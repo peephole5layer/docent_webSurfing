@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/kavach_development');
+mongoose.connect('mongodb://127.0.0.1/kavach_development');
 
 const db = mongoose.connection;
 

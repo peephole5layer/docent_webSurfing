@@ -1,13 +1,14 @@
 const express = require('express');
 const path = require('path');
+const app = express();
 
 const port = 8000;
 const expressLayouts = require('express-ejs-layouts');
 
-const app = express();
 
 
 const db = require('./config/mongoose');
+const MongoStore = require('connect-mongo');
 
 const Link = require('./models/links');
 
@@ -28,13 +29,22 @@ var presentCount = 0;
 
 
 
+var tmp= ["123","4345","3838848"];
 
+console.log(tmp);
 
 
 Link.findOne({ url: url }).then(checkLink => {
 
 
+    console.log(checkLink+"lil");
+
+
     if (!checkLink) {
+
+        console.log("true");
+
+        
 
         if (validator.isURL(url)) {
 
@@ -51,11 +61,16 @@ Link.findOne({ url: url }).then(checkLink => {
     } else {
 
 
+    
+
+
         Link.findOne({ url: url }, // filter criteria
             'count').then(result => {
             presentCount = result.count + 1;
-            console.log(presentCount);
+            console.log(presentCount+2);
         });
+
+        presentCount = checkLink.count;
 
 
         console.log("hello");
@@ -64,21 +79,34 @@ Link.findOne({ url: url }).then(checkLink => {
 
 
         Link.updateOne({ url: url }, // filter criteria
-            { $set: { count: presentCount + '' } }, // update field
+            { $set: { count: presentCount+1 + '' } }, // update field
             console.log("hi")
 
         ).then(result => {
-            console.log(result);
+            console.log();
         });
 
 
 
 
-        checkLink.count = checkLink.count + 1;
-        checkLink.adhaarNos.push("xyz");
+        checkLink.count = 88;
+        checkLink.adhaarNos.push("2838839939939332");
+        checkLink.save();
     }
 
+    console.log("end");
+
 });
+
+
+console.log("hhh");
+
+var tmp= ["123","4345","3838848"];
+
+console.log(tmp);
+
+
+console.log(Link);
 
 // (err, result) => {
 //     if (err) {

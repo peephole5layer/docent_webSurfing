@@ -1,4 +1,6 @@
+// const { Long } = require('mongodb');
 const mongoose = require('mongoose');
+const Long = require('mongodb').Long;
 
 const validator = require('validator');
 
@@ -17,11 +19,13 @@ const linkSchema = new mongoose.Schema({
     },
     count: {
         type: Number,
-        required: true
+        required: true,
+        integer:true
     },
     adhaarNos: {
         type: [String],
-        required: true
+        required: true,
+        integer:true
     }
 }, {
     timestamps: true

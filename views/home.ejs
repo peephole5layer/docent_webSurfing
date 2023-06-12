@@ -1,5 +1,20 @@
 <link rel="stylesheet" href="/css/home.css">
+
 <section id="home">
+
+
+  
+    <% if(Message!=""){ %>
+        <div class="alert alert-primary" role="alert">
+            <%= Message %>
+           </div>
+    
+    <%} %>
+   
+
+  
+
+
    
 
     <div id = "blackList-link">
@@ -8,7 +23,7 @@
 
 
             <label for="adhaar">Enter adhaar number : </label>
-            <input type="text" name="adhaar" id="adhaar" required></br> </br>
+            <input type="number" name="adhaar" id="adhaar" required></br> </br>
 
 
             <label for="web-address"> Enter suspicious web-address : </label>

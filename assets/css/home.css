@@ -1,8 +1,9 @@
 #home {
     color: red;
     position : relative;
-    top : 9.3vh;
+    top : 9vh;
     margin-bottom: 8vh;
+    background-color: white;
   
 
 }
@@ -24,14 +25,14 @@
 }
 
 #blackList-link form{
-    margin:auto;
+    /* margin:auto; */
     border : 2px solid red;
-    padding : 35px;
+   
     width: 35%;
     color :#823720;
     font-family:monospace;
-    word-spacing: -0.05rem;
-    font-size: 14px;;
+    
+    
   
 
 }
@@ -43,7 +44,7 @@
     border: none;
     outline: none;
     color: black;
-    font-size: 14px;
+    
     font-style: italic;
     border-bottom: 2px solid black;
   
@@ -58,15 +59,12 @@
     width:40%;
 }
 
-#adhaar{
-    margin-left:69px;
-}
 
 
 
 .btn-1 {
-    height: 50px;
-    width: 135px;
+    /* height: 50px;
+    width: 135px; */
     border-radius: 10px;
     color: whitesmoke;
     font-size: 16px;
@@ -79,49 +77,14 @@
 }
 
 .btn-1:hover {
-    width: 150px;
-    height: 57px;
+    /* width: 150px;
+    height: 57px; */
     background-color: darkred;
 }
 
 
-@media (min-width:480px) and (max-width:720px){
 
-    
-        
-    #blackList-link #illegal{
-     
-        min-width: 94%;
-    
-    }
-
-        
-    #blackList-link form{
-        margin-left:2%;
-        padding : 17px;
-        width: 86%;
-    }
-
-    .btn-1{
-        height:45px;
-        width:127px;
-    }
-    .btn-1:hover{
-        height:49px;
-        width:132px;
-
-    }
-
-    
-   
-
-}
-
-
-
-
-
-@media (min-width:320px)and (max-width:480px) {
+@media only screen and (min-width:320px) {
 
         
     #blackList-link #illegal{
@@ -166,3 +129,130 @@
    
 }
 
+
+
+@media only screen and (min-width:480px){
+
+    
+        
+    #blackList-link #illegal{
+     
+        min-width: 94%;
+    
+    }
+
+        
+    #blackList-link form{
+        margin-left:2%;
+        padding : 7px;
+        width: 80%;
+        font-size:0.76rem;
+    }
+
+    .btn-1{
+        height:45px;
+        width:127px;
+    }
+    .btn-1:hover{
+        height:49px;
+        width:132px;
+
+    }
+
+    #adhaar{
+
+        margin-left:55px;
+
+    }
+
+    #web-address{
+        margin-left:8px;
+    }
+
+    
+   
+
+} 
+
+
+
+
+
+
+
+@media only screen and (min-width : 720px){
+
+        
+    #blackList-link #illegal{
+     
+        min-width: 94%;
+    
+    }
+
+        
+    #blackList-link form{
+        margin:auto;
+        padding : 18px;
+        width: 59%;
+        font-size:0.8rem;
+       
+    }
+
+   
+    
+    #adhaar{
+
+        margin-left:57px;
+
+    }
+
+         
+    .btn-1 {
+        height: 50px;
+        width: 135px;
+    }
+
+    .btn-1:hover {
+        width: 150px;
+        height: 57px;
+       
+    }
+
+
+}
+
+@media only screen and (min-width : 1420px){
+
+          
+    #blackList-link #illegal{
+     
+        min-width: 100%;
+        font-size: 14px;
+    
+    }
+
+        
+    #blackList-link form{
+        margin:auto;
+        padding : 35px;
+        width: 35%;
+        font-size: 14px;
+        word-spacing: -0.05rem;
+    }
+
+   
+    
+    
+    #adhaar{
+        
+        margin-left:65px;
+    }
+
+    #adhaar,#web-address{
+        width:50%;
+    }
+
+   
+
+
+}

@@ -1,10 +1,21 @@
+const { ReturnDocument } = require('mongodb');
 const Link = require('../models/links');
 const validator = require('validator');
+const alert = require('alert');
+
+
 module.exports.blackList = function(req,res){
 
+
+
+
     const url = req.body.url;
+    let present = false;
 
     Link.findOne({ url: url }).then(checkLink => {
+
+
+        //Insert link into database if it is encountered first time
 
         // console.log(checkLink+"lil");
         if (!checkLink) {
@@ -24,6 +35,33 @@ module.exports.blackList = function(req,res){
             }
 
         } else {
+
+            // If link is already present in database(i.e, already reported) , Only Insert adhaar no. of user reporting the link
+            
+
+            //first check if the link is already reported by curr adhaar number 
+            // skip saving adhaar no. if already reported by curr adhaar
+
+          
+           let currAdhaar = req.body.adhaar;
+
+           let adhaarNos = checkLink.adhaarNos;
+
+           for(let i=0; i<adhaarNos.length; i++){
+              
+               if(adhaarNos.at(i)==currAdhaar){
+                  console.log('jjj');
+                  present=true;
+
+                  return;
+               }
+           }
+
+
+           //else Push currAdhaar into link.adhaarNos 
+
+
+
            
             console.log("hello");
 
@@ -35,17 +73,56 @@ module.exports.blackList = function(req,res){
                 console.log();
             });
 
+            console.log(req.body.adhaar);
+
             checkLink.adhaarNos.push(req.body.adhaar);
             checkLink.save();
+
+
+
         }
 
-        console.log("end");
+        // console.log("end");
+
+    }).then(func=>{
+
+        console.log(Link);
+
+        // console.log(present);
+    
+        if(present==true){
+            console.log(present+"hi");
+               
+            return res.render('home', {
+                Title: "Home",
+                Message:"Already Reported by this Adhaar number !"
+                
+            });
+          
+            
+        }else{
+            
+
+    // // return res.render('home', {
+    // //     Title: "Home",
+        
+    // });
+
+        
+
+                
+            return res.render('home', {
+                Title: "Home",
+                Message:"Successfully Reported !"
+                
+            });
+        }
+    
+       
 
     });
     
-    console.log(Link);
-
-    return res.end("<h1> Succesfully reported <h1>")
+   
     
 }
 

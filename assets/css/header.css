@@ -1,3 +1,13 @@
 header {
     color: blue;
+    display: flex;
+    background-color: lightgrey;
+    align-items: center;
+    height : 70px; 
+    width:100%;
+    justify-content: center;
+    position: fixed;
+
+
+
 }

@@ -1,3 +1,168 @@
 #home {
     color: red;
+    position : relative;
+    top : 9.3vh;
+    margin-bottom: 8vh;
+  
+
 }
+
+#home #trial{
+    height:1000px;
+    border : 4px solid purple;
+    width:auto
+
+}
+
+#blackList-link{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    border : 6px solid green;
+   
+    
+}
+
+#blackList-link form{
+    margin:auto;
+    border : 2px solid red;
+    padding : 35px;
+    width: 35%;
+    color :#823720;
+    font-family:monospace;
+    word-spacing: -0.05rem;
+    font-size: 14px;;
+  
+
+}
+
+#blackList-link #illegal{
+    width: 0;
+    min-width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 14px;
+    font-style: italic;
+    border-bottom: 2px solid black;
+  
+}
+
+/*input inside blackList-link*/
+#adhaar,#web-address{
+
+    border:none;
+    outline:none;
+    border-bottom: 1.5px solid black;
+    width:40%;
+}
+
+#adhaar{
+    margin-left:69px;
+}
+
+
+
+.btn-1 {
+    height: 50px;
+    width: 135px;
+    border-radius: 10px;
+    color: whitesmoke;
+    font-size: 16px;
+    border: none;
+    background-color: black;
+    transition: .4s;
+  
+
+    left: 6%;
+}
+
+.btn-1:hover {
+    width: 150px;
+    height: 57px;
+    background-color: darkred;
+}
+
+
+@media (min-width:480px) and (max-width:720px){
+
+    
+        
+    #blackList-link #illegal{
+     
+        min-width: 94%;
+    
+    }
+
+        
+    #blackList-link form{
+        margin-left:2%;
+        padding : 17px;
+        width: 86%;
+    }
+
+    .btn-1{
+        height:45px;
+        width:127px;
+    }
+    .btn-1:hover{
+        height:49px;
+        width:132px;
+
+    }
+
+    
+   
+
+}
+
+
+
+
+
+@media (min-width:320px)and (max-width:480px) {
+
+        
+    #blackList-link #illegal{
+        /* width: 0; */
+        min-width: 90%; 
+        font-size: 0.75rem;
+    }
+
+        
+    #blackList-link form{
+       
+        padding : 10px;
+        width: 97%;
+      
+        font-family:sans-serif;
+       
+        font-size:0.75rem;
+    
+
+    }
+    #adhaar{
+        margin-left:46px;
+
+    }
+
+    #adhaar,#web-address{
+        
+       
+        width:37%;
+        
+
+    }
+    .btn-1{
+        height:38px;
+        width:117px;
+    }
+    .btn-1:hover{
+        height:43px;
+        width:125px;
+
+    }
+   
+}
+

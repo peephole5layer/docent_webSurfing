@@ -1,7 +1,40 @@
 <link rel="stylesheet" href="/css/home.css">
-<section>
-    <div id="home">
-        hello
+<section id="home">
+   
+
+    <div id = "blackList-link">
+
+        <form action="/blacklist" method="POST">
+
+
+            <label for="adhaar">Enter adhaar number : </label>
+            <input type="text" name="adhaar" id="adhaar" required></br> </br>
+
+
+            <label for="web-address"> Enter suspicious web-address : </label>
+
+            <input id = "web-address" type="url" name="url" required> </br></br><br>
+
+            <!-- <label for="illegal"> Please provide suspicious activities associated with this particular website : </label></br></br> -->
+
+            <textarea name="illegal" id="illegal" cols="45" rows="4" placeholder="Please provide suspicious activities associated with this particular website..." required></textarea></br></br>
+
+
+
+
+            <button class="btn-1" type="submit"> Report </button>
+
+
+
+
+        </form>
+
+
+        <div id = "trial">
+
+        </div>
+
+
     </div>
 </section>
 

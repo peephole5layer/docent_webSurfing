@@ -1,0 +1,10 @@
+footer{
+    color: olivedrab;
+    display: flex;
+    background-color: lightgrey;
+    align-items: center;
+    height : 70px; 
+    justify-content: center;
+
+   
+}

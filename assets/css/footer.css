@@ -1,4 +1,7 @@
 footer{
+    position:relative;
+    
+    bottom: -33vh;   
     color: olivedrab;
     display: flex;
     background-color: lightgrey;

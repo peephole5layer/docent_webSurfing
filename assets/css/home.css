@@ -3,38 +3,55 @@
     position : relative;
     top : 9vh;
     margin-bottom: 8vh;
-    background-color: white;
+    /* background-color: rgba(213, 233, 230, 0.692); */
   
 
 }
-
+/* 
 #home #trial{
     height:1000px;
     border : 4px solid purple;
     width:auto
 
-}
+} */
 
 #blackList-link{
     display:flex;
     justify-content: center;
     flex-direction: column;
-    border : 6px solid green;
+    /* border : 6px solid green; */
+    flex-wrap: wrap;
+    postition:relative;
    
     
 }
 
+  
 #blackList-link form{
-    /* margin:auto; */
-    border : 2px solid red;
+    margin:auto; 
+    border : 0.8px solid white;
+    display:flex;
+    flex-direction: column;
+
+    background-image: url(../img/form-bg.jpg);
+    background-size:cover;
+    
+    background-repeat: repeat;
+
    
     width: 35%;
-    color :#823720;
+    color :#407064ee;
+    font-weight: 535;
     font-family:monospace;
+    transition : 0.4s;
     
     
   
 
+}
+
+#blackList-link form:hover{
+    border : 2px solid whitesmoke;
 }
 
 #blackList-link #illegal{
@@ -43,10 +60,10 @@
     background: transparent;
     border: none;
     outline: none;
-    color: black;
+    color: rgb(110, 98, 98);
     
     font-style: italic;
-    border-bottom: 2px solid black;
+    border-bottom: 1.7px solid #30101047;
   
 }
 
@@ -55,8 +72,11 @@
 
     border:none;
     outline:none;
-    border-bottom: 1.5px solid black;
+    border-bottom: 1.7px solid #83585834;
     width:40%;
+    background: transparent;
+    color: rgb(110, 98, 98);
+    
 }
 
 
@@ -65,11 +85,12 @@
 .btn-1 {
     /* height: 50px;
     width: 135px; */
+    position:relative;
     border-radius: 10px;
     color: whitesmoke;
-    font-size: 16px;
+    font-size: 15px;
     border: none;
-    background-color: black;
+    background-color: rgba(48, 24, 48, 0.6);
     transition: .4s;
   
 
@@ -79,16 +100,16 @@
 .btn-1:hover {
     /* width: 150px;
     height: 57px; */
-    background-color: darkred;
+    background-color: rgba(139, 0, 0, 0.662);
 }
 
-
+ 
 
 @media only screen and (min-width:320px) {
 
         
     #blackList-link #illegal{
-        /* width: 0; */
+         width: 0;
         min-width: 90%; 
         font-size: 0.75rem;
     }
@@ -97,18 +118,22 @@
     #blackList-link form{
        
         padding : 10px;
-        width: 97%;
+        width: 100%;
       
         font-family:sans-serif;
        
-        font-size:0.75rem;
+        font-size:0.72rem;
     
 
     }
-    #adhaar{
-        margin-left:46px;
 
+   
+
+
+    #adhaar{
+        margin-left:43px;
     }
+
 
     #adhaar,#web-address{
         
@@ -118,8 +143,12 @@
 
     }
     .btn-1{
-        height:38px;
-        width:117px;
+       
+
+        left:-1%;
+        top:1vh;
+        height:40px;
+        width:106px;
     }
     .btn-1:hover{
         height:43px;
@@ -137,36 +166,44 @@
         
     #blackList-link #illegal{
      
-        min-width: 94%;
+        min-width:87%;
     
     }
 
         
     #blackList-link form{
-        margin-left:2%;
+        margin:auto;
         padding : 7px;
-        width: 80%;
+        width: 72%;
         font-size:0.76rem;
     }
 
+    #blackList-link form:hover{
+        width:74.3%;
+
+    }
+
     .btn-1{
-        height:45px;
-        width:127px;
+       
+        font-size:15.5px;
+        left:0%;
+        top:0.7vh;
+        height:44px;
+        width:108px;
     }
     .btn-1:hover{
         height:49px;
-        width:132px;
+        width:120px;
 
     }
 
     #adhaar{
 
-        margin-left:55px;
+        margin-left:58px;
 
     }
-
     #web-address{
-        margin-left:8px;
+        margin-left:10px;
     }
 
     
@@ -180,12 +217,13 @@
 
 
 
-@media only screen and (min-width : 720px){
+@media only screen and (min-width : 768px){
 
         
     #blackList-link #illegal{
      
-        min-width: 94%;
+        min-width: 90%;
+        font-size:1rem;
     
     }
 
@@ -194,20 +232,33 @@
         margin:auto;
         padding : 18px;
         width: 59%;
-        font-size:0.8rem;
+        font-size:1rem;
        
+    }
+
+    
+    #blackList-link form:hover{
+        width:61.2%;
+        
     }
 
    
     
     #adhaar{
 
-        margin-left:57px;
+        margin-left:71.5px;
 
     }
 
          
     .btn-1 {
+      
+
+        font-size:16.5px;
+
+        left:0%;
+        top:1.3vh;
+
         height: 50px;
         width: 135px;
     }
@@ -220,24 +271,94 @@
 
 
 }
+ 
 
-@media only screen and (min-width : 1420px){
 
-          
+
+@media only screen and (min-width : 1024px){
+
+        
     #blackList-link #illegal{
      
-        min-width: 100%;
-        font-size: 14px;
+        min-width: 75%;
+        font-size:1.35rem;
     
     }
 
         
     #blackList-link form{
         margin:auto;
-        padding : 35px;
-        width: 35%;
-        font-size: 14px;
-        word-spacing: -0.05rem;
+        padding : 18px;
+        width: 56%;
+        font-size:1.35rem;
+       
+    }
+    
+    #blackList-link form:hover{
+        width:58%;
+        
+    }
+   
+    
+   
+    #adhaar{
+
+        margin-left:95px;
+
+    }
+
+    #web-address{
+        margin-left:12px;
+    }
+
+         
+    .btn-1 {
+
+        font-size:19px;
+       
+
+        left:0%;
+        top:1vh;
+
+        height: 67px;
+        width: 172px;
+    }
+
+    .btn-1:hover {
+        width: 180px;
+        height: 75px;
+       
+    }
+
+
+}
+ 
+
+
+
+@media only screen and (min-width : 1200px){
+
+          
+    #blackList-link #illegal{
+     
+        min-width: 69%;
+        font-size: 17px;
+    
+    }
+
+        
+    #blackList-link form{
+        margin:auto;
+        padding : 15px;
+        width: 42%;
+        font-size: 17px;
+      
+    }
+
+    
+    #blackList-link form:hover{
+        width:43%;
+        
     }
 
    
@@ -245,14 +366,39 @@
     
     #adhaar{
         
-        margin-left:65px;
+        margin-left:82px;
+    }
+
+    #web-address{
+        margin-left:10px;
     }
 
     #adhaar,#web-address{
-        width:50%;
+        width:39%;
     }
+
+         
+    .btn-1 {
+
+        font-size:20px;
+       
+
+       
+        top:1.5vh;
+
+        height: 60px;
+        width: 180px;
+    }
+
+    .btn-1:hover {
+        width: 185px;
+        height: 70px;
+       
+    }
+
 
    
 
 
 }
+

@@ -9,6 +9,10 @@ const blackListController = require('../controllers/blackList_controller');
 
 router.get('/', homeController.home);
 
+
+
+router.use('/users', require('./users'));
+
 router.post('/blacklist',blackListController.blackList);
 
 

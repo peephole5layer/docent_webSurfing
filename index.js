@@ -25,6 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 
 app.use(express.static('./assets'));
+app.use(express.static(path.join(process.cwd(), "/img")));
 
 app.use(expressLayouts);
 // extract style and scripts from sub pages into the layout

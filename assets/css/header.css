@@ -1,13 +1,26 @@
-header {
-    color: blue;
-    display: flex;
-    background-color: lightgrey;
-    align-items: center;
-    height : 70px; 
-    width:100%;
-    justify-content: center;
-    position: fixed;
+/* .mg-a{
+    margin-left:40%;
+} */
+/* 
+.navbar,.container-fluid{
+    background-color:#7ed36d61;
+    /* #f3d38bad */
+    /* #9cf38b61 */
+    /* #bb8bf35e */
+    /* margin:-0.04%; */
 
+#docent-logo{
+    position:absolute;
+    height:52px;
+    width:80px;
 
+  
+    margin-left:-56.5px;
+    margin-top:-11px;
+    border :1px soid black;
+ 
+}
 
+#docent{
+    margin-left:27px;
 }

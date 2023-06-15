@@ -1,0 +1,186 @@
+/* #trial{
+    height:1000px;
+    border : 4px solid purple;
+    width:auto
+
+} */
+/* 
+#signup-form{
+    border : 2px solid red;
+   
+} */
+
+
+#signin-page header{
+ 
+    position:relative;
+    display:flex;
+    flex-wrap: nowrap;
+    /* justify-content: space-between; */
+    /* left:30%; */
+    margin:auto;
+    width:390px;
+    margin-top:4%;
+  
+  }
+  #signin-page header div{
+    color:#5a823354;
+    width:3rem;
+    height:3rem;
+  
+  
+  }
+  
+  
+  #signin-page header button{
+  
+    font-size:30px;
+    font-weight: bolder;
+    width:340px;
+    height:70px;
+  
+  }
+  
+  #signin-form label{
+      /* border :2px solid green; */
+      width:100px;
+  
+      
+  }
+  
+  
+  
+  #signin-form{
+  
+  
+      
+      width:350px;
+  
+      position: relative;
+      top:6.5vh;
+  
+      margin:auto;
+     
+  }
+  
+  
+  #signin-form .btn{
+      width:140px;
+      position:relative;
+      top:4vh;
+     
+  
+    }
+  
+  #inputEmail3,#inputPassword3{
+      /* display:inline-block; */
+      width:210px;
+    
+    } 
+  
+   
+  
+  #signin-form div div div{
+      width:100px;
+  
+     
+  
+  } 
+  /* 
+  #signup-form div {
+      border :3px solid red;
+  } */
+  
+  #signin-form div div {
+      /* border : 3px solid black; */
+      width:300px;
+  }
+  /*margins*/
+  
+  .mg-left-5{
+      margin-left:5rem;
+  } 
+  
+  
+  
+  
+  
+  /*media query*/
+  
+  
+  
+  
+  
+  @media only screen and (max-width:480px){
+  
+    .mg-left-5{
+      margin-left:2rem;
+    }
+    #inputEmail3,#inputPassword3{
+  
+      width:175x;
+      font-size:0.92rem;
+    
+    }
+  /* 
+    #signup-form{
+      justify-content: center;
+      top:14vh;
+      width:100%;
+    } */
+   
+  
+  
+  
+  
+  
+    #signin-form {
+      font-size:0.92rem;
+      width:100%;
+      display:flex;
+      justify-content: center;
+    }
+  
+    #signin-form .btn{
+      width:120px;
+      
+  
+    }
+  
+  
+    #signin-page header{
+     
+      width:280px;
+      margin-top:25px;
+  
+  
+    } 
+  
+    #signin-page header button{
+      width:230px;
+      font-size:20px;
+      
+    }
+    #signin-page header div{
+      margin-top:0.7rem;
+      width:2.2rem;
+      height:2.2rem;
+    }
+  
+  
+  
+     
+  #inputEmail3,#inputPassword3{
+      /* display:inline-block; */
+      width:150px;
+    
+    } 
+  
+  
+      
+          
+      
+  
+  }  
+  
+  

@@ -4,6 +4,8 @@ const app = express();
 
 const port = 8000;
 const expressLayouts = require('express-ejs-layouts');
+
+const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
 
@@ -20,7 +22,9 @@ const MongoStore = require('connect-mongo');
 
 
 // app.use(express.urlencoded());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
+app.use(express.json());
 
 
 

@@ -9,6 +9,9 @@
     /* #bb8bf35e */
     /* margin:-0.04%; */
 
+.navbar{
+    height:55.2px;
+}
 #docent-logo{
     position:absolute;
     height:52px;
@@ -23,4 +26,35 @@
 
 #docent{
     margin-left:27px;
+}
+
+
+
+.nav-item a:hover{
+    color : rgb(244, 239, 239);
+    border-bottom : 0.5px solid white;
+    
+
+}
+
+.navbar-brand span{
+   
+
+}
+
+.navbar-brand span:hover{
+    
+    color:antiquewhite;
+   
+
+
+}
+
+
+.link a{
+    color:rgba(255, 255, 255, 0.55);
+}
+
+.link a:hover{
+    color :rgba(255, 255, 255, 0.75);
 }

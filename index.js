@@ -13,6 +13,8 @@ const bodyParser = require('body-parser');
 const db = require('./config/mongoose');
 const MongoStore = require('connect-mongo');
 
+var trial= true;
+
 
 
 

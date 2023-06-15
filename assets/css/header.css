@@ -29,18 +29,21 @@
 }
 
 
+.nav-item a{
+    color:rgba(255, 255, 255, 0.873);
+    
+}
+
+
 
 .nav-item a:hover{
-    color : rgb(244, 239, 239);
-    border-bottom : 0.5px solid white;
+    color : rgb(255, 255, 255);
+    border-bottom : 0.5px solid rgb(243, 235, 235);
     
 
 }
 
-.navbar-brand span{
-   
 
-}
 
 .navbar-brand span:hover{
     
@@ -52,9 +55,10 @@
 
 
 .link a{
-    color:rgba(255, 255, 255, 0.55);
+    color:rgba(220, 237, 237, 0.951);
 }
 
 .link a:hover{
-    color :rgba(255, 255, 255, 0.75);
+    color : rgb(255, 255, 255);
+    
 }

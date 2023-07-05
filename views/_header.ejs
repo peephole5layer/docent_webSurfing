@@ -18,36 +18,31 @@
 
 
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <div class="collapse navbar-collapse custom" id="navbarTogglerDemo03">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
           <li class="nav-item">
             <a class="nav-link"  href="/">Home</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="/users/signup">Report Url</a>
+            <a class="nav-link" href="/users/signup">Report&nbsp;Url</a>
           </li>
 
 
            
           <li class="nav-item">
-            <a class="nav-link" href="/users/signup">BlackListed URLS</a>
+            <a class="nav-link" href="/report/blacklisted-urls">BlackListed&nbsp;URLS</a>
           </li>
 
-
-
-
-          
-          <li class="nav-item">
-            <a class="nav-link" href="/users/signup">Blogs</a>
-          </li>
-
-
-          <li class="nav-item">
-            <a class="nav-link" href="/users/signup">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/users/signup">Contact Us</a>
+          <li class="nav-item dropdown">
+            <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              More
+            </button>
+            <ul class="dropdown-menu" id="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Blogs</a></li>
+              <li><a class="dropdown-item" href="#">About</a></li>
+              <li><a class="dropdown-item" href="#">Contact&nbsp;Us</a></li>
+            </ul>
           </li>
 
           <li class="nav-item">
@@ -56,15 +51,31 @@
          
         </ul>
 
+
+        <% if(locals.user){ %>
+
+            <div class="me-3 mb-2 mb-lg-0 link">
+
+              <a class="nav-link" href="/">Profile</a>
+    
+            </div>
+            <div class="me-5 mb-2 mb-lg-0 link" >
+            
+              <a class="nav-link" href="/users/destroy-session">Sign&nbsp;out</a>
+            </div>
+        
+        <% }else {%>
+
         <div class="me-3 mb-2 mb-lg-0 link">
 
-          <a class="nav-link" href="/users/signin">Sign In</a>
+          <a class="nav-link" href="/users/signin">Sign&nbsp;In</a>
 
         </div>
         <div class="me-5 mb-2 mb-lg-0 link" >
          
-          <a class="nav-link" href="/users/signup">Sign Up</a>
+          <a class="nav-link" href="/users/signup">Sign&nbsp;Up</a>
         </div>
+        <%}%>
         <form class="d-flex" role="search">
         
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

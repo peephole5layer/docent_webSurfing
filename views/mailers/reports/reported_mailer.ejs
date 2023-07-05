@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="../../../assets/css/reported_mail.css">;
+<div id="report-mail">
+    <p id="hi-container">Hi <%= report[0].fname%> <%=report[0].lname%> !</p>
+    <br>
+    <br>
+    <p id="url"> URL <strong><i><%= report[1]%> </i></strong>just got reported on <strong>Docent WEB_SURFING</strong>
+    </p>
+     
+    <div id="activities">
+        <p>Suspicious activities : </p>
+        <p>&emsp;&emsp;&emsp;&emsp;&emsp;<%=report[2]%></p>
+    </div>
+  
+    <br>
+    <br>
+    <p>Thanks!</p>
+</div>

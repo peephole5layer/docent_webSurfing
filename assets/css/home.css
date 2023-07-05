@@ -1,404 +1,372 @@
 #home {
    
     position : relative;
-    top : 12vh;
+    top:0.06vh;
     bottom : 10vh;
-    /* background-color: rgba(213, 233, 230, 0.692); */
-  
+}
+
+#carouselExampleDark{
+    background-color:#06c7aa22;
+
+
 
 }
 
-#home #trial{
-    height:1000px;
-    border : 4px solid purple;
-    width:auto
+#form-container{
+     background-color:#06c7aa22; 
+     height:505px;
+}  
 
+
+
+#report-link-header{
+    width:170px;
+    position:realtive;
+    left:40%;
+    margin:auto;
 }
 
-#blackList-link{
-    display:flex;
-    justify-content: center;
-    flex-direction: column;
-    /* border : 6px solid green; */
-    flex-wrap: wrap;
-    /* postition:relative; */
-   
-    
-}
-
-  
-#blackList-link form{
-    margin:auto; 
-    border : 0.8px solid white;
-    display:flex;
-    flex-direction: column;
-
-    background-image: url(../img/form-bg.jpg);
-    background-size:cover;
-    
-    background-repeat: repeat;
-
-   
-    width: 35%;
-    color :#407064ee;
-    font-weight: 535;
-    font-family:monospace;
-    transition : 0.4s;
-    
-    
-  
-
-}
-
-#blackList-link form:hover{
-    border : 2px solid whitesmoke;
-}
-
-#blackList-link #illegal{
-    width: 0;
-    min-width: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    color: rgb(110, 98, 98);
-    
-    font-style: italic;
-    border-bottom: 1.7px solid #30101047;
-  
-}
-
-/*input inside blackList-link*/
-#adhaar,#web-address{
-
-    border:none;
-    outline:none;
-    border-bottom: 1.7px solid #83585834;
-    width:40%;
-    background: transparent;
-    color: rgb(110, 98, 98);
-    
-}
-
-
-
-
-.btn-1 {
-    /* height: 50px;
-    width: 135px; */
-    position:relative;
-    border-radius: 10px;
-    color: whitesmoke;
-    font-size: 15px;
-    border: none;
-    background-color: rgba(48, 24, 48, 0.6);
-    transition: .4s;
-  
-
-    left: 6%;
-}
-
-.btn-1:hover {
-    /* width: 150px;
-    height: 57px; */
-    background-color: rgba(139, 0, 0, 0.662);
-}
-
+#report-link-header .btn{
  
+    margin-top:35px;
+    width:155px;
+    height:61px;
+    font-size:1.28rem;
+    font-weight:700;
+    margin-bottom:8px;
+    background-color: #49187998;
+    cursor:default;
+  
 
-@media only screen and (min-width:320px) {
-
-        
-    #blackList-link #illegal{
-         width: 0;
-        min-width: 90%; 
-        font-size: 0.75rem;
-    }
-
-        
-    #blackList-link form{
-       
-        padding : 10px;
-        width: 100%;
-      
-        font-family:sans-serif;
-       
-        font-size:0.72rem;
-    
-
-    }
-
-   
-
-
-    #adhaar{
-        margin-left:43px;
-    }
-
-
-    #adhaar,#web-address{
-        
-       
-        width:37%;
-        
-
-    }
-    .btn-1{
-       
-
-        left:-1%;
-        top:1vh;
-        height:40px;
-        width:106px;
-    }
-    .btn-1:hover{
-        height:43px;
-        width:125px;
-
-    }
-   
 }
 
 
+#report-link-header .btn:hover{
+    background-color: #491879bb;
+}
 
-@media only screen and (min-width:480px){
 
+#blacklist-link-form label{
+    width:100px;   
+}
+
+#blacklist-link-form{
+
+    position: relative;
+    top:1.89vh;
+    margin:auto;
+    margin-bottom : 50px;
+  
+    width:350px;
     
-        
-    #blackList-link #illegal{
-     
-        min-width:87%;
+}
+
+#blacklist-link-form .btn{
+    width:115px;
+    height:45px;
+    position:relative;   
+    top:2vh;
+    font-size:1.2rem;
+    padding:6px;
     
-    }
 
-        
-    #blackList-link form{
-        margin:auto;
-        padding : 7px;
-        width: 72%;
-        font-size:0.76rem;
-    }
+}
 
-    #blackList-link form:hover{
-        width:74.3%;
+#blacklist-link-form div div{
+    width:210px;
+} 
+#blacklist-link-form div{
+    width:210px;
+}
 
-    }
-
-    .btn-1{
-       
-        font-size:15.5px;
-        left:0%;
-        top:0.7vh;
-        height:44px;
-        width:108px;
-    }
-    .btn-1:hover{
-        height:49px;
-        width:120px;
-
-    }
-
-    #adhaar{
-
-        margin-left:58px;
-
-    }
-    #web-address{
-        margin-left:10px;
-    }
-
-    
-   
-
+#blacklist-link-form div div div{
+    width:290px;
 } 
 
+#web-address,#adhaar{
+    width:160px;
+}
+#illegal{
+    width:320px;
+}
 
 
+.carousel-item img{
+    height:473px;
+    width:100vw;
+}
 
-
-
-
-@media only screen and (min-width : 768px){
-
-        
-    #blackList-link #illegal{
-     
-        min-width: 90%;
-        font-size:1rem;
-    
-    }
-
-        
-    #blackList-link form{
-        margin:auto;
-        padding : 18px;
-        width: 59%;
-        font-size:1rem;
-       
-    }
-
-    
-    #blackList-link form:hover{
-        width:61.2%;
-        
-    }
-
+.carousel-caption h5{
+    font-size: 2rem;
    
+    color: rgb(61 38 38 / 93%);
+}
+.carousel-caption p{
+    color:#0b290eeb;
+    font-size:1.22rem;
+    font-weight:500;
+}
+
+
+.element{
+
+    height:505px;
+    width:470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin:auto;
+}
+
+.element h2{
+    text-align: center;
+    position: relative;
+    top:-35px;
+    font-family:'Brush Script MT', cursive;
+    font-size:2rem;
+    letter-spacing: 0.2rem;
+    font-weight:600;
+    color:rgba(254, 0, 0, 0.74);
     
-    #adhaar{
+}
 
-        margin-left:71.5px;
+.element h2::first-letter{
+    font-size:4.15rem;
+    font-weight:800;
+    color:rgba(255, 0, 0, 0.773);
+}
 
-    }
+.flex-container-group{
+    display:flex;
+   
+   flex-direction: column;
 
-         
-    .btn-1 {
-      
+ } 
 
-        font-size:16.5px;
+.group-cards{
 
-        left:0%;
-        top:1.3vh;
+    margin-bottom:28px;
+    display:flex;
+    justify-content: space-evenly;
+}
 
-        height: 50px;
-        width: 135px;
-    }
+.group-cards a{
+    text-decoration: none;
+}
 
-    .btn-1:hover {
-        width: 150px;
-        height: 57px;
-       
-    }
+.cards{
+  
+    height:105px;
+   
+    width:105px;
+    background-color: white;
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    color:  #014d8e;
+  
+    box-shadow: 2px 2px 2px 2px;
+}
 
+.cards i{
+    margin-top:17px;
+    font-size:2.3rem;
+    /* color:red; */
+}
+
+.cards p{
+    font-size:0.73rem;
+    margin:auto;
+    font-weight:600;
+    margin-left:26px;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+    width: 60px;
+}
+
+.cards:hover{
+    color:#01437d;
 
 }
- 
 
 
-
-@media only screen and (min-width : 1024px){
-
-        
-    #blackList-link #illegal{
-     
-        min-width: 75%;
-        font-size:1.35rem;
-    
-    }
-
-        
-    #blackList-link form{
-        margin:auto;
-        padding : 18px;
-        width: 56%;
-        font-size:1.35rem;
-       
-    }
-    
-    #blackList-link form:hover{
-        width:58%;
-        
-    }
-   
-    
-   
-    #adhaar{
-
-        margin-left:95px;
-
-    }
-
-    #web-address{
-        margin-left:12px;
-    }
-
-         
-    .btn-1 {
-
-        font-size:19px;
-       
-
-        left:0%;
-        top:1vh;
-
-        height: 67px;
-        width: 172px;
-    }
-
-    .btn-1:hover {
-        width: 180px;
-        height: 75px;
-       
-    }
-
-
+#data h2{
+    color: #dd4024e5;
 }
- 
+
+#data h2::first-letter{
+    color: #dd4024fb;
+}
+
+#data .flex-container-group .group-cards a .cards{
+    color :#ff6f00ea;
+}
 
 
+#reliable-sites h2{
+    color:rgba(0, 0, 0, 0.712);
+}
 
-@media only screen and (min-width : 1200px){
+#reliable-sites h2::first-letter{
+    color:rgba(0, 0, 0, 0.767);
+}
 
-          
-    #blackList-link #illegal{
-     
-        min-width: 69%;
-        font-size: 17px;
-    
-    }
+#reliable-sites .flex-container-group .group-cards a .cards{
+    color : rgba(255, 0, 0, 0.781);
+}
+
+#other{
+    position:relative;
+    top:15vh;
+}
+
+/*margins*/
+.mg-left-5{
+    margin-left:5rem;
+} 
+  
+/*media query*/
+@media only screen and (max-width:480px){
+
 
         
-    #blackList-link form{
-        margin:auto;
-        padding : 15px;
-        width: 42%;
-        font-size: 17px;
+    #report-link-header .btn{
+        top:50px; 
+        font-size:1.15rem;
+        padding:7px;
+        height:46px;
+        width:120px;
+        margin-top:15px;
+    }
+
+
+    #blacklist-link-form {
+        position:relative;
+        left:-7.2%;
+        top:1.5vh;
+        font-size:0.95rem;
+        width: 145px;
+        display:flex;
+        justify-content: center;
+    }
+
+    #blacklist-link-form .btn{
       
-    }
-
-    
-    #blackList-link form:hover{
-        width:43%;
-        
-    }
-
-   
-    
-    
-    #adhaar{
-        
-        margin-left:82px;
-    }
-
-    #web-address{
-        margin-left:10px;
+        width:90px;
+        height:35px;
+        padding:5px;
+        top:3vh;
+        font-size: 1.05rem;
     }
 
     #adhaar,#web-address{
-        width:39%;
+        position: relative;
+        left:-20px;
+        width:110px;    
     }
 
-         
-    .btn-1 {
-
-        font-size:20px;
-       
-
-       
-        top:1.5vh;
-
-        height: 60px;
-        width: 180px;
+    #blacklist-link-form div{
+        width:295px;
     }
 
-    .btn-1:hover {
-        width: 185px;
-        height: 70px;
+    #blacklist-link-form div div{
+        margin-top : -7.14px;
+    }
+
+    #input-3 textarea{
+        font-size:0.932rem;
+        font-style: italic;
+        width:245px;
+        height:90px;
+        margin-left:1.4%;
+    }
+    
+        
+    .carousel-caption h5{
+        font-size: 1.5rem;
        
+     
+    }
+    .carousel-caption p{
+       
+        font-size:0.935rem;
+        font-weight:500;
+
+    }
+    .carousel-item img{
+        height:82vh;
+        width:100vw;
     }
 
 
-   
+    #form-container{
+        height:500px;
+    }
+        
+    .element{
+      
+        height:500px;
+        width:280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+        
+    .element h2{
+        
+        top:5px;
+        font-size:1.6rem;
+        letter-spacing: 0.2rem;
+
+    }
+
+   .element h2::first-letter{
+        font-size:2.8rem;
+        font-weight:600;
+    }
 
 
-}
+    .flex-container-group{
+        margin:auto;
+        display:flex;
+        flex-direction: row;
+        position:relative;
+        left:-9px;
+        justify-content: space-between;     
+        width:90%;
+        margin-top:10px;
 
+    
+    }
+          
+    .group-cards{
+        margin-bottom:0px;
+        flex-direction: column;
+        width:40%;
+    }
+        
+    .cards{
+        height:94px;
+        width:94px;
+        margin:10px;
+
+    }
+
+    .cards i{
+        font-size:2rem;
+    }
+        
+    .cards p{
+        font-size:0.65rem;
+        margin-left:15.35px;
+    }
+
+    #data h2{
+        font-size:1.48rem;
+    }
+
+}  

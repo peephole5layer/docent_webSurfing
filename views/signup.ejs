@@ -29,25 +29,21 @@
 
 
 
-<section id="signup-page">
+<section id="signup-page" >
 
-    <header>
+    <header >
 
-        <button type="button" class="btn btn-success" disabled> Docent Websurfing</button>
+        <button type="button" class="btn btn-success" > Docent Websurfing</button>
         <div class="spinner-border"  role="status">
             <span class="visually-hidden">Loading...</span>
         </div>
         <div class="spinner-grow"  role="status">
             <span class="visually-hidden">Loading...</span>
-         </div>
-    </header>
+        </div>
 
+     </header>
 
-
-        
     <form action="/users/create-user" method="POST" id="signup-form">
-
-
 
         <div class="d-flex flex-column flex" >
 
@@ -70,6 +66,15 @@
                 </div>
             
             </div>
+<!--             
+            <div class="p-2 row mb-3 d-flex flex-nowrap">
+                <label  for="adhaar" class="col-sm-2 col-form-label ">Adhaar&nbsp;Number&nbsp;:</label>
+                <div class="col-sm-10" id="check">
+
+                    <input name="adhaar" type="number" class="form-control mg-left-5" placeholder="xxxxxxx" aria-label="Adhaar number" id="adhaar" required>
+                </div>
+                
+              </div>  -->
         
             <div class="p-2 row mb-3 d-flex flex-nowrap" >
             <label for="inputEmail3" class="col-sm-2 col-form-label">Email&nbsp;:</label>
@@ -92,11 +97,22 @@
             </div>
 
             <button type="submit" class="mx-2 row mb-3 btn btn-primary btn-lg mt-2">Sign Up</button>
-        </div>
-        
-    
-        
+        </div>  
     </form>
+
+    <div id="container">
+
+        <div id="line-break"> </div> 
+      
+        <p>Or</p>
+
+    </div>
+
+   
+
+    <div id="google-signin" class="d-grid gap-2">
+        <button onclick="window.location.href='/users/auth/google';" class="btn btn-primary" type="button"><i class="fa-brands fa-google fa-fade"></i> Continue with Google</button>
+    </div> 
 
 <!--   
 <div id = "trial">

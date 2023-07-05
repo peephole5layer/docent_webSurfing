@@ -26,7 +26,25 @@ const linkSchema = new mongoose.Schema({
         type: [String],
         required: true,
         integer:true
+    },
+
+    users:{
+        type: [mongoose.Schema.Types.ObjectId],
+        ref:'User',
+        required:true
+    },
+
+    biometricData :{
+        type:[Object],
+        required: true
+        
     }
+
+    // reportInfo: {
+    //     type: [[String]],
+    //     required: true,
+    // }
+    
 }, {
     timestamps: true
 });

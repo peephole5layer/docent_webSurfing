@@ -6,48 +6,90 @@
 
     <header>
 
-        <button type="button" class="btn btn-success" disabled> Docent Websurfing</button>
-        <div class="spinner-border"  role="status">
+        <h1>Docent&nbsp;Websurfing</h1>
+        <div class="spinner-border" role="status">
             <span class="visually-hidden">Loading...</span>
         </div>
-        <div class="spinner-grow"  role="status">
+        <div class="spinner-grow" role="status">
             <span class="visually-hidden">Loading...</span>
-         </div>
+        </div>
     </header>
 
 
 
-        
     <form action="/users/create-session" method="POST" id="signin-form">
 
 
 
-        <div class="d-flex flex-column flex" >
+        <div class="d-flex flex-column flex">
 
-         
-        
-            <div class="p-2 row mb-3 d-flex flex-nowrap" >
-            <label for="inputEmail3" class="col-sm-2 col-form-label">Email&nbsp;:</label>
-            <div class="col-sm-10" style="width:140px" >
-                <input type="email" class="form-control mg-left-5" id="inputEmail3" placeholder="xyz@123.com" required>
-            </div>
+
+
+            <div class="p-2 row mb-3 d-flex flex-nowrap">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email&nbsp;&nbsp;&nbsp;&emsp;&ensp;:</label>
+                <div class="col-sm-10" style="width:140px">
+                    <input name="email" type="email" class="form-control mg-left-5" id="inputEmail3"
+                        placeholder="xyz@123.com" required>
+                </div>
             </div>
             <div class="p-2 row mb-3 d-flex flex-nowrap">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">Password&nbsp;:</label>
-            <div class="col-sm-10" style="width:140px">
-                <input  type="password" class="form-control  mg-left-5" id="inputPassword3" placeholder="********" required>
-            </div>
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password&ensp;:</label>
+                <div class="col-sm-10" style="width:140px">
+                    <input name="password" type="password" class="form-control  mg-left-5" id="inputPassword3"
+                        placeholder="********" required>
+                </div>
             </div>
 
+            <div id="signin-submit-container">
+                <div style="width:106px;"id="signin-button">
+                    <button type="submit" class="mx-2 row mb-3 btn btn-primary btn-lg mt-2">Sign in</button>
+                 </div>
 
-            <button type="submit" class="mx-2 row mb-3 btn btn-primary btn-lg mt-2">Sign In</button>
+
+                 <div style="width:140px;" id="forgot-password"><a href="/users/forgot-password">Forgot&nbsp;Password?</a></div>
+
+
+
+            </div>
+
+             
         </div>
-        
-    
-        
+
     </form>
 
-<!--   
+
+
+    <div id="divider-container">
+
+        <!-- <span>x</span> -->
+        <p id="x1">x</p>
+
+        <div class="line-break"> </div>
+
+        <p>x&nbsp;&nbsp;<span>or</span>&nbsp;&nbsp;x</p>
+
+        <div class="line-break"></div>
+
+        <p id="x2">x</p>
+
+        <!-- <span>x</span> -->
+
+    </div>
+
+
+
+
+    <div id="google-signin" class="d-grid gap-2">
+
+        <button onclick="window.location.href='/users/auth/google';" class="btn btn-primary" type="button">
+            <i class="fa-brands fa-google fa-fade"></i>
+             Continue with Google</button>
+    </div>
+
+
+
+
+    <!--   
 <div id = "trial">
 
 </div>  -->
@@ -55,13 +97,3 @@
 
 
 </section>
-
-
-
-
-
-
-
-
-
-

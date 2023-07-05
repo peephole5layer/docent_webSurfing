@@ -1,75 +1,408 @@
 <link rel="stylesheet" href="/css/home.css">
 
 
-<% if(Message!=""){ %>
-    <div class="alert alert-primary" role="alert">
-        <%= Message %>
-       </div>
+<% if(Success=="true" ){ %>
+  <div class="alert alert-primary alert-dismissible" role="alert">
+    <%= Message %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
 
-<%} %>
-
-
-
-
-<section id="home">
+  <%}else if(Success=="false" ){ %>
 
 
-  
-   
-
-  
-
-
-   
-
-    <div id = "blackList-link">
-
-        <form action="/blacklist" method="POST">
-            
-
-            <div id="input-1">
-
-                
-                <label for="adhaar">Enter adhaar number : </label>
-                <input type="number" name="adhaar" id="adhaar" required></br> </br>
-
-            </div>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="check-circle-fill" viewBox="0 0 16 16">
+        <path
+          d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+      </symbol>
+      <symbol id="info-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+      </symbol>
+      <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+        <path
+          d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+      </symbol>
+    </svg>
 
 
-             <div id="input-2">
+    <div class="alert alert-danger alert-dismissible d-flex align-items-center" role="alert">
+      <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:">
+        <use xlink:href="#exclamation-triangle-fill" />
+      </svg>
 
-                <label for="web-address"> Enter suspicious web-address : </label>
-
-                <input id = "web-address" type="url" name="url" required> </br></br><br>
-
-
-             </div>
-            
-            <!-- <label for="illegal"> Please provide suspicious activities associated with this particular website : </label></br></br> -->
-
-            <div id="input-3">
-
-                <textarea name="illegal" id="illegal" cols="45" rows="4" placeholder="Please provide suspicious activities associated with this particular website..." required></textarea></br></br>
-
-
-            </div>
-
-         
-
-
-
-            <button class="btn-1" type="submit"> Report </button>
-
-
-
-
-        </form>
-
-        <div id = "trial">
-
-        </div> 
-
+      <%= Message %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 
     </div>
-</section>
 
+
+
+    <%}%>
+
+
+
+
+      <section id="home">
+
+
+        <div id="carouselExampleDark" class="carousel carousel-dark slide">
+
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+
+            <% if(locals.user){%>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+              <%}%>
+          </div>
+
+          <div id="carousel-inner" class="carousel-inner">
+
+            <div class="carousel-item active" data-bs-interval="10000">
+
+              <div class="element"  id="about-scams-container">
+
+                <h2>
+                  Learn about Scams
+                </h2>
+
+                <div class="flex-container-group">
+
+                  <div class="group-cards">
+
+                    <a href="">
+                      <div class="cards">
+                        <i class="fa-solid fa-cart-plus fa"></i>
+                        <p>Online Shopping</p>
+                      </div>
+                    </a>
+
+                    <a href="">
+                      <div class="cards">
+                        <i class="fa-sharp fa-solid fa-bars"></i>
+                        <p>Phishing&nbsp;& Identity&nbsp;Theft</p>
+                      </div>
+                    </a>
+
+                    <a href="">
+                      <div class="cards">
+                        <i class="fa-regular fa-money-bill-1"></i>
+                        <p>Advance&nbsp;Fee Scams</p>
+                      </div>
+                    </a>
+
+                  </div>
+
+                  <div class="group-cards">
+
+                    <a href="">
+                      <div class="cards">
+                        <i class="fa-sharp fa-solid fa-heart-circle-exclamation"></i>
+                        <p>Romance Scams</p>
+                      </div>
+                    </a>
+
+                    <a href="">
+                      <div class="cards">
+                        <i class="fa-sharp fa-solid fa-gem"></i>
+                        <p>Investment&nbsp;& Crypto</p>
+                      </div>
+                    </a>
+
+                    <a href="">
+                      <div class="cards">
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                        <p>Other Scams...</p>
+                      </div>
+                    </a>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+            <% if(locals.user){%>
+
+              <div id="form-container" class="carousel-item" data-bs-interval="10000">
+                <header id="report-link-header">
+
+                  <button type="button" class="btn btn-success"> Report Link</button>
+
+                </header>
+
+                <!-- /report/blacklist/<%=locals.user.id%> -->
+
+                <form action="/report/blacklist/<%=locals.user.id%>/challenge" method="POST" id="blacklist-link-form">
+
+                  <div class="d-flex flex-column flex">
+
+                    <div class="p-2 row mb-3 d-flex flex-nowrap">
+                      <label for="adhaar" class="col-sm-2 col-form-label ">Enter&nbsp;Adhaar&nbsp;Number&nbsp;:</label>
+                      <div class="col-sm-10" id="check" style="width:140px">
+
+                        <input name="adhaar" type="number" class="form-control mg-left-5" placeholder="xxxxxxx"
+                          aria-label="Adhaar number" id="adhaar" required>
+                      </div>
+
+                    </div>
+
+                    <div class="p-2 row mb-3 d-flex flex-nowrap">
+                      <label for="web-address" class="col-sm-2 col-form-label">Enter&nbsp;URL&nbsp;:</label>
+                      <div class="col-sm-10" style="width:140px">
+
+                        <input id="web-address" name="url" type="url" class="form-control  mg-left-5"
+                          placeholder="Web Url" aria-label="Web Url" required>
+                      </div>
+
+                    </div>
+
+
+                    <div id="input-3">
+
+                      <textarea name="about" id="illegal" class="form-control" cols="45" rows="4"
+                        placeholder="Please provide suspicious activities associated with this particular website..."
+                        required></textarea>
+
+                    </div>
+
+                    <button type="submit" class="mx-2 row mb-3 btn btn-primary btn-lg mt-2">Submit</button>
+                  </div>
+                </form>
+
+              </div>
+
+              <%}%>
+
+                <div class="carousel-item" data-bs-interval="20000">
+                  <div id="data"class="element" >
+
+                    <h2>
+                      The Biggest Database&nbsp;of&nbsp;Scams
+                      
+                    </h2>
+
+                    <div  class="flex-container-group">
+
+                      <div class="group-cards" >
+
+                        <a href="#data">
+                          <div class="cards" >
+                            <i class="fa-solid fa-database"></i>
+                            <p style="margin-left:9px;">92,938,421&nbsp;Sites in&nbsp;Database</p>
+                          </div>
+                        </a>
+
+                        <a href="#data">
+                          <div class="cards">
+                            <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                            <p  style="margin-left:14px;">10,24,012 Scam&nbsp;Websites</p>
+                          </div>
+                        </a>
+
+                        <a href="#data">
+                          <div class="cards">
+                            <i class="fa-solid fa-eye"></i>
+                            <p style="margin-left:14px;">82,382&nbsp;Visitors Last Day</p>
+                          </div>
+                        </a>
+
+                      </div>
+
+                      <div class="group-cards">
+
+                        <a href="#data">
+                          <div class="cards">
+                            <i class="fa-sharp fa-solid fa-magnifying-glass-arrow-right"></i>                
+                            <p style="margin-left:11px;">1,20,488&nbsp;Sites Scanned&nbsp;Today</p>
+                          </div>
+                        </a>
+
+                        <a href="#data">
+                          <div class="cards">
+                            <i class="fa-solid fa-bug"></i>
+                            <p style="margin-left:10px;">12,090&nbsp;Scams Reported&nbsp;Today</p>
+                          </div>
+                        </a>
+
+                        <a href="#data">
+                          <div class="cards">
+                            <i class="fa-solid fa-users"></i>
+                            <p style="margin-left:6px;">82,828,591&nbsp;Users Last&nbsp;Month</p>
+                          </div>
+                        </a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+
+
+                <div class="carousel-item" data-bs-interval="30000">
+                  <div id="reliable-sites"class="element" >
+
+                    <h2>
+                      Reliable&nbsp;Sites
+                      
+                    </h2>
+
+                    <div  class="flex-container-group">
+
+                      <div class="group-cards" >
+
+                        <a href="#data">
+                          <div class="cards" >
+                            <i class="fa-solid fa-basket-shopping"></i>
+                            <p >Online Shopping</p>
+                          </div>
+                        </a>
+
+                        <a href="#data">
+                          <div class="cards">
+                            <i class="fa-regular fa-credit-card"></i>
+                            <p >Financial Sites</p>
+                          </div>
+                        </a>
+
+                        <a href="#data">
+                          <div class="cards">
+                            <i class="fa-solid fa-venus-mars"></i>
+                            <p >Adult&nbsp;& Dating&nbsp;Sites</p>
+                          </div>
+                        </a>
+
+                      </div>
+
+                      <div class="group-cards">
+
+                        <a href="#data">
+                          <div class="cards">
+                            <i class="fa-solid fa-user-tie"></i>
+                            <p style="margin-left:17px;" >Employment Sites</p>
+                          </div>
+                        </a>
+
+                        <a href="#data">
+                          <div class="cards">
+                            <i class="fa-solid fa-film"></i>
+                            <p style="margin-left:12px;">Entertainment Sites</p>
+                          </div>
+                        </a>
+
+                        <a href="#data">
+                          <div class="cards">
+                            <i style="margin-top:5.5px;margin-bottom:9.7px;" class="bi bi-shield-fill-check"></i>
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-shield-fill-check" viewBox="0 0 25 25">
+                              <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm2.146 5.146a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647z"/>
+                            </svg> -->
+                              <p >All&nbsp;Reliable Sites</p>
+                          </div>
+                        </a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+
+        </div>
+
+        <div id="other">
+          <H1>hiieieiei</H1>hello
+        </div>
+
+
+
+
+
+      </section>
+
+      <script src="/js/base64url.js"></script>
+
+
+      <script src="/js/report_links.js"></script>
+
+      <!-- 
+
+
+<div class="row row-cols-1 row-cols-2 g-4">
+  <div class="col">
+    <div class="card"  style="border:4px solid yellow; ">
+      <div class="card-body" style="border:4px solid blue; ">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">With </p>
+        <a href="#" class="btn btn-primary">Button</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">With.</p>
+        <a href="#" class="btn btn-primary">Button</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">With supporting text below </p>
+        <a href="#" class="btn btn-primary">Button</a>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div style="width:40%" class="card ">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">With supporting </p>
+        <a href="#" class="btn btn-primary">Button</a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col">
+    <div style="width:40%" class="card ">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">hi</p>
+        <a href="#" class="btn btn-primary">Button</a>
+      </div>
+    </div>
+  </div>
+
+<div class="col">
+  <div style="width:40%" class="card">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">With supporting text </p>
+      <a href="#" class="btn btn-primary">Button</a>
+    </div>
+  </div>
+</div> -->

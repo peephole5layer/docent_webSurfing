@@ -2,7 +2,12 @@
 
 
 
-<section id="signup-page">
+
+<section id="signin-page">
+<!--eh-->
+
+
+
 
     <header>
 
@@ -16,9 +21,6 @@
     </header>
 
 
-        
-    <form  id="signup-form">
-=======
     <form action="/users/create-session" method="POST" id="signin-form">
 
 
@@ -27,44 +29,14 @@
 
 
 
-
             <div class="p-2 row mb-3 d-flex flex-nowrap">
-            <label for="f-name" class="col-sm-2 col-form-label ">First&nbsp;Name&nbsp;:</label>
-            <div class="col-sm-10" id="check" style="width:140px">
 
-                <input  type="text" class="form-control mg-left-5" placeholder="First name" aria-label="First name" id="f-name">
-
-
-            </div>
-            
-            </div>
-            <div class="p-2 row mb-3 d-flex flex-nowrap">
-                <label for="l-name" class="col-sm-2 col-form-label">Last&nbsp;Name&nbsp;:</label>
-                <div class="col-sm-10" style="width:140px">
-
-                    <input   type="text" class="form-control  mg-left-5" placeholder="Last name" aria-label="Last name" id="l-name">
-
-                </div>
-            
-            </div>
-        
-            <div class="p-2 row mb-3 d-flex flex-nowrap" >
-            <label for="inputEmail3" class="col-sm-2 col-form-label">Email&nbsp;:</label>
-            <div class="col-sm-10" style="width:140px" >
-                <input type="email" class="form-control mg-left-5" id="inputEmail3" placeholder="xyz@123.com">
-            </div>
-            </div>
-            <div class="p-2 row mb-3 d-flex flex-nowrap">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">Password&nbsp;:</label>
-            <div class="col-sm-10" style="width:140px">
-                <input  type="password" class="form-control  mg-left-5" id="inputPassword3" placeholder="********">
-=======
-            <div class="p-2 row mb-3 d-flex flex-nowrap">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Email&nbsp;&nbsp;&nbsp;&emsp;&ensp;:</label>
                 <div class="col-sm-10" style="width:140px">
                     <input name="email" type="email" class="form-control mg-left-5" id="inputEmail3"
                         placeholder="xyz@123.com" required>
                 </div>
+
 
             </div>
             <div class="p-2 row mb-3 d-flex flex-nowrap">
@@ -84,7 +56,20 @@
             </div>
 
             <button type="button" class="mx-2 row mb-3 btn btn-primary btn-lg mt-2">Sign Up</button>
-=======
+
+            <div id="signin-submit-container">
+                <div style="width:106px;"id="signin-button">
+                    <button type="submit" class="mx-2 row mb-3 btn btn-primary btn-lg mt-2">Sign in</button>
+                 </div>
+
+
+                 <div style="width:140px;" id="forgot-password"><a href="/users/forgot-password">Forgot&nbsp;Password?</a></div>
+
+
+
+
+            </div>
+
             <div id="signin-submit-container">
                 <div style="width:106px;"id="signin-button">
                     <button type="submit" class="mx-2 row mb-3 btn btn-primary btn-lg mt-2">Sign in</button>
@@ -96,7 +81,6 @@
 
 
             </div>
-
 
         </div>
 
@@ -115,13 +99,18 @@
 
         <div class="line-break"></div>
 
+
         <p id="x2">x</p>
 
-        <!-- <span>x</span> -->
-
+ 
     </div>
 
 
+
+
+
+
+  
 
 
     <div id="google-signin" class="d-grid gap-2">
@@ -131,6 +120,8 @@
              Continue with Google</button>
     </div>
 
+
+    
 
 
 

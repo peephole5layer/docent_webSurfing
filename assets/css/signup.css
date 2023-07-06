@@ -4,7 +4,10 @@
   flex-wrap: nowrap; 
   margin:auto;
   width:390px;
-  margin-top:3.4%;
+
+  margin-top:2%;
+
+
 
 }
 
@@ -69,7 +72,7 @@
 
 /*margins*/
 .mg-left-5{
-    margin-left:5rem;
+    margin-left:3rem;
 } 
 
 
@@ -148,7 +151,7 @@
   } 
 
   #signup-page header button{
-    width:230px;
+    width:260px;
     font-size:20px;
     
   }

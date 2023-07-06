@@ -1,13 +1,122 @@
-footer{
-    position:relative;
-    
-    bottom: -50vh;   
-    color: olivedrab;
-    display: flex;
-    background-color: lightgrey;
-    align-items: center;
-    height : 70px; 
-    justify-content: center;
+.footer{
+    background: url(../img/footer-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: cover;
+ }
+ 
+ .footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
+    gap: 1rem;
+    margin-top: 11%;
+ }
+ 
+ .footer .box-container .box h3{
+    color:var(--white);
+    font-size: 2rem;
+    padding-bottom: 2rem;
+ }
+ 
+ .footer .box-container .box a{
+    color:var(--white);
+    font-size: 1rem;
+    padding-bottom: 1.5rem;
+    display: block;
+ }
+ 
+ .footer .box-container .box a i{
+    color:var(--main-color);
+    padding-right: .5rem;
+    transition: .2s linear;
+ }
+ 
+ .footer .box-container .box a:hover i{
+    padding-right: 2rem;
+ }
+ 
+ .footer .credit{
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 1rem;
+    border-top: .1rem solid var(--light-white);
+    font-size: 1rem;
+    color:var(--white);
+ }
+ 
+ .footer .credit span{
+    color:var(--main-color);
+ }
+ 
+ /* ====================== Responsive Design ========================== */
+@media (max-width: 991px) {
+   .navigation {
+     left: -300px;
+   }
+   .navigation.active {
+     width: 300px;
+     left: 0;
+   }
+   .main {
+     width: 100%;
+     left: 0;
+   }
+   .main.active {
+     left: 300px;
+   }
+   .cardBox {
+     grid-template-columns: repeat(2, 1fr);
+   }
+ }
+ 
+ @media (max-width: 768px) {
+   .details {
+     grid-template-columns: 1fr;
+   }
+   .recentOrders {
+     overflow-x: auto;
+   }
+   .status.inProgress {
+     white-space: nowrap;
+   }
+ }
+ 
+ @media (max-width: 480px) {
+   .cardBox {
+     grid-template-columns: repeat(1, 1fr);
+   }
 
-   
-}
+   .box h3{
+      font-size: 15px;
+   }
+   .cardHeader h2 {
+     font-size: 10px;
+   }
+   .user {
+     min-width: 40px;
+   }
+   .navigation {
+     width: 100%;
+     left: -100%;
+     z-index: 1000;
+   }
+   .navigation.active {
+     width: 100%;
+     left: 0;
+   }
+   .toggle {
+     z-index: 10001;
+   }
+   .main.active .toggle {
+     color: #fff;
+     position: fixed;
+     right: 0;
+     left: initial;
+   }
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 

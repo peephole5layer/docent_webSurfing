@@ -19,7 +19,11 @@
 
 #admin_container {
   min-height: 100vh;
-  overflow-x: hidden;
+  position:relative;
+  left:0px;
+  border:2px solid red;
+  
+  /* overflow-x: hidden; */
 }
 
 .container {

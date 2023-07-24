@@ -1,4 +1,7 @@
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="/css/home.css">
+
 
 
 <% if(Success=="true" ){ %>
@@ -66,7 +69,7 @@
 
             <div class="carousel-item active" data-bs-interval="10000">
 
-              <div class="element"  id="about-scams-container">
+              <div class="element" id="about-scams-container">
 
                 <h2>
                   Learn about Scams
@@ -182,19 +185,19 @@
               <%}%>
 
                 <div class="carousel-item" data-bs-interval="20000">
-                  <div id="data"class="element" >
+                  <div id="data" class="element">
 
                     <h2>
                       The Biggest Database&nbsp;of&nbsp;Scams
-                      
+
                     </h2>
 
-                    <div  class="flex-container-group">
+                    <div class="flex-container-group">
 
-                      <div class="group-cards" >
+                      <div class="group-cards">
 
                         <a href="#data">
-                          <div class="cards" >
+                          <div class="cards">
                             <i class="fa-solid fa-database"></i>
                             <p style="margin-left:9px;">92,938,421&nbsp;Sites in&nbsp;Database</p>
                           </div>
@@ -203,7 +206,7 @@
                         <a href="#data">
                           <div class="cards">
                             <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
-                            <p  style="margin-left:14px;">10,24,012 Scam&nbsp;Websites</p>
+                            <p style="margin-left:14px;">10,24,012 Scam&nbsp;Websites</p>
                           </div>
                         </a>
 
@@ -220,7 +223,7 @@
 
                         <a href="#data">
                           <div class="cards">
-                            <i class="fa-sharp fa-solid fa-magnifying-glass-arrow-right"></i>                
+                            <i class="fa-sharp fa-solid fa-magnifying-glass-arrow-right"></i>
                             <p style="margin-left:11px;">1,20,488&nbsp;Sites Scanned&nbsp;Today</p>
                           </div>
                         </a>
@@ -248,35 +251,35 @@
 
 
                 <div class="carousel-item" data-bs-interval="30000">
-                  <div id="reliable-sites"class="element" >
+                  <div id="reliable-sites" class="element">
 
                     <h2>
                       Reliable&nbsp;Sites
-                      
+
                     </h2>
 
-                    <div  class="flex-container-group">
+                    <div class="flex-container-group">
 
-                      <div class="group-cards" >
+                      <div class="group-cards">
 
                         <a href="#data">
-                          <div class="cards" >
+                          <div class="cards">
                             <i class="fa-solid fa-basket-shopping"></i>
-                            <p >Online Shopping</p>
+                            <p>Online Shopping</p>
                           </div>
                         </a>
 
                         <a href="#data">
                           <div class="cards">
                             <i class="fa-regular fa-credit-card"></i>
-                            <p >Financial Sites</p>
+                            <p>Financial Sites</p>
                           </div>
                         </a>
 
                         <a href="#data">
                           <div class="cards">
                             <i class="fa-solid fa-venus-mars"></i>
-                            <p >Adult&nbsp;& Dating&nbsp;Sites</p>
+                            <p>Adult&nbsp;& Dating&nbsp;Sites</p>
                           </div>
                         </a>
 
@@ -287,7 +290,7 @@
                         <a href="#data">
                           <div class="cards">
                             <i class="fa-solid fa-user-tie"></i>
-                            <p style="margin-left:17px;" >Employment Sites</p>
+                            <p style="margin-left:17px;">Employment Sites</p>
                           </div>
                         </a>
 
@@ -304,7 +307,7 @@
                             <!-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-shield-fill-check" viewBox="0 0 25 25">
                               <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm2.146 5.146a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647z"/>
                             </svg> -->
-                              <p >All&nbsp;Reliable Sites</p>
+                            <p>All&nbsp;Reliable Sites</p>
                           </div>
                         </a>
 
@@ -330,9 +333,142 @@
 
         </div>
 
-        <div id="other">
-          <H1>hiieieiei</H1>hello
-        </div>
+        <section id="reports-container">
+
+          <header>
+            Scam Alert
+          </header>
+
+          <div>
+
+            <button onclick="window.location.href='/report/blacklisted-urls';">
+
+              Reported Sites
+
+            </button>
+
+          </div>
+        </section>
+        <section id="report-sites-container">
+          <header>
+            Report Fake Sites
+          </header>
+
+          <div>
+
+            <button id="report-site-btn" data-user="<%=locals.user%>" >
+
+              Report a Site
+
+            </button>
+
+          </div>
+
+          <div id="login-message">
+            <p>
+              You Need To Login First!!!
+            </p>
+
+          </div>
+
+
+
+          <div id="submit-report-container">
+
+            <h1 class="heading-title">Fill Details</h1>
+
+            <form action="/report/blacklist/<%=locals.user.id%>/challenge" method="post" id="book-form">
+
+              <div id="flex">
+                <div class="inputBox">
+                  <span> name </span>
+                  <input type="text" placeholder="Enter url" name="name" value="<%=locals.user.fname%>&nbsp;<%=locals.user.lname%>" disabled>
+                </div>
+                <div class="inputBox">
+                  <span>email :</span>
+                  <input type="email" placeholder="enter your email" name="email" value="<%=locals.user.email%>" disabled>
+                </div>
+                <div class="inputBox">
+                  <span> Site Url : </span>
+                  <input type="url" placeholder="Enter url" name="url">
+                </div>
+                <div class="inputBox">
+                  <span>Adhaar Number :</span>
+                  <input type="text" placeholder="enter your Adhaar Number" name="adhaar">
+                </div>
+
+                <div class="inputBox">
+                  <span>address :</span>
+                    <textarea name="about" id="" rows="7" cols="2"></textarea>
+                </div>
+
+
+              </div>
+
+              <div id="btn-container">
+
+                <input type="submit" value="submit" class="btn">
+
+
+              </div>
+
+
+
+            </form>
+
+
+          </div>
+
+
+        </section>
+
+        <section id="blogs">
+          <h1 class="heading-title"> For your Safety and Curiosity Docent Blogs </h1>
+
+          <div class="box-container">
+
+            <div class="box">
+              <div class="image">
+                <img src="/img/s3.jpg" alt="">
+              </div>
+              <div class="content">
+                <h3>Man&nbsp;in&nbsp;the&nbsp;middle&nbsp;attack</h3>
+                <p>Shield Yourself from Man in the middle attack .......</p>
+                <a href="book.html" class="btn">Read</a>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="image">
+                <img src="/img/s2.jpg" alt="">
+              </div>
+              <div class="content">
+                <h3>Ransomeware&nbsp;Attacks</h3>
+                <p>Know how to be safe from Ransomeware .. *******</p>
+                <a href="book.html" class="btn">Read</a>
+              </div>
+            </div>
+
+            <div class="box">
+              <div class="image">
+                <img src="/img/s1.jpg" alt="">
+              </div>
+              <div class="content">
+                <h3>Social Engineering</h3>
+                <p>How to protect yourself from social engineering ? ...</p>
+                <a style="display:inline-block" href="book.html" class="btn">Read</a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- <div class="load-more"> <a href="places.html" class="btn">load more</a> </div> -->
+          <button class="custom-btn" onclick="window.location.href='/blog';"> Load More </button>
+
+
+
+
+        </section>
 
 
 
@@ -340,10 +476,18 @@
 
       </section>
 
+      <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
       <script src="/js/base64url.js"></script>
 
 
+
+
       <script src="/js/report_links.js"></script>
+      <script src="/js/home.js"> </script>
+
+
 
       <!-- 
 

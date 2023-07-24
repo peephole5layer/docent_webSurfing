@@ -1,3 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+:root{
+   --main-color:#d36a9f;
+   --black:#222;
+   --white:#fff;
+   --light-black:#777;
+   --light-white:#fff9;
+   --dark-bg:rgba(0,0,0,.7);
+   --light-bg:#eee;
+   --border:.1rem solid var(--black);
+   --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+   --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+}
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   text-transform: capitalize;
+}
+
+
 #home {
    
     position : relative;
@@ -7,6 +32,7 @@
 
 #carouselExampleDark{
     background-color:#06c7aa22;
+    height:540px
 
 
 
@@ -217,10 +243,395 @@
     color : rgba(255, 0, 0, 0.781);
 }
 
-#other{
-    position:relative;
-    top:15vh;
+
+
+/* report sections */
+
+
+#reports-container{
+    /* background: linear-gradient(to left top, white 30%,white,rgba(0, 0, 0, 0.786)); */
+    background-image: linear-gradient(to right top, white 30%,white,rgba(0, 0, 0, 0.216));
+   
 }
+
+#reports-container,#report-sites-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    height:auto;    
+}
+
+
+#report-sites-container{
+    /* background-image: linear-gradient(to left bottom, white 30%,white ,rgba(0, 0, 0, 0.785)); */
+    background-image: linear-gradient(to right bottom, white 30%,white ,rgba(0, 0, 0, 0.216));
+    flex-direction: column;
+    margin-top:-39px;
+}
+
+#reports-container header,#report-sites-container header{
+    margin-top: 55px;;
+    font-size:2.4rem;
+    text-align: center;
+    font-family: cursive;
+    font-weight: bold;
+   
+}
+
+#reports-container header::first-letter,#report-sites-container header::first-letter{
+    font-size:4.1rem;
+}
+
+#reports-container div,#report-sites-container div{
+    display: flex;
+    justify-content: center;
+    height: 245px;
+}
+
+#reports-container div button,#report-sites-container div button{
+    margin:auto;
+    margin-top:50px;
+    width:700px;
+    height:70px;
+    background-color :  #01437d;
+    
+    border-radius: 7px;
+    color:white;
+    font-size:1.3rem;
+
+}
+
+#reports-container div button:hover,#report-sites-container div button:hover{
+    background-color: red;
+}
+
+
+#report-sites-container #login-message{
+
+    display: none;
+
+    font-size:1.16rem;
+   
+    width:100%;
+    height:50px;
+    margin-top:-30px;
+  
+}
+
+#login-message p{
+    border:2px solid red;
+    height:50px;
+    width:100%;
+    text-align: center;
+    background-color: red;
+    color :white;
+    padding:8px;
+}
+
+
+
+#report-sites-container #submit-report-container{
+    display:flex;
+    flex-direction: column;
+    display: none;
+    height:630px;
+    border : 2px solid red;
+}
+
+
+
+
+
+
+
+
+
+#submit-report-container #book-form{
+
+    margin:auto;
+    margin-top:0px;
+
+    
+
+
+  
+    padding:2rem;
+    background: var(--light-bg);
+    /* background-color: red;; */
+    height:450px;
+    width:75%;
+ }
+
+ #submit-report-container .heading-title{
+    font-size:2.3rem;
+
+ }
+ 
+ #submit-report-container #book-form #flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+   
+   
+  /* gap:2rem;
+     gap:0rem; */
+    /* border: 2px solid red; */
+    width:100%;
+    height: 100%;
+    
+ }
+ 
+ #submit-report-container #book-form #flex .inputBox{
+    display:flex;
+    flex-direction: column;
+    /* flex:1 1 41rem; */
+    width:47%;
+    height:90px;
+ }
+
+ 
+ #submit-report-container #book-form #flex .inputBox textarea{
+    border:2px solid black;
+ }
+
+
+ #submit-report-container #book-form #flex .inputBox:nth-child(5){
+    width:97%;
+    height:105px;
+  
+ }
+ 
+ #submit-report-container #book-form #flex .inputBox input{
+    /* width: 100%; */
+   
+    height: 20px;
+    padding:1.2rem 1.4rem;
+    font-size: 0.92rem;
+    color:var(--light-black);
+    text-transform: none;
+    border:var(--border);
+ }
+ 
+ #submit-report-container #book-form #flex .inputBox input:focus{
+    background: var(--black);
+    color:var(--white);
+ }
+ 
+ #submit-report-container #book-form #flex .inputBox input:focus::placeholder{
+    color:var(--light-white);
+ }
+ 
+ #submit-report-container #book-form #flex .inputBox span{
+    font-size: 1.16rem;
+    color:var(--light-black);
+ }
+/*  
+ #submit-report-container #book-form .btn{
+    margin-top: -2rem;
+    margin: auto;;
+ } */
+
+ 
+
+#btn-container{
+   
+    display: flex;
+    justify-content: center;;
+}
+
+#btn-container .btn{
+    margin-top:15px;
+    width:150px;
+    height:50px;
+    background-color: black;
+    color:white;
+}
+
+#btn-container .btn:hover{
+    color:black;
+    background-color: whitesmoke;
+    border : 1px solid black;
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*blogs*/
+
+/* #blogs{
+    position:relative;
+   
+    height:600px;
+    margin-bottom:400px;
+    background-image: linear-gradient(#eaeaea98 65%,#d0d0d0af 80%,#bbbbbb7c 100%);
+
+} */
+
+
+#blogs header span{
+    display:inline-block;
+}
+
+#blogs header span::first-letter{
+    font-size:2.65rem;
+}
+
+
+#blogs {
+    /* background: var(--light-bg); */
+    background-image: linear-gradient(#fffffffb 60%,#d0d0d0af 80%,#bbbbbb7c 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+
+ }
+
+ 
+.heading-title{
+    margin-top:55px;
+    text-align: center;
+    margin-bottom: 40px;;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    font-family: cursive;
+   
+    color:var(--black);
+ }
+ 
+ 
+ #blogs .box-container{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    /* position: relative; */
+    top:80px;
+    margin-bottom: 20px;;
+
+  
+
+ }
+ 
+ #blogs .box-container .box{
+    border:var(--border);
+    box-shadow: var(--box-shadow);
+    background: var(--white);
+    /* width:390px; */
+    width:26.2vw;
+    height:410px;
+ }
+ 
+ #blogs .box-container .box:hover .image img{
+    transform: scale(1.1);
+ }
+ 
+  #blogs .box-container .box .image{
+    height: 50%;
+    width:100%;
+    overflow: hidden;
+ } 
+ 
+ #blogs .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+ }
+ 
+ #blogs .box-container .box .content{
+    padding:2rem;
+    text-align: center;
+    line-height: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+ }
+ 
+ #blogs .box-container .box .content h3{
+    margin-top:-16px;
+    font-size: 1.09rem;
+    font-weight: bold;
+    color:var(--black);
+
+    /* color:red; */
+ }
+ 
+ #blogs .box-container .box .content p{
+    margin-top:-10px;
+    font-size: 0.84rem;
+    color:var(--light-black);
+    line-height: 2;
+    padding:1rem 0;
+    font-weight: 500;
+ }
+
+ #blogs .box-container .box .content .btn{
+    margin-top:-8px;
+    background-color: black;
+    color : white;
+
+ }
+ 
+ #blogs .load-more{
+    position: relative;
+    text-align: center;
+    margin-top: 2rem;
+
+ }
+
+ .custom-btn{
+
+    position: relative;
+    top:7px;
+    background-color: black;
+    color:white;
+
+    width:160px;
+    height:45px;
+    border-radius: 5px;
+    padding:13px;
+    margin:auto;
+    transition: 0.35s ease-in-out;
+ }
+ .custom-btn:hover{
+    background-color:white;
+    color: black;
+    font-weight: bold;
+    border:0.9px solid black;
+
+   
+ }
+
+ #blogs .box-container .box .content .btn:hover{
+    background-color: lightgray;
+    color: black;
+    font-weight: bold;
+    border:0.1px solid black;
+ }
+
+
+
+
 
 /*margins*/
 .mg-left-5{
@@ -228,6 +639,100 @@
 } 
   
 /*media query*/
+
+@media only screen and (max-width: 980px){
+
+     .heading-title{
+        font-size:2.03rem;
+    } 
+
+    /* #reports-container header::first-letter,#report-sites-container header::first-letter{
+        font-size:
+    } */
+
+        
+    #blogs .box-container .box{
+        width:300px;
+        height:390px;
+    }
+
+    
+    
+    #blogs .box-container{
+        flex-wrap: wrap-reverse;
+        justify-content: flex-start;
+        width:650px;
+        margin:auto;
+    }
+
+    .custom-btn{
+        top:25px;
+     }
+
+        
+    #reports-container div button,#report-sites-container div button{
+      
+        width:69vw;
+    }
+
+     
+
+    
+
+}
+
+
+@media only screen and (max-width:720px){
+
+    .heading-title{
+        font-size:1.5rem;
+    } 
+
+    #reports-container header,#report-sites-container header{
+        font-size:1.9rem;
+    }
+
+    #reports-container header::first-letter,#report-sites-container header::first-letter{
+        font-size: 3.5rem;
+    }
+
+
+
+
+
+
+
+
+    #blogs .box-container .box{
+        width:65vw;
+        height:390px;
+    }
+
+    
+    
+    
+    #blogs .box-container{
+        width:470px;
+        justify-content: center;
+
+    
+
+    }
+    #blogs .box-container .box .content p{
+        font-size: 2.4vw;
+     }
+
+          
+    #reports-container div button,#report-sites-container div button{
+      
+        width:74.5vw;
+    }
+
+     
+    
+
+    
+}
 @media only screen and (max-width:480px){
 
 
@@ -369,4 +874,59 @@
         font-size:1.48rem;
     }
 
+
+    
+    .heading-title{
+        font-size:1.19rem;
+    } 
+
+    #reports-container header,#report-sites-container header{
+        font-size:1.4rem;
+    }
+
+    #reports-container header::first-letter,#report-sites-container header::first-letter{
+        font-size: 2.8rem;
+    }
+
+           
+    #reports-container div button,#report-sites-container div button{
+        font-size:1.2rem;
+      
+        width:81vw;
+    }
+
+
+    #blogs .box-container .box{
+        width:88%;
+        height:410px;
+    }
+
+    
+    #blogs .box-container{
+        width:100%;
+    }
+
+    #blogs .box-container .box .content h3{
+        margin-top:-16px;
+        font-size: 1.05rem;
+        font-weight: bold;
+        color:var(--black);
+    
+        /* color:red; */
+     }
+
+    #blogs .box-container .box .content p{
+        font-size: 3.52vw;
+        font-weight: 500;
+     }
+    
+    
+
+
 }  
+
+#submit-report-container{
+    display: none;
+    border:none;
+
+}

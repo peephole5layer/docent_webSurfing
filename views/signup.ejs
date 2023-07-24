@@ -1,72 +1,80 @@
+<link rel="stylesheet" href="/css/signin_signup.css">
 <link rel="stylesheet" href="/css/signup.css">
 
 
 
-<% if(Message!=""){ %>
+<% if(Message!="" ){ %>
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="check-circle-fill" viewBox="0 0 16 16">
-          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+            <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
         </symbol>
         <symbol id="info-fill" viewBox="0 0 16 16">
-          <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+            <path
+                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
         </symbol>
         <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
-          <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            <path
+                d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
         </symbol>
-      </svg>
+    </svg>
 
 
     <div class="alert alert-danger alert-dismissible d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-        
-            <%= Message %>
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:">
+            <use xlink:href="#exclamation-triangle-fill" />
+        </svg>
+
+        <%= Message %>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        
+
     </div>
 
-<%} %>
+    <%} %>
 
 
+<!-- 
+        <section id="signup-page">
 
-<section id="signup-page" >
+            <header>
 
-    <header >
-
-        <button type="button" class="btn btn-success" > Docent Websurfing</button>
-        <div class="spinner-border"  role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
-        <div class="spinner-grow"  role="status">
-            <span class="visually-hidden">Loading...</span>
-        </div>
-
-     </header>
-
-    <form action="/users/create-user" method="POST" id="signup-form">
-
-        <div class="d-flex flex-column flex" >
-
-            <div class="p-2 row mb-3 d-flex flex-nowrap">
-            <label for="f-name" class="col-sm-2 col-form-label ">First&nbsp;Name&nbsp;:</label>
-            <div class="col-sm-10" id="check" style="width:140px">
-
-                <input  name="fname" type="text" class="form-control mg-left-5" placeholder="First name" aria-label="First name" id="f-name" required>
-
-
-            </div>
-            
-            </div>
-            <div class="p-2 row mb-3 d-flex flex-nowrap">
-                <label for="l-name" class="col-sm-2 col-form-label">Last&nbsp;Name&nbsp;:</label>
-                <div class="col-sm-10" style="width:140px">
-
-                    <input   name="lname" type="text" class="form-control  mg-left-5" placeholder="Last name" aria-label="Last name" id="l-name" required>
-
+                <button type="button" class="btn btn-success"> Docent Websurfing</button>
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
                 </div>
-            
-            </div>
-<!--             
+                <div class="spinner-grow" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+
+            </header>
+
+            <form action="/users/create-user" method="POST" id="signup-form">
+
+                <div class="d-flex flex-column flex">
+
+                    <div class="p-2 row mb-3 d-flex flex-nowrap">
+                        <label for="f-name" class="col-sm-2 col-form-label ">First&nbsp;Name&nbsp;:</label>
+                        <div class="col-sm-10" id="check" style="width:140px">
+
+                            <input name="fname" type="text" class="form-control mg-left-5" placeholder="First name"
+                                aria-label="First name" id="f-name" required>
+
+
+                        </div>
+
+                    </div>
+                    <div class="p-2 row mb-3 d-flex flex-nowrap">
+                        <label for="l-name" class="col-sm-2 col-form-label">Last&nbsp;Name&nbsp;:</label>
+                        <div class="col-sm-10" style="width:140px">
+
+                            <input name="lname" type="text" class="form-control  mg-left-5" placeholder="Last name"
+                                aria-label="Last name" id="l-name" required>
+
+                        </div>
+
+                    </div>
+                    <!--             
             <div class="p-2 row mb-3 d-flex flex-nowrap">
                 <label  for="adhaar" class="col-sm-2 col-form-label ">Adhaar&nbsp;Number&nbsp;:</label>
                 <div class="col-sm-10" id="check">
@@ -75,53 +83,126 @@
                 </div>
                 
               </div>  -->
-        
-            <div class="p-2 row mb-3 d-flex flex-nowrap" >
-            <label for="inputEmail3" class="col-sm-2 col-form-label">Email&nbsp;:</label>
-            <div class="col-sm-10" style="width:140px" >
-                <input type="email" name="email" class="form-control mg-left-5" id="inputEmail3" placeholder="xyz@123.com" required>
-            </div>
-            </div>
-            <div class="p-2 row mb-3 d-flex flex-nowrap">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">Password&nbsp;:</label>
-            <div class="col-sm-10" style="width:140px">
-                <input  type="password" name="password" class="form-control  mg-left-5" id="inputPassword3" placeholder="********" required>
-            </div>
-            </div>
 
-            <div class="p-2 row mb-3 d-flex flex-nowrap">
-                <label for="confirm-password3" class="col-sm-2 col-form-label">Confirm&nbsp;Password&nbsp;:</label>
-                <div class="col-sm-10" style="width:140px">
-                    <input  type="password" name="confirm_password"class="form-control mg-left-5" id="confirm-password3" placeholder="********" required>
-                </div>
-            </div>
 
-            <button type="submit" class="mx-2 row mb-3 btn btn-primary btn-lg mt-2">Sign Up</button>
-        </div>  
-    </form>
-
-    <div id="container">
-
-        <div id="line-break"> </div> 
-      
-        <p>Or</p>
-
-    </div>
-
-   
-
-    <div id="google-signin" class="d-grid gap-2">
-        <button onclick="window.location.href='/users/auth/google';" class="btn btn-primary" type="button"><i class="fa-brands fa-google fa-fade"></i> Continue with Google</button>
-    </div> 
-
-<!--   
+            <!--   
 <div id = "trial">
 
 </div>  -->
 
 
 
-</section>
+        <!-- </section> -->
+
+
+        <link rel="stylesheet" href="/css/signup.css">
+
+
+
+
+        <section id="signup-page">
+            <!--eh-->
+
+
+
+
+            <header>
+
+                <h1>Docent&nbsp;Websurfing</h1>
+                <div class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="spinner-grow" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </header>
+
+
+            <form action="/users/create-user" method="POST" id="signup-form">
+
+                <div class="d-flex flex-column flex">
+
+                    <div class="p-2 row mb-3 d-flex flex-nowrap">
+                        <label for="f-name" class="col-sm-2 col-form-label ">First&nbsp;Name&nbsp;:</label>
+                        <div class="col-sm-10" id="check" style="width:140px">
+
+                            <input name="fname" type="text" class="form-control mg-left-5" placeholder="First name"
+                                aria-label="First name" id="f-name" required>
+
+
+                        </div>
+
+                    </div>
+                    <div class="p-2 row mb-3 d-flex flex-nowrap">
+                        <label for="l-name" class="col-sm-2 col-form-label">Last&nbsp;Name&nbsp;:</label>
+                        <div class="col-sm-10" style="width:140px">
+
+                            <input name="lname" type="text" class="form-control  mg-left-5" placeholder="Last name"
+                                aria-label="Last name" id="l-name" required>
+
+                        </div>
+
+                    </div>
+                    <!--             
+            <div class="p-2 row mb-3 d-flex flex-nowrap">
+                <label  for="adhaar" class="col-sm-2 col-form-label ">Adhaar&nbsp;Number&nbsp;:</label>
+                <div class="col-sm-10" id="check">
+
+                    <input name="adhaar" type="number" class="form-control mg-left-5" placeholder="xxxxxxx" aria-label="Adhaar number" id="adhaar" required>
+                </div>
+                
+              </div>  -->
+
+                    <div class="p-2 row mb-3 d-flex flex-nowrap">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Email&nbsp;:</label>
+                        <div class="col-sm-10" style="width:140px">
+                            <input type="email" name="email" class="form-control mg-left-5" id="inputEmail3"
+                                placeholder="xyz@123.com" required>
+                        </div>
+                    </div>
+                    <div class="p-2 row mb-3 d-flex flex-nowrap">
+                        <label for="inputPassword3" class="col-sm-2 col-form-label">Password&nbsp;:</label>
+                        <div class="col-sm-10" style="width:140px">
+                            <input type="password" name="password" class="form-control  mg-left-5" id="inputPassword3"
+                                placeholder="********" required>
+                        </div>
+                    </div>
+
+                    <div  class="p-2 row mb-3 d-flex flex-nowrap">
+                        <label id="confirm-pass" for="confirm-password3"
+                            class="col-sm-2 col-form-label">Confirm&nbsp;Password&nbsp;:</label>
+                        <div class="col-sm-10" style="width:140px">
+                            <input type="password" name="confirm_password" class="form-control mg-left-5"
+                                id="confirm-password3" placeholder="********" required>
+                        </div>
+                    </div>
+                    <div id="signup-submit-container">
+                        <div  id="signup-button">
+                            <button type="submit" >Sign up</button>
+                         </div>
+        
+                    </div>
+                </div>
+            </form>
+
+
+
+            <div id="divider-container">
+
+                <!-- <span>x</span> -->
+                <p id="x1">x</p>
+
+                <div class="line-break"> </div>
+
+                <p>x&nbsp;&nbsp;<span>or</span>&nbsp;&nbsp;x</p>
+
+                <div class="line-break"></div>
+
+
+                <p id="x2">x</p>
+
+
+            </div>
 
 
 
@@ -131,4 +212,23 @@
 
 
 
+            <div id="google-signin" class="d-grid gap-2">
 
+                <button onclick="window.location.href='/users/auth/google';" class="btn btn-primary" type="button">
+                    <i class="fa-brands fa-google fa-fade"></i>
+                    Continue with Google</button>
+            </div>
+
+
+
+
+
+
+            <!--   
+<div id = "trial">
+
+</div>  -->
+
+
+
+        </section>

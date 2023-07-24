@@ -12,195 +12,195 @@ var base64url = require('base64url');
 
 
 
-module.exports.blackList = async function(req,res,next){
+// module.exports.blackList = async function(req,res,next){
 
-    console.log("hi");
+//     console.log("hi");
 
-    try{
+//     try{
 
-        await passport.authenticate('webauthn',{failureMessage:true,failWithError:true},async function(err,currUser){
+//         await passport.authenticate('webauthn',{failureMessage:true,failWithError:true},async function(err,currUser){
 
-            console.log("hi");
+//             console.log("hi");
     
-            try{
+//             try{
     
-                console.log("helo");
+//                 console.log("helo");
     
-                if (err) {
-                    // Handle authentication error
-                    console.log("blackLIst link auth error");
-                    return next(err);
-                  }
+//                 if (err) {
+//                     // Handle authentication error
+//                     console.log("blackLIst link auth error");
+//                     return next(err);
+//                   }
 
 
-                console.log(currUser);
+//                 console.log(currUser);
             
     
-                const {attestationResponse,username,userHandle} = currUser;
+//                 const {attestationResponse,username,userHandle} = currUser;
     
-                const user = await User.findById(req.params.id); 
+//                 const user = await User.findById(req.params.id); 
 
-                console.log(user.biometricData);
-                console.log(attestationResponse);
+//                 console.log(user.biometricData);
+//                 console.log(attestationResponse);
     
     
-                if(user.biometricData==undefined){
-                    user.biometricData = attestationResponse.biometricData;
-                }else if(user.biometricData!=attestationResponse.biometricData){
-                    res.send("<h1> submitted fingerPrint is not asscociated with your account!!!")
-                }
+//                 if(user.biometricData==undefined){
+//                     user.biometricData = attestationResponse.biometricData;
+//                 }else if(user.biometricData!=attestationResponse.biometricData){
+//                     res.send("<h1> submitted fingerPrint is not asscociated with your account!!!")
+//                 }
     
-                const url = req.body.url;
-                console.log(validator.isURL(url));  
-                console.log(url);
+//                 const url = req.body.url;
+//                 console.log(validator.isURL(url));  
+//                 console.log(url);
         
         
-                if (! await validator.isURL(url)) {
+//                 if (! await validator.isURL(url)) {
         
-                    req.flash('error','Not a valid URL!');
-                    if(req.xhr){
-                        return res.status(200).json({
+//                     req.flash('error','Not a valid URL!');
+//                     if(req.xhr){
+//                         return res.status(200).json({
                           
-                            message:"Not a valid URL!"
-                        });
-                       }
-                    return res.redirect('back');
-                }
+//                             message:"Not a valid URL!"
+//                         });
+//                        }
+//                     return res.redirect('back');
+//                 }
         
         
             
-                let getLink = await Link.findOne({url:url});
+//                 let getLink = await Link.findOne({url:url});
             
-                if (getLink==null) {
-                    const link = new Link;
-                    link.url = url;
-                    link.count = 1;
-                    link.adhaarNos.push(req.body.adhaar); 
-                    link.users.push(user._id);  
-                    link.biometricData.push(attestationResponse.biometricData);  
-                    link.save();
+//                 if (getLink==null) {
+//                     const link = new Link;
+//                     link.url = url;
+//                     link.count = 1;
+//                     link.adhaarNos.push(req.body.adhaar); 
+//                     link.users.push(user._id);  
+//                     link.biometricData.push(attestationResponse.biometricData);  
+//                     link.save();
         
-                } else {
+//                 } else {
         
-                    // If link is already present in database(i.e, already reported) , Only Insert adhaar no. of user reporting the link
+//                     // If link is already present in database(i.e, already reported) , Only Insert adhaar no. of user reporting the link
                     
         
-                    //first check if the link is already reported by curr adhaar number and curr user
-                    // skip saving adhaar no. if already reported by curr adhaar or curr user
+//                     //first check if the link is already reported by curr adhaar number and curr user
+//                     // skip saving adhaar no. if already reported by curr adhaar or curr user
         
-                    let currAdhaar = req.body.adhaar;
-                    let adhaarNos = getLink.adhaarNos;
+//                     let currAdhaar = req.body.adhaar;
+//                     let adhaarNos = getLink.adhaarNos;
         
-                    for(let i=0; i<adhaarNos.length; i++){
+//                     for(let i=0; i<adhaarNos.length; i++){
                         
-                        if(adhaarNos.at(i)==currAdhaar){
+//                         if(adhaarNos.at(i)==currAdhaar){
         
-                            req.flash('error','Already reported by this adhaar!')
-                            if(req.xhr){
-                                return res.status(200).json({
+//                             req.flash('error','Already reported by this adhaar!')
+//                             if(req.xhr){
+//                                 return res.status(200).json({
                                   
-                                    message:"Already reported by this adhaar!"
-                                });
-                               }
+//                                     message:"Already reported by this adhaar!"
+//                                 });
+//                                }
         
-                           return res.redirect('back');
-                        }
-                    }
+//                            return res.redirect('back');
+//                         }
+//                     }
                 
-                    if(getLink.users.find((userId)=>{return userId+""==user._id+""})){
+//                     if(getLink.users.find((userId)=>{return userId+""==user._id+""})){
                     
                         
-                        req.flash('error','Already reported by this email!')
-                        if(req.xhr){
-                            return res.status(200).json({
+//                         req.flash('error','Already reported by this email!')
+//                         if(req.xhr){
+//                             return res.status(200).json({
                               
-                                message:"Already reported by this email!"
-                            });
-                           }
+//                                 message:"Already reported by this email!"
+//                             });
+//                            }
         
-                       return res.redirect('back');
-                    }
+//                        return res.redirect('back');
+//                     }
     
     
-                    if(getLink.users.find((biometricData)=>{return biometricData+""==user.biometricData+""})){
-                        req.flash('error','Already reported with submitted fingerPrint!!!');
+//                     if(getLink.users.find((biometricData)=>{return biometricData+""==user.biometricData+""})){
+//                         req.flash('error','Already reported with submitted fingerPrint!!!');
     
-                        if(req.xhr){
-                            return res.status(200).json({
+//                         if(req.xhr){
+//                             return res.status(200).json({
                               
-                                message:"Already reported with submitted fingerPrint!!!"
-                            });
-                           }
+//                                 message:"Already reported with submitted fingerPrint!!!"
+//                             });
+//                            }
         
-                       return res.redirect('back');
+//                        return res.redirect('back');
     
-                    }
+//                     }
         
-                        //else update the count and Push currAdhaar and curr user._id into link.adhaarNos and link.users   
-                    let updateLink = await Link.updateOne({ url: url }, // filter criteria
-                        { $set: { count: getLink.count+1 + '' } }, // update field
+//                         //else update the count and Push currAdhaar and curr user._id into link.adhaarNos and link.users   
+//                     let updateLink = await Link.updateOne({ url: url }, // filter criteria
+//                         { $set: { count: getLink.count+1 + '' } }, // update field
                         
-                    )
+//                     )
         
-                    getLink.adhaarNos.push(req.body.adhaar);
-                    getLink.users.push(user._id);
-                    getLink.biometricData.push(user.biometricData);
-                    getLink.save();
+//                     getLink.adhaarNos.push(req.body.adhaar);
+//                     getLink.users.push(user._id);
+//                     getLink.biometricData.push(user.biometricData);
+//                     getLink.save();
         
-                 }
+//                  }
         
-                let infoUser = [];
-                infoUser.push(user);
-                infoUser.push(url);
-                infoUser.push(req.body.about);
-                console.log(infoUser);
+//                 let infoUser = [];
+//                 infoUser.push(user);
+//                 infoUser.push(url);
+//                 infoUser.push(req.body.about);
+//                 console.log(infoUser);
         
-                let job = queue.create('emails',infoUser).save(function(err){
+//                 let job = queue.create('emails',infoUser).save(function(err){
         
-                    if(err){
-                        console.log('error in sending to the queue');
-                        return;
-                    }
-                    console.log('job enqueued',job.id);
+//                     if(err){
+//                         console.log('error in sending to the queue');
+//                         return;
+//                     }
+//                     console.log('job enqueued',job.id);
         
-                });
+//                 });
         
-               if(req.xhr){
-                return res.status(200).json({
-                    data:{
-                        user:user
-                    },
-                    message:"URL Reported!"
-                });
-               }
+//                if(req.xhr){
+//                 return res.status(200).json({
+//                     data:{
+//                         user:user
+//                     },
+//                     message:"URL Reported!"
+//                 });
+//                }
         
-               req.flash('success','URL Reported!');     
-               return res.redirect('back');
+//                req.flash('success','URL Reported!');     
+//                return res.redirect('back');
         
-            }catch(err){
+//             }catch(err){
         
-                console.log("error::", err);
-                return next(err);
-            }
+//                 console.log("error::", err);
+//                 return next(err);
+//             }
 
-        })(req,res,next);
+//         })(req,res,next);
 
-        console.log("22");
+//         console.log("22");
 
-    }catch(err){
-        console.log(err);
+//     }catch(err){
+//         console.log(err);
         
-    }
+//     }
 
-    console.log("iewur");
-    return res.end("f");
+//     console.log("iewur");
+//     return res.end("f");
 
 
   
 
    
 
-};
+// };
     
     
 module.exports.blackListedUrls = async function(req,res){
@@ -275,124 +275,124 @@ module.exports.blackListedUrls = async function(req,res){
 
 
 
-// module.exports.blackList = async function(req,res,next){
+module.exports.blackList = async function(req,res,next){
 
-//     try{
+    try{
  
-//         const url = req.body.url;
-//         console.log(validator.isURL(url));  
-//         console.log(url);
+        const url = req.body.url;
+        console.log(validator.isURL(url));  
+        console.log(url);
 
 
-//         if (! await validator.isURL(url)) {
+        if (! await validator.isURL(url)) {
 
-//             req.flash('error','Not a valid URL!');
-//             if(req.xhr){
-//                 return res.status(200).json({
+            req.flash('error','Not a valid URL!');
+            if(req.xhr){
+                return res.status(200).json({
                   
-//                     message:"Not a valid URL!"
-//                 });
-//                }
-//             return res.redirect('back');
-//         }
+                    message:"Not a valid URL!"
+                });
+               }
+            return res.redirect('back');
+        }
 
-//         const user = await User.findById(req.params.id); 
+        const user = await User.findById(req.params.id); 
 
     
-//         let getLink = await Link.findOne({url:url});
+        let getLink = await Link.findOne({url:url});
     
-//         if (getLink==null) {
-//             const link = new Link;
-//             link.url = url;
-//             link.count = 1;
-//             link.adhaarNos.push(req.body.adhaar); 
-//             link.users.push(user._id);    
-//             link.save();
+        if (getLink==null) {
+            const link = new Link;
+            link.url = url;
+            link.count = 1;
+            link.adhaarNos.push(req.body.adhaar); 
+            link.users.push(user._id);    
+            link.save();
 
-//         } else {
+        } else {
 
-//             // If link is already present in database(i.e, already reported) , Only Insert adhaar no. of user reporting the link
+            // If link is already present in database(i.e, already reported) , Only Insert adhaar no. of user reporting the link
             
 
-//             //first check if the link is already reported by curr adhaar number and curr user
-//             // skip saving adhaar no. if already reported by curr adhaar or curr user
+            //first check if the link is already reported by curr adhaar number and curr user
+            // skip saving adhaar no. if already reported by curr adhaar or curr user
 
-//             let currAdhaar = req.body.adhaar;
-//             let adhaarNos = getLink.adhaarNos;
+            let currAdhaar = req.body.adhaar;
+            let adhaarNos = getLink.adhaarNos;
 
-//             for(let i=0; i<adhaarNos.length; i++){
+            for(let i=0; i<adhaarNos.length; i++){
                 
-//                 if(adhaarNos.at(i)==currAdhaar){
+                if(adhaarNos.at(i)==currAdhaar){
 
-//                     req.flash('error','Already reported by this adhaar!')
-//                     if(req.xhr){
-//                         return res.status(200).json({
+                    req.flash('error','Already reported by this adhaar!')
+                    if(req.xhr){
+                        return res.status(200).json({
                           
-//                             message:"Already reported by this adhaar!"
-//                         });
-//                        }
+                            message:"Already reported by this adhaar!"
+                        });
+                       }
 
-//                    return res.redirect('back');
-//                 }
-//             }
+                   return res.redirect('back');
+                }
+            }
         
-//             if(getLink.users.find((userId)=>{return userId+""==user._id+""})){
+            if(getLink.users.find((userId)=>{return userId+""==user._id+""})){
             
                 
-//                 req.flash('error','Already reported by this email!')
-//                 if(req.xhr){
-//                     return res.status(200).json({
+                req.flash('error','Already reported by this email!')
+                if(req.xhr){
+                    return res.status(200).json({
                       
-//                         message:"Already reported by this email!"
-//                     });
-//                    }
+                        message:"Already reported by this email!"
+                    });
+                   }
 
-//                return res.redirect('back');
-//             }
+               return res.redirect('back');
+            }
 
-//                 //else update the count and Push currAdhaar and curr user._id into link.adhaarNos and link.users   
-//             let updateLink = await Link.updateOne({ url: url }, // filter criteria
-//                 { $set: { count: getLink.count+1 + '' } }, // update field
+                //else update the count and Push currAdhaar and curr user._id into link.adhaarNos and link.users   
+            let updateLink = await Link.updateOne({ url: url }, // filter criteria
+                { $set: { count: getLink.count+1 + '' } }, // update field
                 
-//             )
+            )
 
-//             getLink.adhaarNos.push(req.body.adhaar);
-//             getLink.users.push(user._id);
-//             getLink.save();
+            getLink.adhaarNos.push(req.body.adhaar);
+            getLink.users.push(user._id);
+            getLink.save();
 
-//          }
+         }
 
-//         let infoUser = [];
-//         infoUser.push(user);
-//         infoUser.push(url);
-//         infoUser.push(req.body.about);
-//         console.log(infoUser);
+        let infoUser = [];
+        infoUser.push(user);
+        infoUser.push(url);
+        infoUser.push(req.body.about);
+        console.log(infoUser);
 
-//         let job = queue.create('emails',infoUser).save(function(err){
+        let job = queue.create('emails',infoUser).save(function(err){
 
-//             if(err){
-//                 console.log('error in sending to the queue');
-//                 return;
-//             }
-//             console.log('job enqueued',job.id);
+            if(err){
+                console.log('error in sending to the queue');
+                return;
+            }
+            console.log('job enqueued',job.id);
 
-//         });
+        });
 
-//        if(req.xhr){
-//         return res.status(200).json({
-//             data:{
-//                 user:user
-//             },
-//             message:"URL Reported!"
-//         });
-//        }
+       if(req.xhr){
+        return res.status(200).json({
+            data:{
+                user:user
+            },
+            message:"URL Reported!"
+        });
+       }
 
-//        req.flash('success','URL Reported!');     
-//        return res.redirect('back');
+       req.flash('success','URL Reported!');     
+       return res.redirect('back');
 
-//     }catch(err){
+    }catch(err){
 
-//         console.log("error::", err);
-//         return res.redirect('back');
-//     }
-// }
+        console.log("error::", err);
+        return res.redirect('back');
+    }
+}

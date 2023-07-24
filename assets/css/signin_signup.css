@@ -191,7 +191,7 @@ label{
 #x2{
   margin-left:0.7px;
 }
-
+ 
 #google-signin{
   width:425px;
   height:44px;
@@ -231,7 +231,7 @@ label{
   left:-15px;
   font-size:1.21rem;
   color:white
-}
+} 
 
 
 
@@ -354,6 +354,7 @@ label{
 
     #divider-container{
       position: relative;
+      width:89%;
       right:-10px;
       top:-15px;
       
@@ -382,7 +383,7 @@ label{
     width:140px;
      
   } 
- 
+  
 }  
   
   

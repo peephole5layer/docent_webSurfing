@@ -372,12 +372,15 @@
           </div>
 
 
+        <% if(locals.user){ %>
+
+
 
           <div id="submit-report-container">
 
             <h1 class="heading-title">Fill Details</h1>
 
-            <form action="/report/blacklist/<%=locals.user.id%>/challenge" method="post" id="book-form">
+            <form action="/report/blacklist/<%=locals.user.id%>" method="post" id="book-form">
 
               <div id="flex">
                 <div class="inputBox">
@@ -390,16 +393,16 @@
                 </div>
                 <div class="inputBox">
                   <span> Site Url : </span>
-                  <input type="url" placeholder="Enter url" name="url">
+                  <input type="url" placeholder="Enter url" name="url" required>
                 </div>
                 <div class="inputBox">
                   <span>Adhaar Number :</span>
-                  <input type="text" placeholder="enter your Adhaar Number" name="adhaar">
+                  <input type="text" placeholder="enter your Adhaar Number" name="adhaar" required>
                 </div>
 
                 <div class="inputBox">
                   <span>address :</span>
-                    <textarea name="about" id="" rows="7" cols="2"></textarea>
+                    <textarea name="about" id="" rows="7" cols="2" required></textarea>
                 </div>
 
 
@@ -418,6 +421,8 @@
 
 
           </div>
+        
+           <%}%>
 
 
         </section>

@@ -11,14 +11,14 @@ router.use(express.static('./assets'));
 
 const blackListController = require('../controllers/blackList_controller');
 
-router.post('/blacklist/:id/challenge', function(req, res, next) {
-  console.log("helloieie");
-    store.challenge(req, function(err, challenge) {
-      if (err) { return next(err); }
-      res.json({ challenge: base64url.encode(challenge) });
-    });
-    console.log("hello");
-  });
+// router.post('/blacklist/:id/challenge', function(req, res, next) {
+//   console.log("helloieie");
+//     store.challenge(req, function(err, challenge) {
+//       if (err) { return next(err); }
+//       res.json({ challenge: base64url.encode(challenge) });
+//     });
+//     console.log("hello");
+//   });
   // /blacklist/:id
 
 router.post('/blacklist/:id',blackListController.blackList);

@@ -335,7 +335,6 @@
     flex-direction: column;
     display: none;
     height:630px;
-    border : 2px solid red;
 }
 
 
@@ -360,6 +359,8 @@
     /* background-color: red;; */
     height:450px;
     width:75%;
+    box-shadow: 2px 2px 4px 4px;
+
  }
 
  #submit-report-container .heading-title{
@@ -675,6 +676,13 @@
         width:69vw;
     }
 
+
+        
+    #submit-report-container #book-form{
+
+        width:85.5%;
+    }
+
      
 
     
@@ -726,6 +734,16 @@
     #reports-container div button,#report-sites-container div button{
       
         width:74.5vw;
+    }
+
+    #submit-report-container .heading-title{
+        font-size:1.95rem;
+
+     }
+
+    #submit-report-container #book-form{
+
+        width:95%;
     }
 
      
@@ -895,6 +913,66 @@
         width:81vw;
     }
 
+    
+    #submit-report-container .heading-title{
+        font-size:1.85rem;
+
+     }
+
+     
+    #submit-report-container #book-form{
+        height: 530px;
+
+        width:98%;
+    }
+
+    #submit-report-container #book-form #flex{
+        margin-top: -15px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+        
+    #submit-report-container #book-form #flex .inputBox{
+        display:flex;
+        flex-direction: column;
+        /* flex:1 1 41rem; */
+        width:97%;
+        height:90px;
+    }
+
+    
+    #submit-report-container #book-form #flex .inputBox:nth-child(5){
+       height:100px;
+       margin-top:15px;
+     
+    }
+
+    #submit-report-container #book-form #flex .inputBox span{
+        font-size:1.02rem;
+    }
+    
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    #blogs{
+        margin-top:30px;
+    }
+
 
     #blogs .box-container .box{
         width:88%;
@@ -919,6 +997,8 @@
         font-size: 3.52vw;
         font-weight: 500;
      }
+
+
     
     
 

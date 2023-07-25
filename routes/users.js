@@ -28,7 +28,6 @@ router.get('/auth/google',passport.authenticate('google',{scope:['profile','emai
 router.get('/auth/google/callback',passport.authenticate('google',{failureRedirect:'/users/signin'}),userController.createSession);
 
 
-// router.get('/forgot-password',userController.forgotPassword);
 router.post('/forgot-password/find-email',userController.findEmail);
 router.get('/forgot-password/find-email/reset-password-form/:token',userController.resetPasswordForm);
 router.post('/forgot-password/find-email/reset/:token',userController.resetPassword);

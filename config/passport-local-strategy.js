@@ -21,6 +21,10 @@ passport.use(new LocalStrategy({
             console.log(email);
 
             if(!user || user.password!=password){
+
+
+
+                req.flash("error","Invalid email/password");
                
                 
                 return done(null,false);

@@ -58,11 +58,6 @@
               aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
               aria-label="Slide 3"></button>
-
-            <% if(locals.user){%>
-              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
-              <%}%>
           </div>
 
           <div id="carousel-inner" class="carousel-inner">
@@ -132,191 +127,140 @@
               </div>
             </div>
 
-            <% if(locals.user){%>
 
-              <div id="form-container" class="carousel-item" data-bs-interval="10000">
-                <header id="report-link-header">
+            <div class="carousel-item" data-bs-interval="20000">
+              <div id="data" class="element">
 
-                  <button type="button" class="btn btn-success"> Report Link</button>
+                <h2>
+                  The Biggest Database&nbsp;of&nbsp;Scams
 
-                </header>
+                </h2>
 
-                <!-- /report/blacklist/<%=locals.user.id%> -->
+                <div class="flex-container-group">
 
-                <form action="/report/blacklist/<%=locals.user.id%>/challenge" method="POST" id="blacklist-link-form">
+                  <div class="group-cards">
 
-                  <div class="d-flex flex-column flex">
-
-                    <div class="p-2 row mb-3 d-flex flex-nowrap">
-                      <label for="adhaar" class="col-sm-2 col-form-label ">Enter&nbsp;Adhaar&nbsp;Number&nbsp;:</label>
-                      <div class="col-sm-10" id="check" style="width:140px">
-
-                        <input name="adhaar" type="number" class="form-control mg-left-5" placeholder="xxxxxxx"
-                          aria-label="Adhaar number" id="adhaar" required>
+                    <a href="#data">
+                      <div class="cards">
+                        <i class="fa-solid fa-database"></i>
+                        <p style="margin-left:9px;">92,938,421&nbsp;Sites in&nbsp;Database</p>
                       </div>
+                    </a>
 
-                    </div>
-
-                    <div class="p-2 row mb-3 d-flex flex-nowrap">
-                      <label for="web-address" class="col-sm-2 col-form-label">Enter&nbsp;URL&nbsp;:</label>
-                      <div class="col-sm-10" style="width:140px">
-
-                        <input id="web-address" name="url" type="url" class="form-control  mg-left-5"
-                          placeholder="Web Url" aria-label="Web Url" required>
+                    <a href="#data">
+                      <div class="cards">
+                        <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                        <p style="margin-left:14px;">10,24,012 Scam&nbsp;Websites</p>
                       </div>
+                    </a>
 
-                    </div>
+                    <a href="#data">
+                      <div class="cards">
+                        <i class="fa-solid fa-eye"></i>
+                        <p style="margin-left:14px;">82,382&nbsp;Visitors Last Day</p>
+                      </div>
+                    </a>
 
-
-                    <div id="input-3">
-
-                      <textarea name="about" id="illegal" class="form-control" cols="45" rows="4"
-                        placeholder="Please provide suspicious activities associated with this particular website..."
-                        required></textarea>
-
-                    </div>
-
-                    <button type="submit" class="mx-2 row mb-3 btn btn-primary btn-lg mt-2">Submit</button>
                   </div>
-                </form>
+
+                  <div class="group-cards">
+
+                    <a href="#data">
+                      <div class="cards">
+                        <i class="fa-sharp fa-solid fa-magnifying-glass-arrow-right"></i>
+                        <p style="margin-left:11px;">1,20,488&nbsp;Sites Scanned&nbsp;Today</p>
+                      </div>
+                    </a>
+
+                    <a href="#data">
+                      <div class="cards">
+                        <i class="fa-solid fa-bug"></i>
+                        <p style="margin-left:10px;">12,090&nbsp;Scams Reported&nbsp;Today</p>
+                      </div>
+                    </a>
+
+                    <a href="#data">
+                      <div class="cards">
+                        <i class="fa-solid fa-users"></i>
+                        <p style="margin-left:6px;">82,828,591&nbsp;Users Last&nbsp;Month</p>
+                      </div>
+                    </a>
+
+                  </div>
+
+                </div>
 
               </div>
+            </div>
 
-              <%}%>
 
-                <div class="carousel-item" data-bs-interval="20000">
-                  <div id="data" class="element">
+            <div class="carousel-item" data-bs-interval="30000">
+              <div id="reliable-sites" class="element">
 
-                    <h2>
-                      The Biggest Database&nbsp;of&nbsp;Scams
+                <h2>
+                  Reliable&nbsp;Sites
 
-                    </h2>
+                </h2>
 
-                    <div class="flex-container-group">
+                <div class="flex-container-group">
 
-                      <div class="group-cards">
+                  <div class="group-cards">
 
-                        <a href="#data">
-                          <div class="cards">
-                            <i class="fa-solid fa-database"></i>
-                            <p style="margin-left:9px;">92,938,421&nbsp;Sites in&nbsp;Database</p>
-                          </div>
-                        </a>
-
-                        <a href="#data">
-                          <div class="cards">
-                            <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
-                            <p style="margin-left:14px;">10,24,012 Scam&nbsp;Websites</p>
-                          </div>
-                        </a>
-
-                        <a href="#data">
-                          <div class="cards">
-                            <i class="fa-solid fa-eye"></i>
-                            <p style="margin-left:14px;">82,382&nbsp;Visitors Last Day</p>
-                          </div>
-                        </a>
-
+                    <a href="#data">
+                      <div class="cards">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <p>Online Shopping</p>
                       </div>
+                    </a>
 
-                      <div class="group-cards">
-
-                        <a href="#data">
-                          <div class="cards">
-                            <i class="fa-sharp fa-solid fa-magnifying-glass-arrow-right"></i>
-                            <p style="margin-left:11px;">1,20,488&nbsp;Sites Scanned&nbsp;Today</p>
-                          </div>
-                        </a>
-
-                        <a href="#data">
-                          <div class="cards">
-                            <i class="fa-solid fa-bug"></i>
-                            <p style="margin-left:10px;">12,090&nbsp;Scams Reported&nbsp;Today</p>
-                          </div>
-                        </a>
-
-                        <a href="#data">
-                          <div class="cards">
-                            <i class="fa-solid fa-users"></i>
-                            <p style="margin-left:6px;">82,828,591&nbsp;Users Last&nbsp;Month</p>
-                          </div>
-                        </a>
-
+                    <a href="#data">
+                      <div class="cards">
+                        <i class="fa-regular fa-credit-card"></i>
+                        <p>Financial Sites</p>
                       </div>
+                    </a>
 
-                    </div>
+                    <a href="#data">
+                      <div class="cards">
+                        <i class="fa-solid fa-venus-mars"></i>
+                        <p>Adult&nbsp;& Dating&nbsp;Sites</p>
+                      </div>
+                    </a>
 
                   </div>
-                </div>
 
+                  <div class="group-cards">
 
-                <div class="carousel-item" data-bs-interval="30000">
-                  <div id="reliable-sites" class="element">
-
-                    <h2>
-                      Reliable&nbsp;Sites
-
-                    </h2>
-
-                    <div class="flex-container-group">
-
-                      <div class="group-cards">
-
-                        <a href="#data">
-                          <div class="cards">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                            <p>Online Shopping</p>
-                          </div>
-                        </a>
-
-                        <a href="#data">
-                          <div class="cards">
-                            <i class="fa-regular fa-credit-card"></i>
-                            <p>Financial Sites</p>
-                          </div>
-                        </a>
-
-                        <a href="#data">
-                          <div class="cards">
-                            <i class="fa-solid fa-venus-mars"></i>
-                            <p>Adult&nbsp;& Dating&nbsp;Sites</p>
-                          </div>
-                        </a>
-
+                    <a href="#data">
+                      <div class="cards">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <p style="margin-left:17px;">Employment Sites</p>
                       </div>
+                    </a>
 
-                      <div class="group-cards">
+                    <a href="#data">
+                      <div class="cards">
+                        <i class="fa-solid fa-film"></i>
+                        <p style="margin-left:12px;">Entertainment Sites</p>
+                      </div>
+                    </a>
 
-                        <a href="#data">
-                          <div class="cards">
-                            <i class="fa-solid fa-user-tie"></i>
-                            <p style="margin-left:17px;">Employment Sites</p>
-                          </div>
-                        </a>
-
-                        <a href="#data">
-                          <div class="cards">
-                            <i class="fa-solid fa-film"></i>
-                            <p style="margin-left:12px;">Entertainment Sites</p>
-                          </div>
-                        </a>
-
-                        <a href="#data">
-                          <div class="cards">
-                            <i style="margin-top:5.5px;margin-bottom:9.7px;" class="bi bi-shield-fill-check"></i>
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-shield-fill-check" viewBox="0 0 25 25">
+                    <a href="#data">
+                      <div class="cards">
+                        <i style="margin-top:5.5px;margin-bottom:9.7px;" class="bi bi-shield-fill-check"></i>
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-shield-fill-check" viewBox="0 0 25 25">
                               <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm2.146 5.146a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647z"/>
                             </svg> -->
-                            <p>All&nbsp;Reliable Sites</p>
-                          </div>
-                        </a>
-
+                        <p>All&nbsp;Reliable Sites</p>
                       </div>
-
-                    </div>
+                    </a>
 
                   </div>
+
                 </div>
+
+              </div>
+            </div>
           </div>
 
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
@@ -356,7 +300,7 @@
 
           <div>
 
-            <button id="report-site-btn" data-user="<%=locals.user%>" >
+            <button id="report-site-btn" data-user="<%=locals.user%>">
 
               Report a Site
 
@@ -372,57 +316,59 @@
           </div>
 
 
-        <% if(locals.user){ %>
+          <% if(locals.user){ %>
 
 
 
-          <div id="submit-report-container">
+            <div id="submit-report-container">
 
-            <h1 class="heading-title">Fill Details</h1>
+              <h1 class="heading-title">Fill Details</h1>
 
-            <form action="/report/blacklist/<%=locals.user.id%>" method="post" id="book-form">
+              <form action="/report/blacklist/<%=locals.user.id%>" method="post" id="book-form">
 
-              <div id="flex">
-                <div class="inputBox">
-                  <span> name </span>
-                  <input type="text" placeholder="Enter url" name="name" value="<%=locals.user.fname%>&nbsp;<%=locals.user.lname%>" disabled>
-                </div>
-                <div class="inputBox">
-                  <span>email :</span>
-                  <input type="email" placeholder="enter your email" name="email" value="<%=locals.user.email%>" disabled>
-                </div>
-                <div class="inputBox">
-                  <span> Site Url : </span>
-                  <input type="url" placeholder="Enter url" name="url" required>
-                </div>
-                <div class="inputBox">
-                  <span>Adhaar Number :</span>
-                  <input type="text" placeholder="enter your Adhaar Number" name="adhaar" required>
-                </div>
+                <div id="flex">
+                  <div class="inputBox">
+                    <span> name </span>
+                    <input type="text" placeholder="Enter url" name="name"
+                      value="<%=locals.user.fname%>&nbsp;<%=locals.user.lname%>" disabled>
+                  </div>
+                  <div class="inputBox">
+                    <span>email :</span>
+                    <input type="email" placeholder="enter your email" name="email" value="<%=locals.user.email%>"
+                      disabled>
+                  </div>
+                  <div class="inputBox">
+                    <span> Site Url : </span>
+                    <input type="url" placeholder="Enter url" name="url" required>
+                  </div>
+                  <div class="inputBox">
+                    <span>Adhaar Number :</span>
+                    <input type="number" placeholder="enter your Adhaar Number" name="adhaar" required>
+                  </div>
 
-                <div class="inputBox">
-                  <span>address :</span>
+                  <div class="inputBox">
+                    <span>Report Description :</span>
                     <textarea name="about" id="" rows="7" cols="2" required></textarea>
+                  </div>
+
+
+                </div>
+
+                <div id="btn-container">
+
+                  <input type="submit" value="submit" class="btn">
+
+
                 </div>
 
 
-              </div>
 
-              <div id="btn-container">
-
-                <input type="submit" value="submit" class="btn">
+              </form>
 
 
-              </div>
+            </div>
 
-
-
-            </form>
-
-
-          </div>
-        
-           <%}%>
+            <%}%>
 
 
         </section>

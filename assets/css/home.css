@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 :root{
    --main-color:#d36a9f;
@@ -16,14 +16,15 @@
 *{
    font-family: 'Poppins', sans-serif;
    margin:0; padding:0;
-   box-sizing: border-box;
+  
    outline: none; border:none;
    text-decoration: none;
    text-transform: capitalize;
-}
+} 
 
 
 #home {
+    border:2px solid red;
    
     position : relative;
     top:0.06vh;
@@ -247,7 +248,6 @@
 
 /* report sections */
 
-
 #reports-container{
     /* background: linear-gradient(to left top, white 30%,white,rgba(0, 0, 0, 0.786)); */
     background-image: linear-gradient(to right top, white 30%,white,rgba(0, 0, 0, 0.216));
@@ -264,7 +264,7 @@
 
 #report-sites-container{
     /* background-image: linear-gradient(to left bottom, white 30%,white ,rgba(0, 0, 0, 0.785)); */
-    background-image: linear-gradient(to right bottom, white 30%,white ,rgba(0, 0, 0, 0.216));
+    background-image: linear-gradient(to left bottom, white 30%,white ,rgba(0, 0, 0, 0.216));
     flex-direction: column;
     margin-top:-39px;
 }
@@ -453,6 +453,48 @@
     background-color: whitesmoke;
     border : 1px solid black;
 }
+
+
+
+
+/* search article section */
+#search-articles{
+    height:445px;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right bottom, white 30%,white ,rgba(0, 0, 0, 0.216));
+ }
+
+ #search-articles button{
+    height:170px;
+    width:340px;
+    font-family: cursive;
+
+    background-color:#06c7aa22;;
+  
+    color:black;
+    font-size:1.85rem;
+    box-shadow: 2px 2px 4px 4px black;
+    font-weight: bold;
+    transition:0.4s ease-in-out;
+
+ }
+
+ #search-articles button::first-letter{
+    font-size:2.9rem;
+ }
+
+ #search-articles button:hover{
+
+    background-color:#06c7aa35;;
+    
+    transform: translateX(25px);
+  
+ }
+
+
  
 
 
@@ -476,16 +518,8 @@
 
 
 
-/*blogs*/
+/*blogs section*/
 
-/* #blogs{
-    position:relative;
-   
-    height:600px;
-    margin-bottom:400px;
-    background-image: linear-gradient(#eaeaea98 65%,#d0d0d0af 80%,#bbbbbb7c 100%);
-
-} */
 
 
 #blogs header span{
@@ -705,12 +739,6 @@
     }
 
 
-
-
-
-
-
-
     #blogs .box-container .box{
         width:65vw;
         height:390px;
@@ -722,9 +750,6 @@
     #blogs .box-container{
         width:470px;
         justify-content: center;
-
-    
-
     }
     #blogs .box-container .box .content p{
         font-size: 2.4vw;
@@ -951,22 +976,12 @@
     #submit-report-container #book-form #flex .inputBox span{
         font-size:1.02rem;
     }
-    
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        
+    #search-articles button{
+        height:155px;
+        width:78vw;
+        font-size:1.655rem;
+    }
 
 
     #blogs{

@@ -7,8 +7,6 @@ const store = new SessionChallengeStore();
 var base64url = require('base64url');
 
 
-router.use(express.static('./assets'));
-
 const blackListController = require('../controllers/blackList_controller');
 
 // router.post('/blacklist/:id/challenge', function(req, res, next) {

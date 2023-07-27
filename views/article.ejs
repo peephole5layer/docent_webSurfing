@@ -1,0 +1,90 @@
+<link rel="stylesheet" href="/css/article.css">
+
+
+<section id="article" data-value="articlePage">
+<!-- 
+    <nav id="article-nav">
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="/assets/img/logo.png" alt="company logo">
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')"> online scams</li>
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">shopping scams</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">cyber attack</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g. Science">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+        </div>
+    </nav> -->
+
+
+    <% if(Str=="search"){ %>
+
+                
+        <div id="search">
+
+          
+            <input name="search" id="search-bar" class="form-control me-2" type="search" placeholder="Search articles"
+                aria-label="Search url">
+            <button id="search-button" class="btn btn-outline-success" type="submit">Search</button>
+         
+        
+        </div>
+
+    <%}else {%>
+
+        <header>
+            <%=Str%>
+        </header>
+
+    <%}%>
+
+
+
+    <main>
+        <div class="cards-container container flex" id="cards-container" data-showcontent="<%=Str%>">
+
+        </div>
+    </main>
+
+    <div class="btn-container">
+
+        <button class="custom-btn"> Load More </button>
+
+
+    </div>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-image" id="news-img">
+            </div>
+            <div class="card-content">
+
+                <div>
+
+                    <h3 id="news-title">This is the Title</h3>
+                    <p class="news-desc" id="news-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+                        saepe quis voluptatum quisquam vitae doloremque facilis molestias quae ratione cumque!</p>
+                </div>
+
+                <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+              
+              
+            </div>
+        </div>
+    </template>
+
+</section>
+
+
+
+
+<% console.log("hi") %>
+
+    <script src="/js/article.js"></script>

@@ -2,8 +2,6 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 
-/*middlewares*/
-router.use(express.static('./assets'));
 
 
 /*controllers*/
@@ -31,17 +29,6 @@ router.get('/auth/google/callback',passport.authenticate('google',{failureRedire
 router.post('/forgot-password/find-email',userController.findEmail);
 router.get('/forgot-password/find-email/reset-password-form/:token',userController.resetPasswordForm);
 router.post('/forgot-password/find-email/reset/:token',userController.resetPassword);
-
-
-
-
-
-
-
-
-
-
-
 
 console.log("user router loaded");
 

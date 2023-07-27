@@ -1,25 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+
+/* 
+:root{
+  --main-color:#d36a9f;
+  --black:#222;
+  --white:#fff;
+  --light-black:#777;
+  --light-white:#fff9;
+  --dark-bg:rgba(0,0,0,.7);
+  --light-bg:#eee;
+  --border:.1rem solid var(--black);
+  --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+  --text-shadow:0 1.5rem 3rem rgba(0,0,0,.3);
+}
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+  /* margin:0; padding:0; */
+  /* box-sizing: border-box;
+  outline: none; border:none; */
+  /* text-decoration: none;
+  text-transform: capitalize;
+} */ 
+
+
+
 .footer{
     background: url(../img/footer-bg.jpg) no-repeat;
     background-size: cover;
-    background-position: cover;
+    background-position: center;
  }
  
  .footer .box-container{
-    display: grid;
+   position: relative;
+   top:35px;
+    border:2px solid red;
     grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
     gap: 1rem;
     margin-top: 11%;
+    width:1200px;
+    margin:auto;
+    height:auto;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+ }
+
+ .footer .box-container .box{
+  width:265px;
+  border : 2px solid red;
+ 
+  
+
  }
  
  .footer .box-container .box h3{
     color:var(--white);
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding-bottom: 2rem;
+    font-weight: bold;
  }
  
  .footer .box-container .box a{
-    color:var(--white);
-    font-size: 1rem;
+
+    color:var(--light-white);
+    font-size: 0.79rem;
+  
     padding-bottom: 1.5rem;
     display: block;
  }
@@ -48,7 +96,43 @@
  }
  
  /* ====================== Responsive Design ========================== */
+
+ 
+@media (max-width:1200px){
+
+  section{
+     padding:3rem 5%;
+  }
+
+  .footer .box-container{
+    top:35px;
+     width:90vw;
+
+     margin:auto;
+     height:550px;
+     display:flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     flex-wrap: wrap;
+  }
+
+  .footer .box-container .box{
+    width:46%;
+    border : 2px solid red;
+   
+    
+  
+   }
+ 
+
+}
+
 @media (max-width: 991px) {
+
+  footer{
+    font-size:0.3rem;
+  }
+
    .navigation {
      left: -300px;
    }

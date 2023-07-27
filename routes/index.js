@@ -1,7 +1,6 @@
 const express = require('express');
 
 const router = express.Router();
-
 const passport = require('passport');
 const SessionChallengeStore = require('passport-fido2-webauthn').SessionChallengeStore;
 const store = new SessionChallengeStore();
@@ -21,6 +20,8 @@ const blogController =require("../controllers/blog_controller");
 
 const userController = require('../controllers/user_controller');
 const blackListController = require('../controllers/blackList_controller');
+const articleController = require('../controllers/article_controller');
+
 
 
 
@@ -39,6 +40,8 @@ router.use('/users', require('./users'));
 
 
 router.use('/report',require('./report'));
+router.get('/article/:str1/:str2/:str3',articleController.article);
+
 
 
 router.use('/api',require('./api'));

@@ -94,3 +94,208 @@
 [0mGET /report/js/blacklistedUrls.js [33m404[0m 12.363 ms - 167[0m
 [0mGET /report/css/header.css [33m404[0m 4.815 ms - 160[0m
 [0mGET /report/css/footer.css [33m404[0m 3.307 ms - 160[0m
+[0mGET /report/blacklisted-urls [32m200[0m 114.463 ms - 112497[0m
+[0mGET /report/css/footer.css [33m404[0m 6.957 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 4.862 ms - 160[0m
+[0mGET /report/css/layout.css [33m404[0m 14.543 ms - 160[0m
+[0mGET /report/css/blackListed_urls.css [33m404[0m 13.869 ms - 170[0m
+[0mGET /report/js/_header.js [33m404[0m 2.304 ms - 159[0m
+[0mGET /report/js/_footer.js [33m404[0m 3.572 ms - 159[0m
+[0mGET /report/js/blacklistedUrls.js [33m404[0m 2.238 ms - 167[0m
+[0mGET /report/css/layout.css [33m404[0m 4.220 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 13.976 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 13.248 ms - 160[0m
+[0mGET /report/css/blackListed_urls.css [33m404[0m 17.171 ms - 170[0m
+[0mGET /report/css/header.css [33m404[0m 4.094 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 5.375 ms - 160[0m
+[0mGET /report/blacklisted-urls [36m304[0m 91.302 ms - -[0m
+[0mGET /report/css/layout.css [33m404[0m 4.258 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 10.789 ms - 160[0m
+[0mGET /report/css/blackListed_urls.css [33m404[0m 9.318 ms - 170[0m
+[0mGET /report/css/footer.css [33m404[0m 14.391 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 5.774 ms - 160[0m
+[0mGET /report/css/layout.css [33m404[0m 11.376 ms - 160[0m
+[0mGET /report/js/_header.js [33m404[0m 20.207 ms - 159[0m
+[0mGET /report/js/_footer.js [33m404[0m 20.501 ms - 159[0m
+[0mGET /report/js/blacklistedUrls.js [33m404[0m 28.667 ms - 167[0m
+[0mGET /report/css/header.css [33m404[0m 5.099 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 3.347 ms - 160[0m
+[0mGET /report/blacklisted-urls [32m200[0m 108.495 ms - 112498[0m
+[0mGET /report/css/layout.css [33m404[0m 7.865 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 14.398 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 3.720 ms - 160[0m
+[0mGET /report/js/_header.js [33m404[0m 3.302 ms - 159[0m
+[0mGET /report/js/_footer.js [33m404[0m 1.890 ms - 159[0m
+[0mGET /report/js/blacklistedUrls.js [33m404[0m 4.331 ms - 167[0m
+[0mGET /report/css/layout.css [33m404[0m 6.151 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 8.974 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 10.083 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 2.150 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 5.190 ms - 160[0m
+[0mGET /users/signin [32m200[0m 19.341 ms - 10385[0m
+[0mGET /users/css/layout.css [33m404[0m 12.396 ms - 159[0m
+[0mGET /users/css/header.css [33m404[0m 22.749 ms - 159[0m
+[0mGET /users/css/signin_signup.css [33m404[0m 23.948 ms - 166[0m
+[0mGET /users/css/footer.css [33m404[0m 22.290 ms - 159[0m
+[0mGET /users/js/_header.js [33m404[0m 3.233 ms - 158[0m
+[0mGET /users/js/_footer.js [33m404[0m 9.022 ms - 158[0m
+[0mGET /users/css/header.css [33m404[0m 2.313 ms - 159[0m
+[0mGET /users/css/footer.css [33m404[0m 2.138 ms - 159[0m
+[0mGET / [32m200[0m 27.969 ms - 21174[0m
+[0mGET /report/blacklisted-urls [36m304[0m 116.704 ms - -[0m
+[0mGET /report/css/layout.css [33m404[0m 7.226 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 6.980 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 6.225 ms - 160[0m
+[0mGET /report/js/_header.js [33m404[0m 5.620 ms - 159[0m
+[0mGET /report/js/_footer.js [33m404[0m 2.187 ms - 159[0m
+[0mGET /report/js/blacklistedUrls.js [33m404[0m 4.008 ms - 167[0m
+[0mGET /report/css/layout.css [33m404[0m 11.131 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 12.593 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 12.483 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 5.131 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 7.448 ms - 160[0m
+[0mGET /report/blacklisted-urls [36m304[0m 112.686 ms - -[0m
+[0mGET /report/css/header.css [33m404[0m 5.782 ms - 160[0m
+[0mGET /report/css/layout.css [33m404[0m 6.768 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 7.201 ms - 160[0m
+[0mGET /report/js/_header.js [33m404[0m 9.956 ms - 159[0m
+[0mGET /report/js/blacklistedUrls.js [33m404[0m 9.343 ms - 167[0m
+[0mGET /report/js/_footer.js [33m404[0m 14.836 ms - 159[0m
+[0mGET /report/css/header.css [33m404[0m 3.615 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 1.993 ms - 160[0m
+[0mGET /report/blacklisted-urls [36m304[0m 95.175 ms - -[0m
+[0mGET /report/css/footer.css [33m404[0m 9.200 ms - 160[0m
+[0mGET /report/css/layout.css [33m404[0m 10.041 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 7.833 ms - 160[0m
+[0mGET /report/js/_header.js [33m404[0m 9.565 ms - 159[0m
+[0mGET /report/js/_footer.js [33m404[0m 10.409 ms - 159[0m
+[0mGET /report/js/blacklistedUrls.js [33m404[0m 13.646 ms - 167[0m
+[0mGET /report/css/header.css [33m404[0m 2.274 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 7.942 ms - 160[0m
+[0mGET /report/css/layout.css [33m404[0m 4.710 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 7.729 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 8.268 ms - 160[0m
+[0mGET /report/blacklisted-urls [36m304[0m 90.904 ms - -[0m
+[0mGET /report/css/layout.css [33m404[0m 6.318 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 11.652 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 4.606 ms - 160[0m
+[0mGET /report/js/_header.js [33m404[0m 3.049 ms - 159[0m
+[0mGET /report/js/_footer.js [33m404[0m 3.171 ms - 159[0m
+[0mGET /report/js/blacklistedUrls.js [33m404[0m 3.072 ms - 167[0m
+[0mGET /report/css/layout.css [33m404[0m 4.468 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 10.294 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 14.140 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 4.887 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 2.278 ms - 160[0m
+[0mGET /report/blacklisted-urls [36m304[0m 109.408 ms - -[0m
+[0mGET /report/css/layout.css [33m404[0m 12.652 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 14.690 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 3.951 ms - 160[0m
+[0mGET /report/js/_header.js [33m404[0m 3.905 ms - 159[0m
+[0mGET /report/js/_footer.js [33m404[0m 7.621 ms - 159[0m
+[0mGET /report/js/blacklistedUrls.js [33m404[0m 16.818 ms - 167[0m
+[0mGET /report/css/layout.css [33m404[0m 15.484 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 15.221 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 15.385 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 2.914 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 2.981 ms - 160[0m
+[0mGET /report/blacklisted-urls [36m304[0m 109.081 ms - -[0m
+[0mGET /report/css/layout.css [33m404[0m 7.102 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 5.585 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 6.444 ms - 160[0m
+[0mGET /report/js/_footer.js [33m404[0m 5.156 ms - 159[0m
+[0mGET /report/js/_header.js [33m404[0m 6.609 ms - 159[0m
+[0mGET /report/css/layout.css [33m404[0m 7.329 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 12.986 ms - 160[0m
+[0mGET /report/js/blacklistedUrls.js [33m404[0m 13.788 ms - 167[0m
+[0mGET /report/css/footer.css [33m404[0m 9.966 ms - 160[0m
+[0mGET /report/css/header.css [33m404[0m 1.868 ms - 160[0m
+[0mGET /report/css/footer.css [33m404[0m 2.364 ms - 160[0m
+::1 - - [31/Jul/2023:11:05:12 +0000] "GET /users/signin HTTP/1.1" 200 10268 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:12 +0000] "GET /js/signin.js HTTP/1.1" 404 151 "http://localhost:8000/users/signin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:12 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/users/signin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:18 +0000] "GET / HTTP/1.1" 200 21022 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:18 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:18 +0000] "GET /img/s1.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:18 +0000] "GET /img/s3.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:18 +0000] "GET /img/s2.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:20 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:20 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:20 +0000] "GET /img/s3.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:20 +0000] "GET /img/s1.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:20 +0000] "GET /img/s2.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:27 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:27 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:27 +0000] "GET /img/s3.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:27 +0000] "GET /img/s2.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:27 +0000] "GET /img/s1.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:28 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:28 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:28 +0000] "GET /img/s3.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:28 +0000] "GET /img/s2.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:05:28 +0000] "GET /img/s1.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+[0mGET / [32m200[0m 29.204 ms - 21176[0m
+[0mGET / [32m200[0m 32.544 ms - 21177[0m
+[0mGET / [32m200[0m 50.977 ms - 21086[0m
+[0mGET / [32m200[0m 43.720 ms - 21088[0m
+[0mGET /report/blacklisted-urls [32m200[0m 101.920 ms - 112409[0m
+[0mGET /report/js/blacklistedUrls.js [33m404[0m 6.851 ms - 167[0m
+[0mGET /report/blacklisted-urls [32m200[0m 140.238 ms - 112410[0m
+::1 - - [31/Jul/2023:11:16:50 +0000] "GET / HTTP/1.1" 200 20956 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:16:50 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:16:50 +0000] "GET /img/s3.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:16:50 +0000] "GET /img/s2.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:16:50 +0000] "GET /img/s1.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:21:08 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:21:08 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [31/Jul/2023:11:21:08 +0000] "GET /img/s3.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [31/Jul/2023:11:21:08 +0000] "GET /img/s2.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:21:08 +0000] "GET /img/s1.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:22:39 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:22:39 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:22:39 +0000] "GET /img/s3.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:22:39 +0000] "GET /img/s2.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:22:39 +0000] "GET /img/s1.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:23:20 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:23:20 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:23:20 +0000] "GET /img/s3.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:23:20 +0000] "GET /img/s2.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:23:20 +0000] "GET /img/s1.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:23:43 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:23:43 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:23:43 +0000] "GET /img/s3.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:23:43 +0000] "GET /img/s2.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:23:43 +0000] "GET /img/s1.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:23:55 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:23:55 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:23:55 +0000] "GET /img/s3.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:23:55 +0000] "GET /img/s2.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:23:56 +0000] "GET /img/s1.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:25:59 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:26:00 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:26:00 +0000] "GET /img/s3.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:26:00 +0000] "GET /img/s2.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:26:00 +0000] "GET /img/s1.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:30:49 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:30:50 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:30:50 +0000] "GET /img/s3.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:30:50 +0000] "GET /img/s2.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:30:50 +0000] "GET /img/s1.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:31:29 +0000] "GET / HTTP/1.1" 500 148 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:35:34 +0000] "GET / HTTP/1.1" 500 148 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:35:40 +0000] "GET / HTTP/1.1" 500 148 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:35:56 +0000] "GET / HTTP/1.1" 500 148 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:36:04 +0000] "GET / HTTP/1.1" 500 148 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+[0mGET / [32m200[0m 34.263 ms - 21088[0m
+::1 - - [31/Jul/2023:11:36:48 +0000] "GET / HTTP/1.1" 500 148 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [31/Jul/2023:11:38:29 +0000] "GET / HTTP/1.1" 200 20956 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [31/Jul/2023:11:38:29 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [31/Jul/2023:11:38:30 +0000] "GET /img/s3.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [31/Jul/2023:11:38:30 +0000] "GET /img/s2.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [31/Jul/2023:11:38:30 +0000] "GET /img/s1.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:39:38 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:39:38 +0000] "GET /img/logo.png HTTP/1.1" 404 151 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:39:38 +0000] "GET /img/s3.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [31/Jul/2023:11:39:38 +0000] "GET /img/s2.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+::1 - - [31/Jul/2023:11:39:38 +0000] "GET /img/s1.jpg HTTP/1.1" 404 149 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+[0mGET / [32m200[0m 23.820 ms - 21088[0m

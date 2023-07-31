@@ -10,7 +10,10 @@ module.exports = (app) =>{
         }
 
         console.log(filePath);
-        console.log(`${JSON.parse(fs.readFileSync(path.join(__dirname,'../public/assets/rev-manifest.json')))[filePath]}`)
+        console.log(fs.readFileSync(path.join(__dirname,'../public/assets/rev-manifest.json')));
+        // console.log(`${JSON.parse(fs.readFileSync(path.join(__dirname,'../public/assets/rev-manifest.json')))[filePath]}`)
+        console.log(`${JSON.parse(fs.readFileSync(path.join(__dirname,'../public/assets/rev-manifest.json')))[filePath]}`);
+
 
         return JSON.parse(fs.readFileSync(path.join(__dirname,'../public/assets/rev-manifest.json')))[filePath];
 

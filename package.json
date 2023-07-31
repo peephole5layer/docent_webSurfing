@@ -14,7 +14,7 @@
 
         "start": "nodemon index.js",
 
-        "prod_start" : "NODE_ENV=production nodemon index.js"
+        "prod_start": "NODE_ENV=production nodemon index.js"
 
     },
 
@@ -51,6 +51,8 @@
         "express-ejs-layouts": "^2.5.1",
 
         "express-session": "^1.17.3",
+
+        "fs": "^0.0.1-security",
 
         "fs-extra": "^11.1.1",
 

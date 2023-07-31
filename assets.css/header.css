@@ -1,0 +1,143 @@
+#docent-logo {
+    position: absolute;
+
+    height: 71px;
+    width: 85px;
+    margin-left: -59.5px;
+    margin-top: -12.5px;
+    border: 1px soid black;
+
+}
+
+
+#try {
+    /* border :2px solid red; */
+
+    height: 55px;
+    /* position: relative;
+    left:13.1px; */
+}
+
+
+#docent {
+    width: 70px;
+    position: relative;
+    top: -5px;
+    left: 2.5px;
+
+
+    display: flex;
+    flex-direction: column;
+
+
+    /* border:2px solid white; */
+    display: inline-block;
+    height: 55px;
+    margin-left: 27px;
+    font-family: cursive;
+}
+
+#docent div {
+    font-family: cursive;
+
+
+
+    font-size: 1.1rem;
+}
+
+#docent div:nth-child(1)::first-letter {
+    font-size: 1.7rem;
+
+}
+
+#docent div {
+    position: relative;
+    top: -6.1px;
+}
+
+#docent div:nth-child(2) {
+    position: relative;
+    top: -14.1px;
+}
+
+.nav-item {
+    height: 40px;
+
+}
+
+.nav-item a {
+    color: rgba(255, 255, 255, 0.873);
+    font-size: 0.94rem;
+}
+
+
+.nav-item a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.navbar-brand span:hover {
+    color: antiquewhite;
+}
+
+.link {
+    position: relative;
+    left: 16.2px;
+}
+
+
+.link a {
+    color: rgba(220, 237, 237, 0.951);
+}
+
+.link a:hover {
+    color: rgb(255, 255, 255);
+}
+
+.link .nav-link {
+    font-size: 0.91rem;
+}
+
+#dropdown-menu {
+    background-color: rgb(255, 255, 255);
+}
+
+#dropdown-menu li a {
+    color: black;
+}
+
+#dropdown-menu li a:hover {
+    background-color: aliceblue;
+}
+
+.dropdown button {
+    font-size: 0.9rem;
+    width: 72px;
+    background-color: #3e44519f;
+}
+
+.dropdown button:hover {
+    background-color: #3e4451b6;
+}
+
+
+@media (min-width:360px){
+    #try {
+       position: relative;
+       left: 12px;
+      
+   } 
+
+}
+
+@media (min-width:992px) {
+    .nav-item a:hover {
+
+        border-bottom: 0.5px solid rgb(243, 235, 235);
+    }
+
+    #try { 
+       left: 0px;
+   } 
+
+
+}

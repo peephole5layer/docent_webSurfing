@@ -1,5 +1,7 @@
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
+
+
 :root{
    --main-color:#d36a9f;
    --black:#222;
@@ -19,12 +21,11 @@
   
    outline: none; border:none;
    text-decoration: none;
-   text-transform: capitalize;
+   /* text-transform: capitalize; */
 } 
 
 
 #home {
-    border:2px solid red;
    
     position : relative;
     top:0.06vh;
@@ -154,14 +155,14 @@
     font-size:2rem;
     letter-spacing: 0.2rem;
     font-weight:600;
-    color:rgba(254, 0, 0, 0.74);
+    color:rgba(0, 0, 0, 0.745)
     
 }
 
 .element h2::first-letter{
     font-size:4.15rem;
     font-weight:800;
-    color:rgba(255, 0, 0, 0.773);
+    color:rgba(0, 0, 0, 0.796);
 }
 
 .flex-container-group{
@@ -184,15 +185,16 @@
 
 .cards{
   
-    height:105px;
+    height:107.5px;
    
-    width:105px;
+    width:107.5px;
     background-color: white;
     display:flex;
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
-    color:  #014d8e;
+    color : rgba(255, 0, 0, 0.821);
+    /* color:  #014d8e; */
   
     box-shadow: 2px 2px 2px 2px;
 }
@@ -204,31 +206,32 @@
 }
 
 .cards p{
-    font-size:0.73rem;
+    font-size:0.7rem;
     margin:auto;
-    font-weight:600;
-    margin-left:26px;
-    font-family: Arial, Helvetica, sans-serif;
-    color:black;
+   
+    margin-left:21.6px;
+    font-weight: 600;
+    font-family: cursive;
+    color:rgba(0, 0, 0, 0.833);
     width: 60px;
+
 }
 
 .cards:hover{
-    color:#01437d;
+    color : rgba(255, 0, 0, 0.977);
 
 }
 
 
-#data h2{
-    color: #dd4024e5;
-}
-
-#data h2::first-letter{
-    color: #dd4024fb;
-}
 
 #data .flex-container-group .group-cards a .cards{
-    color :#ff6f00ea;
+    color :  #014c8eea; 
+  
+}
+
+#data .flex-container-group .group-cards a .cards:hover{
+    color :  #004683; 
+
 }
 
 
@@ -241,7 +244,12 @@
 }
 
 #reliable-sites .flex-container-group .group-cards a .cards{
-    color : rgba(255, 0, 0, 0.781);
+   color:rgba(1, 128, 77, 0.893);
+}
+
+
+#reliable-sites .flex-container-group .group-cards a .cards:hover{
+    color:#007848;
 }
 
 
@@ -294,7 +302,7 @@
     width:700px;
     height:70px;
     background-color :  #01437d;
-    
+  
     border-radius: 7px;
     color:white;
     font-size:1.3rem;
@@ -495,27 +503,6 @@
  }
 
 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*blogs section*/
@@ -637,12 +624,13 @@
  .custom-btn{
 
     position: relative;
-    top:7px;
+    top:87px;
     background-color: black;
     color:white;
+    font-size:1.1rem;
 
-    width:160px;
-    height:45px;
+    width:170px;
+    height:65px;
     border-radius: 5px;
     padding:13px;
     margin:auto;
@@ -681,9 +669,7 @@
         font-size:2.03rem;
     } 
 
-    /* #reports-container header::first-letter,#report-sites-container header::first-letter{
-        font-size:
-    } */
+ 
 
         
     #blogs .box-container .box{
@@ -700,10 +686,7 @@
         margin:auto;
     }
 
-    .custom-btn{
-        top:25px;
-     }
-
+   
         
     #reports-container div button,#report-sites-container div button{
       
@@ -755,6 +738,17 @@
         font-size: 2.4vw;
      }
 
+           
+    .custom-btn{
+
+        font-size:1.01rem;
+        width:145px;
+        height:55px;
+    }
+
+
+
+  
           
     #reports-container div button,#report-sites-container div button{
       
@@ -961,7 +955,6 @@
     #submit-report-container #book-form #flex .inputBox{
         display:flex;
         flex-direction: column;
-        /* flex:1 1 41rem; */
         width:97%;
         height:90px;
     }
@@ -1005,7 +998,6 @@
         font-weight: bold;
         color:var(--black);
     
-        /* color:red; */
      }
 
     #blogs .box-container .box .content p{

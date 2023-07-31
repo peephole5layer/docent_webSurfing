@@ -3,16 +3,24 @@
 <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
  
 <nav class="navbar sticky-top navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark" >
-    <div class="container-fluid">
+
+    <div class="container-fluid" id="hi">
+
+      <a id="try"  class="navbar-brand  ml-5" href="#">
+        <img style="border: 1px solid #5e818a26" id ="docent-logo" src="/img/logo.png" alt="docent-logo" width="50" height="15px" class="d-inline-block align-text-top">
+         <div id="docent">
+              <div>Docent</div>
+              <div>webscan</div>
+    
+         </div>
+      </a>
+    
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <!-- <a class="navbar-brand" href="#">Navbar</a> -->
 
-      <a  class="navbar-brand ml-5 " href="#">
-        <img style="border: 1px solid #5e818a26" id ="docent-logo" src="/img/logo.png" alt="docent-logo" width="50" height="15px" class="d-inline-block align-text-top">
-         <span id="docent">Docent</span>
-      </a>
+    
 
 
 
@@ -31,7 +39,7 @@
 
            
           <li class="nav-item">
-            <a class="nav-link" href="/#reports-container">BlackListed&nbsp;URLS</a>
+            <a class="nav-link" href="/#reports-container">Reported&nbsp;sites</a>
           </li>
 
           <li class="nav-item">
@@ -57,12 +65,12 @@
 
             <div class="me-3 mb-2 mb-lg-0 link">
 
-              <a class="nav-link" href="/">Profile</a>
+              <a class="nav-link" href="/"><%=locals.user.fname%>&nbsp;<%=locals.user.lname%></a>
     
             </div>
             <div class="me-5 mb-2 mb-lg-0 link" >
             
-              <a class="nav-link" href="/users/destroy-session">Sign&nbsp;out</a>
+              <a class="nav-link" href="/users/destroy-session" >Sign&nbsp;out</a>
             </div>
         
         <% }else {%>
@@ -88,3 +96,4 @@
   </nav>
 
   <!-- bg-dark border-bottom border-bottom-dark -->
+

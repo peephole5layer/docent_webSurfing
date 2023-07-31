@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/css/blogContent.css">
+<div class="parallax-wrapper">
+    <div class="hero parallax-content"><img id="img" src="<%=Blog.coverImageUrl%>" alt="Photo of city during a sunset by Sterling Davis"/>
+      <div class="hero__title">
+        <h1></h1>
+    
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="scroll-icon-container">
+        <svg class="icon--down-arrow" viewBox="0 0 24 24">
+          <path d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z"></path>
+        </svg>
+      </div>
+      <h2><%=Blog.title%></h2>
+
+      <pre>
+        <%=Blog.body%>
+      </pre>
+     
+    </div>
+
+    <div id="contributor">
+       
+      <p> <span id="line"></span>&nbsp;&nbsp;contributed by <span><%=Blog.createdBy.fname%>&nbsp;<%=Blog.createdBy.lname%></span> </p>
+
+    </div>
+  </div>
+
+  <script src="/js/blogContent.js"></script>

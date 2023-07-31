@@ -43,7 +43,7 @@
 
             <header>
 
-                <h1>Docent&nbsp;Websurfing</h1>
+                <h1>Docent&nbsp;Webscan</h1>
                 <div class="spinner-border" role="status">
                     <span class="visually-hidden">Loading...</span>
                 </div>
@@ -61,7 +61,7 @@
                         <label for="f-name" class="col-sm-2 col-form-label ">First&nbsp;Name&nbsp;:</label>
                         <div class="col-sm-10" id="check" style="width:140px">
 
-                            <input name="fname" type="text" class="form-control mg-left-5" placeholder="First name"
+                            <input minlength="3" maxlength="14" name="fname" type="text" class="form-control mg-left-5" placeholder="First name"
                                 aria-label="First name" id="f-name" required>
 
 
@@ -72,7 +72,7 @@
                         <label for="l-name" class="col-sm-2 col-form-label">Last&nbsp;Name&nbsp;:</label>
                         <div class="col-sm-10" style="width:140px">
 
-                            <input name="lname" type="text" class="form-control  mg-left-5" placeholder="Last name"
+                            <input minlength="3" maxlength="15" name="lname" type="text" class="form-control  mg-left-5" placeholder="Last name"
                                 aria-label="Last name" id="l-name" required>
 
                         </div>
@@ -91,14 +91,14 @@
                     <div class="p-2 row mb-3 d-flex flex-nowrap">
                         <label for="inputEmail3" class="col-sm-2 col-form-label">Email&nbsp;:</label>
                         <div class="col-sm-10" style="width:140px">
-                            <input type="email" name="email" class="form-control mg-left-5" id="inputEmail3"
+                            <input maxlength="32" type="email" name="email" class="form-control mg-left-5" id="inputEmail3"
                                 placeholder="xyz@123.com" required>
                         </div>
                     </div>
                     <div class="p-2 row mb-3 d-flex flex-nowrap">
                         <label for="inputPassword3" class="col-sm-2 col-form-label">Password&nbsp;:</label>
                         <div class="col-sm-10" style="width:140px">
-                            <input type="password" name="password" class="form-control  mg-left-5" id="inputPassword3"
+                            <input minlength="8" type="password" name="password" class="form-control  mg-left-5" id="inputPassword3"
                                 placeholder="********" required>
                         </div>
                     </div>
@@ -107,7 +107,7 @@
                         <label id="confirm-pass" for="confirm-password3"
                             class="col-sm-2 col-form-label">Confirm&nbsp;Password&nbsp;:</label>
                         <div class="col-sm-10" style="width:140px">
-                            <input type="password" name="confirm_password" class="form-control mg-left-5"
+                            <input minlength="10" type="password" name="confirm_password" class="form-control mg-left-5"
                                 id="confirm-password3" placeholder="********" required>
                         </div>
                     </div>

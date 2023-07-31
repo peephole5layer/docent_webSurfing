@@ -14,18 +14,13 @@ passport.use(new LocalStrategy({
     async function(req,email,password,done){
 
         try{
-            
-
 
             const user = await User.findOne({email:email});
             console.log(email);
 
             if(!user || user.password!=password){
 
-
-
                 req.flash("error","Invalid email/password");
-               
                 
                 return done(null,false);
             }
@@ -35,13 +30,12 @@ passport.use(new LocalStrategy({
         }catch(err){
 
             console.log("Passport Local Error : ",err);
-     
         }
     }
 
 ));
 
-passport.serializeUser(function(user,done){
+passport.serializeUser(async function(user,done){
     done(null,user.id);
 });
 
@@ -51,6 +45,7 @@ passport.deserializeUser(async function(id,done){
     try{
 
         const user = await User.findById(id);
+        // req.flash('success', 'Signed out!');
         return done(null,user);
 
     }catch(err){
@@ -62,9 +57,13 @@ passport.deserializeUser(async function(id,done){
 
 // Authentication check
 
-passport.checkAuthentication = function(req,res,next){
+passport.checkAuthentication = async function(req,res,next){
 
     if(req.isAuthenticated()){
+
+        // console.log("auth check")
+
+       
         return next();
     }
 
@@ -72,8 +71,10 @@ passport.checkAuthentication = function(req,res,next){
     return res.redirect('/users/signin');
 }
 
-passport.setAuthenticatedUser = function(req,res,next){
+passport.setAuthenticatedUser = async function(req,res,next){
     if(req.isAuthenticated()){
+
+        console.log("set user");
         res.locals.user = req.user;
     }
 

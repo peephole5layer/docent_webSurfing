@@ -278,6 +278,10 @@ module.exports.blackListedUrls = async function(req,res){
 module.exports.blackList = async function(req,res,next){
 
     try{
+
+        if(!req.isAuthenticated()){
+            return res.redirect('/');
+        }
  
         const url = req.body.url;
         console.log(validator.isURL(url));  

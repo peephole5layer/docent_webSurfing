@@ -3,6 +3,8 @@ const ForgotPassToken = require('../models/forgot_pass_token');
 const crypto = require('crypto');
 const queue = require('../config/kue');
 const forgotPasswordEmailWorder = require('../workers/forgot_password_worker');
+const { Script } = require('vm');
+const { listenerCount } = require('stream');
 
 
 module.exports.signup = function (req, res) {
@@ -26,13 +28,14 @@ module.exports.signin = function (req, res) {
 
 
 
-    res.render('signin', {
+    return res.render('signin', {
         Title: "Sign In"
     });
 }
 
 
 module.exports.create = async function (req, res) {
+
 
     console.log("create controller loaded");
 
@@ -46,13 +49,14 @@ module.exports.create = async function (req, res) {
 
     console.log(req.body);
 
-    const user = await User.findOne({ email: req.body.email });
+    let user = await User.findOne({ email: req.body.email });
+ 
 
     try {
 
         if (!user) {
 
-            User.create({
+            user = await User.create({
                 email: req.body.email,
                 password: req.body.password,
                 fname: req.body.fname,
@@ -60,6 +64,8 @@ module.exports.create = async function (req, res) {
                 biometricData: null
 
             });
+
+            req.flash("success",`${user.fname} your account is created successfully`);
 
             return res.redirect('/users/signin');
 
@@ -74,33 +80,45 @@ module.exports.create = async function (req, res) {
 
     } catch (err) {
 
-        console.log("error while signing up");
+        console.log("error while signing up :::: ",err);
         return;
     }
 
 }
 
 
-module.exports.createSession = function (req, res) {
-    console.log("user session controller loaded");
-    req.flash('success', 'Logged In! ');
+module.exports.createSession = async function (req, res) {
+    req.flash("success","Logged in !")
     return res.redirect('/');
+   
 }
 
-module.exports.destroySession = function (req, res) {
+module.exports.destroySession = async function (req, res,next) {
 
-    req.logout(function (err) {
+    if(req.isAuthenticated()){
+       
+        req.logout(function (err) {
 
-        if (err) {
-            return next(err);
-        }
+            if (err) {
+                return next(err);
+            }
 
 
-        req.flash('success', 'Signed out!');
+            req.flash("success","Signed out!");
+           
 
+         
+            
+            return res.redirect('/');
 
-        return res.redirect('/');
-    });
+        });  
+
+    }
+
+  
+
+    
+
 
 }
 
@@ -260,6 +278,8 @@ module.exports.resetPassword = async function(req,res){
 
 
 }
+
+
 
 
 

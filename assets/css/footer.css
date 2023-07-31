@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 
-/* 
+
 :root{
   --main-color:#d36a9f;
   --black:#222;
@@ -18,58 +18,86 @@
 
 *{
   font-family: 'Poppins', sans-serif;
-  /* margin:0; padding:0; */
-  /* box-sizing: border-box;
-  outline: none; border:none; */
-  /* text-decoration: none;
-  text-transform: capitalize;
-} */ 
+  margin:0; padding:0; 
+   box-sizing: border-box;
+  outline: none; border:none;
+   text-decoration: none;
+  /* text-transform: capitalize; */
+} 
 
 
 
 .footer{
-    background: url(../img/footer-bg.jpg) no-repeat;
+
+    text-transform: capitalize;
+
+    min-height:320px;
+    opacity: 0.98;
+
+
+    position:relative;
+    bottom:0%;
+    margin-top:229px;
+    background: url("../img/f3.jpg") no-repeat;
     background-size: cover;
-    background-position: center;
+    
+    background-position-x: center;
+    background-position-y:bottom;
+    /* background-position: center; */
  }
  
  .footer .box-container{
    position: relative;
    top:35px;
-    border:2px solid red;
     grid-template-columns: repeat(auto-fit, minmax(2rem, 1fr));
     gap: 1rem;
     margin-top: 11%;
     width:1200px;
     margin:auto;
-    height:auto;
+    height:280px;
     display:flex;
     justify-content: space-evenly;
+    align-items: center;
     flex-wrap: wrap;
  }
 
  .footer .box-container .box{
   width:265px;
-  border : 2px solid red;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height:174px;
+
  
   
 
  }
  
  .footer .box-container .box h3{
+  position: relative;
+  top:-12px;
     color:var(--white);
     font-size: 1.5rem;
     padding-bottom: 2rem;
     font-weight: bold;
+    height:25px;
+    margin-bottom: 0px;
  }
  
  .footer .box-container .box a{
 
     color:var(--light-white);
-    font-size: 0.79rem;
+    font-size: 0.82rem;
   
     padding-bottom: 1.5rem;
     display: block;
+
+    height:15px;
+    position: relative;
+    top:-5px;
+    text-decoration: none;
+   
  }
  
  .footer .box-container .box a i{
@@ -82,52 +110,79 @@
     padding-right: 2rem;
  }
  
- .footer .credit{
+
+  .footer .credit{
+    margin-top:2rem;
+  }
+
+  .footer .credit div{
+    position: relative;
+    top:-9px;
     text-align: center;
-    padding-top: 2rem;
-    margin-top: 1rem;
+    padding-top: 1.5rem;
     border-top: .1rem solid var(--light-white);
     font-size: 1rem;
     color:var(--white);
  }
  
- .footer .credit span{
+ .footer .credit div span{
+  display: inline-block;
     color:var(--main-color);
+    font-size:1.38rem;
+    font-family: cursive;
  }
+
+ .footer .credit div span::first-letter{
+    font-size:1.9rem;
+   
+ }
+
+
  
  /* ====================== Responsive Design ========================== */
 
  
 @media (max-width:1200px){
 
-  section{
-     padding:3rem 5%;
-  }
+  
 
   .footer .box-container{
-    top:35px;
-     width:90vw;
+    top:5px;
+
+
+    width:100%;
+   
 
      margin:auto;
-     height:550px;
-     display:flex;
-     flex-direction: column;
-     justify-content: space-evenly;
-     flex-wrap: wrap;
+     height:350px;
+   
   }
 
   .footer .box-container .box{
-    width:46%;
-    border : 2px solid red;
-   
-    
-  
+    width:165px;
    }
  
 
 }
 
+
+
 @media (max-width: 991px) {
+
+  
+  .footer .box-container{
+    top:35px;
+    flex-direction: column;
+    align-items: center;
+     height:430px;
+  }
+
+  
+  .footer .box-container .box{
+    width:180px;
+   }
+ 
+
 
   footer{
     font-size:0.3rem;
@@ -165,11 +220,29 @@
  }
  
  @media (max-width: 480px) {
+
+  .footer .box-container{
+     top:38px;
+     width:92vw;
+     height:780px;
+     align-items: flex-start;
+  }
+
+  .footer .box-container .box h3{
+    height:27px;
+  }
+
+  .footer .box-container .box a{
+    top:-8px;
+  }
+
    .cardBox {
      grid-template-columns: repeat(1, 1fr);
    }
 
    .box h3{
+
+      
       font-size: 15px;
    }
    .cardHeader h2 {

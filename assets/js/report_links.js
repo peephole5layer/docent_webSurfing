@@ -88,17 +88,8 @@ window.addEventListener('load',function(){
     }
 
     blackList();
-
-});
-   
-   
+});   
 }
-
-
-
-
-
-
 
 
 

@@ -63,6 +63,10 @@ app.set('views', './views');
 // });
 
 
+
+
+
+
 app.use(session({
     name : 'webSurf',
     secret : 'webSurf',
@@ -85,13 +89,18 @@ app.use(session({
 
 }));
 
+
+app.use(flash());
+app.use(customMware.setFlash);
+
+
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
 
-app.use(flash());
+// app.use(flash());
 
-app.use(customMware.setFlash);
+// app.use(customMware.setFlash);
 
 app.use('/', require('./routes'));
 

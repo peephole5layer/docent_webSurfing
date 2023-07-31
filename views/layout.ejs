@@ -48,13 +48,17 @@
 
         <%- body %>
 
-            <!-- <%-include('_footer'); %> -->
+            <%-include('_footer'); %>
 
                 <%- script %>
                 
                 <script>
                     
                     <% if (flash.success && flash.success.length > 0) {%>
+                          
+                       
+                      
+                        
                         new Noty({
                             theme: 'relax',
                             text: "<%= flash.success %>",
@@ -62,7 +66,14 @@
                             layout: 'topRight',
                             timeout: 1500
                             
-                        }).show();  
+                        }).show();
+                        
+                        // console.log(<%=flash.success%>);
+
+                        console.log("<%=flash.success%>" + "  jdjdidjdi");
+
+                       <% flash.success="";%>
+                       console.log("<%=flash.success%>" + "  jdjdidjdi");
 
                     <%} %>
         
@@ -74,7 +85,9 @@
                             layout: 'topRight',
                             timeout: 1500
                             
-                        }).show();   
+                        }).show();  
+                        
+                        flash.error="";
 
                     <%} %>
 

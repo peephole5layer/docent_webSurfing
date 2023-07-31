@@ -27,32 +27,15 @@ const articleController = require('../controllers/article_controller');
 
 
 router.get('/admin', adminController.admin);
-
-
-
 router.get('/', homeController.home);
 router.get('/signup',userController.signup);
-router.get('/blog',blogController.blog);
-router.use('/users', require('./users'));
-
-
-
-
-
-router.use('/report',require('./report'));
 router.get('/article/:str1/:str2/:str3',articleController.article);
 
 
-
+router.use('/users', require('./users'));
+router.use('/blog',require('./blogs'));
+router.use('/report',require('./report'));
 router.use('/api',require('./api'));
-
-
-
-
-
-
-
-
 
 console.log("router loaded");
 

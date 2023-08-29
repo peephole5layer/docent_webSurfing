@@ -5,7 +5,7 @@ module.exports.setFlash = async function(req,res,next){
         'error' : req.flash('error')
     }
 
-    console.log("middeleware flash loaded");
+    // console.log("middeleware flash loaded");
 
     next();
 }

@@ -2,12 +2,20 @@ let boxes = [...document.querySelectorAll('.reports')];
 
 let x = 21;
 
-for(let i=0; i<x; i++){
+for(let i=0; i<x &&i<boxes.length; i++){
     boxes[i].style.display = 'inline-block';
 }
 
+
 let nextBtn = document.querySelector('#next');
 let prevBtn = document.querySelector('#prev');
+
+
+
+if(boxes.length<=9){
+    nextBtn.style.display = 'none';
+    
+}
 
 
 
@@ -15,6 +23,8 @@ let prevBtn = document.querySelector('#prev');
 
 let nextCurrentItem = x;
 let prevCurrentItem = 1;
+
+console.log(nextBtn);
 
 
 nextBtn.onclick = () => {
@@ -61,6 +71,22 @@ prevBtn.onclick = ()=>{
     window.scrollTo(0,0);
 
 }
+
+
+function reallySure (event) {
+    var message = ' Remove this URL ? ';
+    action = confirm(message) ? true : event.preventDefault();
+}
+
+function actionToFunction (event) {
+
+    if(event.target.getAttribute('data-removeLink')=='true'){
+        reallySure(event);
+
+    }
+}
+
+document.body.addEventListener('click', actionToFunction);
 
 
 

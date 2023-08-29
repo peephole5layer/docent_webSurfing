@@ -2,101 +2,94 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
- 
-<nav class="navbar sticky-top navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark" >
 
-    <div class="container-fluid" id="hi">
+<nav class="navbar sticky-top navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
 
-      <a id="try"  class="navbar-brand  ml-5" href="#">
-        <img style="border: 1px solid #5e818a26" id ="docent-logo" src="/img/logo.png" alt="docent-logo" width="50" height="15px" class="d-inline-block align-text-top">
-         <div id="docent">
-              <div>Docent</div>
-              <div>webscan</div>
-    
-         </div>
-      </a>
-    
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+  <div class="container-fluid" id="hi">
 
-    
+    <a id="try" class="navbar-brand  ml-5" href="#">
+      <img style="border: 1px solid #5e818a26" id="docent-logo" src="<%=assetPath('img/logo.png')%>" alt="docent-logo"
+        width="50" height="15px" class="d-inline-block align-text-top">
+      <div id="docent">
+        <div>Docent</div>
+        <div>webscan</div>
 
-
-
-
-
-      <div class="collapse navbar-collapse custom" id="navbarTogglerDemo03">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-          <li class="nav-item">
-            <a class="nav-link"  href="/">Home</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="/#report-sites-container">Report&nbsp;Url</a>
-          </li>
-
-
-           
-          <li class="nav-item">
-            <a class="nav-link" href="/#reports-container">Reported&nbsp;sites</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="/#search-articles">Articles</a>
-          </li>
-
-          <li class="nav-item dropdown">
-            <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              More
-            </button>
-            <ul class="dropdown-menu" id="dropdown-menu">
-              <li><a class="dropdown-item" href="/#blogs">Blogs</a></li>
-              <li><a class="dropdown-item" href="#">About</a></li>
-              <li><a class="dropdown-item" href="#">Contact&nbsp;Us</a></li>
-            </ul>
-          </li>
-
-         
-        </ul>
-
-
-        <% if(locals.user){ %>
-
-            <div class="me-3 mb-2 mb-lg-0 link">
-
-              <a class="nav-link" href="/"><%=locals.user.fname%>&nbsp;<%=locals.user.lname%></a>
-    
-            </div>
-            <div class="me-5 mb-2 mb-lg-0 link" >
-            
-              <a class="nav-link" href="/users/destroy-session" >Sign&nbsp;out</a>
-            </div>
-        
-        <% }else {%>
-
-        <div class="me-3 mb-2 mb-lg-0 link">
-
-          <a class="nav-link" href="/users/signin">Sign&nbsp;In</a>
-
-        </div>
-        <div class="me-5 mb-2 mb-lg-0 link" >
-         
-          <a class="nav-link" href="/users/signup">Sign&nbsp;Up</a>
-        </div>
-        <%}%>
-        <form class="d-flex" role="search">
-        
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        
-        </form>
       </div>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+
+
+
+
+
+
+
+    <div class="collapse navbar-collapse custom" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#report-sites-container">Report&nbsp;Url</a>
+        </li>
+
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#reports-container">Reported&nbsp;sites</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#search-articles">Articles</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            More
+          </button>
+          <ul class="dropdown-menu" id="dropdown-menu">
+            <li><a class="dropdown-item" href="/#blogs">Blogs</a></li>
+            <li><a class="dropdown-item" href="/about">About</a></li>
+            <li><a class="dropdown-item" href="/#contact-us">Contact&nbsp;Us</a></li>
+
+            <% if(locals.user){ %>
+
+             
+                <li><a class="dropdown-item" href="#"> <%=locals.user.fname%>&nbsp;<%=locals.user.lname%></a></li>
+                <li><a class="dropdown-item" href="/users/destroy-session">Sign&nbsp;out</a></li>
+
+              <% }else {%>
+
+                <li><a class="dropdown-item" href="/users/signin" >Sign&nbsp;in</a></li>
+                <li><a class="dropdown-item" href="/users/signup" >Sign&nbsp;up</a></li>
+
+
+
+              
+                <%}%>
+          </ul>
+        </li>
+
+
+      </ul>
+
+
+      <form class="d-flex" role="search">
+
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+
+      </form>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- bg-dark border-bottom border-bottom-dark -->
+<!-- bg-dark border-bottom border-bottom-dark -->
 
-  <script src="<%= assetPath('/js/_header.js')%>"></script>
-
+<script src="<%= assetPath('js/_header.js')%>"></script>

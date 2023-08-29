@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<link rel="stylesheet" href="<%= assetPath('/css/home.css')%>">
+<link rel="stylesheet" href="<%= assetPath('css/home.css')%>">
 
 
 
@@ -206,24 +206,24 @@
 
                   <div class="group-cards">
 
-                    <a href="#data">
+                    <a href="/reliableSites/0">
                       <div class="cards">
                         <i class="fa-solid fa-basket-shopping"></i>
                         <p>Online Shopping</p>
                       </div>
                     </a>
 
-                    <a href="#data">
+                    <a href="/reliableSites/1">
                       <div class="cards">
                         <i class="fa-regular fa-credit-card"></i>
                         <p>Financial Sites</p>
                       </div>
                     </a>
 
-                    <a href="#data">
+                    <a href="/reliableSites/2">
                       <div class="cards">
                         <i class="fa-solid fa-venus-mars"></i>
-                        <p>Adult&nbsp;& Dating&nbsp;Sites</p>
+                        <p>Dating&nbsp;Sites</p>
                       </div>
                     </a>
 
@@ -231,21 +231,21 @@
 
                   <div class="group-cards">
 
-                    <a href="#data">
+                    <a href="/reliableSites/3">
                       <div class="cards">
                         <i class="fa-solid fa-user-tie"></i>
                         <p style="margin-left:17px;">Employment Sites</p>
                       </div>
                     </a>
 
-                    <a href="#data">
+                    <a href="/reliableSites/4">
                       <div class="cards">
                         <i class="fa-solid fa-film"></i>
                         <p style="margin-left:12px;">Entertainment Sites</p>
                       </div>
                     </a>
 
-                    <a href="#data">
+                    <a href="/reliableSites/5">
                       <div class="cards">
                         <i style="margin-top:5.5px;margin-bottom:9.7px;" class="bi bi-shield-fill-check"></i>
                         <!-- <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-shield-fill-check" viewBox="0 0 25 25">
@@ -339,7 +339,7 @@
                   </div>
                   <div class="inputBox">
                     <span> Site Url : </span>
-                    <input type="url" placeholder="Enter url" name="url" required>
+                    <input maxlength="120" type="url" placeholder="Enter url" name="url" required>
                   </div>
                   <div class="inputBox">
                     <span>Adhaar Number :</span>
@@ -388,34 +388,34 @@
 
             <div class="box">
               <div class="image">
-                <img src="/img/s3.jpg" alt="">
+                <img src="<%=assetPath('img/s3.jpg')%>" alt="">
               </div>
               <div class="content">
                 <h3>Man&nbsp;in&nbsp;the&nbsp;middle&nbsp;attack</h3>
                 <p>Shield Yourself from Man in the middle attack ............</p>
-                <a href="book.html" class="btn">Read</a>
+                <a href="/blog/64c9d019b35180497be2ee98" class="btn">Read</a>
               </div>
             </div>
 
             <div class="box">
               <div class="image">
-                <img src="/img/s2.jpg" alt="">
+                <img src="<%=assetPath('img/s2.jpg')%>" alt="">
               </div>
               <div class="content">
                 <h3>Ransomeware&nbsp;Attacks</h3>
                 <p>Know how to be safe from Ransomeware ... *******</p>
-                <a href="book.html" class="btn">Read</a>
+                <a href="/blog/64c9cec7ebc22969ccc24da3" class="btn">Read</a>
               </div>
             </div>
 
             <div class="box">
               <div class="image">
-                <img src="/img/s1.jpg" alt="">
+                <img src="<%=assetPath('img/s1.jpg')%>" alt="">
               </div>
               <div class="content">
                 <h3>Social Engineering</h3>
                 <p>How to protect yourself from social engineering ? .......</p>
-                <a style="display:inline-block" href="book.html" class="btn">Read</a>
+                <a style="display:inline-block" href="/blog/64c913e87c677eecbab36205" class="btn">Read</a>
               </div>
             </div>
 
@@ -456,13 +456,13 @@
       <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
 
-      <script src="<%= assetPath('/js/base64url.js')%>"></script>
+      <script src="<%= assetPath('js/base64url.js')%>"></script>
 
 
 
 
-      <script src="<%= assetPath('/js/report_links.js')%>"></script>
-      <script src="<%= assetPath('/js/home.js')%>"> </script> 
+      <script src="<%= assetPath('js/report_links.js')%>"></script>
+      <script src="<%= assetPath('js/home.js')%>"> </script> 
 
 
 

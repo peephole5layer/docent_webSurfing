@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="<%= assetPath('css/reliable.css')%>">
+
+<div id="reliable-sites-container" data-pageIndex="<%= PageIndex%>">
+    <header>
+        <h1 id="page-heading"></h1>
+    </header>
+    <main >
+
+        <div id="heading">
+            <span>Websites</span>
+            <span>Countries Served</span>
+
+        </div>
+        <table id="reliable-sites-table">
+
+
+            <!-- Add more shopping sites and countries as needed -->
+        </table>
+    </main>
+
+    <template id="table-row-template">
+        <tr>
+            <td rowspan="1"><a class="link" href="" target="_blank"> </a></td>
+            <td class="countries"></td>
+        </tr>
+
+
+    </template>
+
+
+</div>
+
+<script src="<%= assetPath('js/reliableSites.js')%>"></script>

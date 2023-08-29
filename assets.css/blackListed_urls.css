@@ -72,6 +72,21 @@
     color:rgba(255, 0, 0, 0.838);
 }
 
+#remove-link{
+    color:rgba(255, 0, 0, 0.856);
+    margin-left:10%;
+    font-size:0.8rem;
+    position: relative;
+    left:10%;
+    margin:auto;
+}
+
+#remove-link:hover{
+    color:red;
+
+}
+
+
 
 #page{
     display:flex;
@@ -176,7 +191,8 @@
     }
 
     #modal-button{
-        width:70px;
+        width:13.75vw;
+        font-size:0.6rem;
     }
 
     #card-entities ul li{

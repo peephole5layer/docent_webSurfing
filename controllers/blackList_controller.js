@@ -207,6 +207,8 @@ module.exports.blackListedUrls = async function(req,res){
     
         console.log("BlackListed Urls controller loaded");
         console.log(req.query.search);
+
+      
     
         const search = req.query.search!=undefined ? req.query.search: "";
     
@@ -224,10 +226,16 @@ module.exports.blackListedUrls = async function(req,res){
                     for(userId of i.users){
             
                         const user = await User.findById(userId.toHexString());
-                        x.push(user);  
+                        if(user!=undefined)
+                           x.push(user);  
+                    }
+
+                    if(x.length!=0){
+                        reporters.push(x);
+
                     }
                     
-                    reporters.push(x);
+                   
                 }     
     
             }else{
@@ -243,14 +251,15 @@ module.exports.blackListedUrls = async function(req,res){
                 link.push(status);
                 console.log(link);
             }
+
         
-            return await res.render('blacklistedUrls',{
+            return res.render('blacklistedUrls',{
                 Title: 'BlackListed URLs',
                 Reported_links : link,
                 Reporters : reporters,
                 Search_key : search,
                 color : "",
-                bgColor: ""
+                bgColor: "",
             });
     
         }catch(err){
@@ -258,6 +267,7 @@ module.exports.blackListedUrls = async function(req,res){
         }
 
  }
+
     
 
 
@@ -399,4 +409,29 @@ module.exports.blackList = async function(req,res,next){
         console.log("error::", err);
         return res.redirect('back');
     }
+}
+
+
+
+module.exports.delete = async function(req,res){
+
+    try{
+
+        if(req.user && req.user.access == 'admin'){
+
+            await Link.findByIdAndDelete(req.params.id);
+            return res.redirect('back');
+        }else{
+
+            return res.send('<h1 style="text-align:center;"> UnAuthorized Access... Request Blocked!!! </h1>');
+        }
+
+    
+
+    }catch(err){
+        console.log("Error in blacklist delete controller :::::: ",err);
+        return;
+    }
+
+    
 }

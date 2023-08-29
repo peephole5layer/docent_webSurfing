@@ -1,4 +1,16 @@
 /* =========== Google Fonts ============ */
+#heeee{
+  color:grey;
+}
+#hi{
+  color:red;
+}
+#on{
+  color:blue;
+}
+#hel{
+  color:blue;
+}
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 
 /* =============== Globals ============== */
@@ -18,28 +30,38 @@
 }
 
 #admin_container {
-  min-height: 100vh;
+  display: flex;
+
+  max-height:700px;
+
+
+
   position:relative;
+
   left:0px;
-  border:2px solid red;
+ 
   
-  /* overflow-x: hidden; */
 }
 
-.container {
-  position: relative;
-  width: 100%;
-}
 
 /* =============== Navigation ================ */
+
+
 .navigation {
+  z-index:1;
+
+  display: none;
+
   position: fixed;
-  width: 300px;
+  left:0px;
+  top:72px;
+  width: 250px;
   height: 100%;
   background: var(--blue);
   border-left: 10px solid var(--blue);
   transition: 0.5s;
   overflow: hidden;
+  margin-right:40px;
 }
 .navigation.active {
   width: 80px;
@@ -58,6 +80,21 @@
   list-style: none;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+}
+
+.navigation ul li:first-child{
+  position: relative;
+  left:-34px;
+  top:16px;
+}
+
+.navigation ul li:first-child a .title{
+  font-size:1.28rem;
+  font-family: cursive;
+}
+
+.navigation ul li:first-child a .title::first-letter{
+  font-size:2.2rem;
 }
 
 .navigation ul li:hover,
@@ -103,10 +140,10 @@
   line-height: 60px;
   text-align: start;
   white-space: nowrap;
-}
+} */
 
 /* --------- curve outside ---------- */
-.navigation ul li:hover a::before,
+ .navigation ul li:hover a::before,
 .navigation ul li.hovered a::before {
   content: "";
   position: absolute;
@@ -135,29 +172,25 @@
 
 /* ===================== Main ===================== */
 .main {
-  position: absolute;
-  width: calc(100% - 300px);
-  left: 300px;
+  position: relative;
+  width: calc(100vw - 250px);
+
+  
+  left: 150px;
   min-height: 100vh;
   background: var(--white);
   transition: 0.5s;
+  /* border:2px solid green; */
 }
-.main.active {
+/* .main.active {
   width: calc(100% - 80px);
-  left: 80px;
-}
-
-.topbar {
-  width: 100%;
-  height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10px;
-}
+ 
+} */
 
 .toggle {
-  position: relative;
+  position: fixed;
+  z-index: 2;
+  top:88.5px;
   width: 60px;
   height: 60px;
   display: flex;
@@ -216,23 +249,44 @@
 
 /* ======================= Cards ====================== */
 .cardBox {
+  margin:auto;
   position: relative;
+  /* left:300px; */
+  top:15px;
+  margin-top: 50px;;
   width: 100%;
+  /* border:2px solid red; */
   padding: 20px;
-  display: grid;
+  display:flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly;
+  /* display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
+  grid-gap: 30px; */
 }
 
 .cardBox .card {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+
+
   position: relative;
   background: var(--white);
-  padding: 30px;
+  height:200px;
+  width:190px;
+  margin:8px;
+  
+  padding: 20px;
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
+  /* align-content:  space-evenly; */
   cursor: pointer;
-  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.082);
 }
 
 .cardBox .card .numbers {
@@ -240,17 +294,25 @@
   font-weight: 500;
   font-size: 2.5rem;
   color: var(--blue);
+
+  position: relative;
+  /* top:10px; */
 }
 
 .cardBox .card .cardName {
   color: var(--black2);
   font-size: 1.1rem;
   margin-top: 5px;
+
+  position: relative;
+  top:9.4px;
 }
 
 .cardBox .card .iconBx {
   font-size: 3.5rem;
   color: var(--black2);
+  position: relative;
+  top:20px;
 }
 
 .cardBox .card:hover {
@@ -262,212 +324,230 @@
   color: var(--white);
 }
 
-/* ================== Order Details List ============== */
-.details {
+
+#reports-container,#blogs-container{
   position: relative;
-  width: 100%;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 30px;
-  /* margin-top: 10px; */
+  left:200px;
+  width: 90%;
+  width:700px;
+  top:70px;
 }
 
-.details .recentOrders {
-  position: relative;
-  display: grid;
-  min-height: 500px;
-  background: var(--white);
-  padding: 20px;
-  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+#reports-container{
+  margin-top:20px;
+}
+
+#blogs-container{
+  margin-top:35px;
+}
+
+
+
+#reports-container div button,#blogs-container div button{
+  margin:auto;
+  margin-bottom:50px;
+  width:725px;
+  height:70px;
   border-radius: 20px;
+
+  background-color: var(--blue);
+  opacity: 0.98;
+  color:white;
+  
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.215);
+  font-size:1.3rem;
+
 }
 
-.details .cardHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.cardHeader h2 {
-  font-weight: 600;
-  color: var(--blue);
-}
-.cardHeader .btn {
-  position: relative;
-  padding: 5px 10px;
-  background: var(--blue);
-  text-decoration: none;
-  color: var(--white);
-  border-radius: 6px;
+#reports-container div button:hover,#blogs-container div button:hover{
+  background-color: white;
+  color: rgba(0, 0, 0, 0.897);
+  border:0.5px solid rgba(0, 0, 0, 0.863);
 }
 
-.details table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-.details table thead td {
-  font-weight: 600;
-}
-.details .recentOrders table tr {
-  color: var(--black1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-.details .recentOrders table tr:last-child {
-  border-bottom: none;
-}
-.details .recentOrders table tbody tr:hover {
-  background: var(--blue);
-  color: var(--white);
-}
-.details .recentOrders table tr td {
-  padding: 10px;
-}
-.details .recentOrders table tr td:last-child {
-  text-align: end;
-}
-.details .recentOrders table tr td:nth-child(2) {
-  text-align: end;
-}
-.details .recentOrders table tr td:nth-child(3) {
-  text-align: center;
-}
-.status.delivered {
-  padding: 2px 4px;
-  background: #8de02c;
-  color: var(--white);
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
-}
-.status.pending {
-  padding: 2px 4px;
-  background: #e9b10a;
-  color: var(--white);
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
-}
-.status.return {
-  padding: 2px 4px;
-  background: #f00;
-  color: var(--white);
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
-}
-.status.inProgress {
-  padding: 2px 4px;
-  background: #1795ce;
-  color: var(--white);
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 500;
-}
 
-.recentCustomers {
-  position: relative;
-  display: grid;
-  min-height: 500px;
-  padding: 20px;
-  background: var(--white);
-  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
-  border-radius: 20px;
-}
-.recentCustomers .imgBx {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  overflow: hidden;
-}
-.recentCustomers .imgBx img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.recentCustomers table tr td {
-  padding: 12px 10px;
-}
-.recentCustomers table tr td h4 {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.2rem;
-}
-.recentCustomers table tr td h4 span {
-  font-size: 14px;
-  color: var(--black2);
-}
-.recentCustomers table tr:hover {
-  background: var(--blue);
-  color: var(--white);
-}
-.recentCustomers table tr:hover td h4 span {
-  color: var(--white);
-}
 
 /* ====================== Responsive Design ========================== */
-@media (max-width: 991px) {
+ @media (max-width: 1280px) {
   .navigation {
-    left: -300px;
+    z-index: 1;
   }
-  .navigation.active {
-    width: 300px;
-    left: 0;
+  
+  .main {
+    width: calc(100vw - 40px);;
+    left:0; 
+
   }
+
+  .cardBox {
+    position: relative;
+    left:0;
+    top:50px;
+    margin: auto;
+   
+    width:100%;
+  }
+
+
+  #reports-container,#blogs-container{  
+    width:69vw;
+    left:0;
+    margin-left:0px;
+    margin:auto;
+   
+  }
+
+  #reports-container{
+    margin-top:58px;
+  }
+
+  #blogs-container{
+    margin-top:35px;
+  }
+
+
+    
+  #reports-container div button,#blogs-container div button{
+
+    width:100%;
+   
+  }
+
+
+
+}
+
+@media (max-width: 991px) {
   .main {
     width: 100%;
-    left: 0;
   }
-  .main.active {
-    left: 300px;
+
+  .cardBox{
+    top:80px;
   }
-  .cardBox {
-    grid-template-columns: repeat(2, 1fr);
+    
+  .cardBox .card {
+    height:160px;
+    width:140px;
+    padding:0px;
+  }   
+
+  .cardBox .card .numbers {
+    top:10px;
+    font-size: 1.76rem;
+  }
+
+  .cardBox .card .cardName {
+    font-size: 1.01rem;
+    top:14px;
+   
+  }
+
+  .cardBox .card .iconBx {
+    font-size: 3.1rem;
+    top:15px;
   }
 }
 
-@media (max-width: 768px) {
-  .details {
-    grid-template-columns: 1fr;
-  }
-  .recentOrders {
-    overflow-x: auto;
-  }
-  .status.inProgress {
-    white-space: nowrap;
-  }
-}
 
-@media (max-width: 480px) {
+@media (max-width: 720px) {
   .cardBox {
-    grid-template-columns: repeat(1, 1fr);
+    width:95%;
   }
-  .cardHeader h2 {
-    font-size: 20px;
+
+    
+  .cardBox .card {
+    width:35%;
+    margin:23px;
+    min-width:155px;
+   
   }
-  .user {
-    min-width: 40px;
+
+  
+  #reports-container,#blogs-container {
+    width:81vw;
+    height:75px;
   }
-  .navigation {
-    width: 100%;
-    left: -100%;
-    z-index: 1000;
+
+  
+  #reports-container{
+    margin-top:35px;
   }
-  .navigation.active {
-    width: 100%;
-    left: 0;
+
+  #blogs-container{
+    margin-top:65px;
   }
-  .toggle {
-    z-index: 10001;
+
+
+
+
+
+} 
+
+@media only screen and (max-width: 480px){
+
+
+    
+  #admin_container {
+    display: flex;
+
+    max-height:1200px;
+
+
+
+    position:relative;
+
+    left:0px;
+  
+    
   }
-  .main.active .toggle {
-    color: #fff;
-    position: fixed;
-    right: 0;
-    left: initial;
+
+
+
+  .cardBox {
+    top:43.5px;
+    width:100%
   }
+
+    
+  .cardBox .card {
+    margin-top: 18px;
+    width:65%;
+    height:170px;
+    min-width:202px;
+   
+  }
+
+  .cardBox .card .numbers {
+    font-size:1.87rem;
+  }
+
+  .cardBox .card .cardName {
+    top:18px;
+    font-size: 1.1rem;
+  
+   
+  }
+
+  .cardBox .card .iconBx {
+    font-size: 3.2rem;
+  }
+
+  
+  
+  #reports-container{
+    margin-top:40px;
+  }
+
+  #blogs-container{
+    /* margin-top:65px; */
+    margin-top:90px;
+  }
+
+  #blogs-container div button,#reports-container div button{
+    height:90px;
+    font-size:1.37rem;
+  }
+
+
 }

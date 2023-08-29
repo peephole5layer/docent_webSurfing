@@ -1,14 +1,14 @@
 <footer>
-    <section class="footer">
+    <section class="footer" data-backgroundUrl="<%=assetPath('img/f3.jpg')%>">
 
         <div class="box-container">
      
            <div class="box">
               <h3>quick links</h3>
-              <a href="home.ejs"> <i class="fas fa-angle-right"></i> home</a>
-              <a href="ReportUrl.ejs"> <i class="fas fa-angle-right"></i> Report Url</a>
-              <a href="BlackListedURLS.ejs"> <i class="fas fa-angle-right"></i> BlackListed URLS</a>
-              <a href="Blogs.ejs"> <i class="fas fa-angle-right"></i> Blogs</a>
+              <a href="#home"> <i class="fas fa-angle-right"></i> home</a>
+              <a href="#reports-container"> <i class="fas fa-angle-right"></i> Report Url</a>
+              <a href="#report-sites-container"> <i class="fas fa-angle-right"></i> BlackListed URLS</a>
+              <a href="#blogs"> <i class="fas fa-angle-right"></i> Blogs</a>
 
 
            </div>
@@ -16,25 +16,27 @@
            <div class="box">
               <h3>extra links</h3>
               <a href="#"> <i class="fas fa-angle-right"></i> ask questions</a>
-              <a href="#"> <i class="fas fa-angle-right"></i> about us</a>
+              <a href="/about"> <i class="fas fa-angle-right"></i> about us</a>
               <a href="#"> <i class="fas fa-angle-right"></i> privacy policy</a>
               <a href="#"> <i class="fas fa-angle-right"></i> terms of use</a>
            </div>
      
            <div class="box">
-              <h3>contact info</h3>
+              <h3 id = "contact-us">contact info</h3>
               <a href="#"> <i class="fas fa-phone"></i> 7456383848 </a>
-              <a href="#"> <i class="fas fa-phone"></i> 8934567123 </a>
-              <a href="#"> <i class="fas fa-envelope"></i>xyz@gmail.com  </a>
+              <a href="#"> <i class="fas fa-phone"></i> 7906660684</a>
+              <a id="my-email" href="#"> <i class="fas fa-envelope"></i>bhaveshrathour4@gmail.com  </a>
               <a href="#"> <i class="fas fa-map"></i> Nainital, india - 263001 </a>
            </div>
      
            <div class="box">
               <h3>follow us</h3>
-              <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
-              <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
-              <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
-              <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+              <a href="https://www.facebook.com/bhavesh.rathour.1"> <i class="fab fa-facebook-f"></i> facebook </a>
+              <!-- <a href="#"> <i class="fab fa-twitter"></i> twitter </a> -->
+              <a href="https://instagram.com/__mr.codex___?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"> <i class="fab fa-instagram"></i> instagram </a>
+              <a href="https://www.linkedin.com/in/rathour2bhawesh"> <i class="fab fa-linkedin"></i> linkedin </a>
+              <a href="https://www.linkedin.com/in/divyanshu-mishra-2b5294238?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BxiM6jwa9RDaT3eQRAdI4OQ%3D%3D"> <i class="fab fa-linkedin"></i> linkedin </a>
+
            </div>
      
         </div>
@@ -50,4 +52,4 @@
      </section>
      
 </footer>
-<script src="<%= assetPath('/js/_footer.js')%>"></script>
+<script src="<%= assetPath('js/_footer.js')%>"></script>

@@ -16,11 +16,13 @@ const homeController = require('../controllers/home_controller');
 
 
 const adminController = require('../controllers/admin_controller');
-const blogController =require("../controllers/blog_controller");
+// const blogController =require("../controllers/blog_controller");
 
 const userController = require('../controllers/user_controller');
-const blackListController = require('../controllers/blackList_controller');
+// const blackListController = require('../controllers/blackList_controller');
 const articleController = require('../controllers/article_controller');
+const reliableSitesController = require('../controllers/reliableSites_controller');
+const aboutController =require('../controllers/about_controller');
 
 
 
@@ -30,6 +32,8 @@ router.get('/admin', adminController.admin);
 router.get('/', homeController.home);
 router.get('/signup',userController.signup);
 router.get('/article/:str1/:str2/:str3',articleController.article);
+router.get('/about', aboutController.about);
+router.get('/reliableSites/:index',reliableSitesController.reliableSites);
 
 
 router.use('/users', require('./users'));

@@ -130,9 +130,11 @@ const hash = require('gulp-hash');
 const imagemin = require('gulp-imagemin');
 const rename = require('gulp-rename');
 const fs = require('fs-extra');
+const merge = require('merge-stream');
+const reload = require('reload');
+const browserSync = require('browser-sync').create();
 
 
-// const cssnano = require('gulp-cssnano');
 const rev = require('gulp-rev');
 
 
@@ -140,84 +142,135 @@ var hashedjs;
 var hashedcss;
 
 
+var gulpwatch = require('gulp-watch');
+
+gulp.task('new-assets', function(done) {
+
+    gulpwatch('./assets/**/*.+(png|jpg|gif|svg|jpeg)', function(obj){
+        gulp.src( obj.path, { "base": './assets', "allowEmpty":true})
+        .pipe(imagemin())
+        .pipe(rev())
+        .pipe(gulp.dest('./public/assets/'))
+        .pipe(rev.manifest('public/assets/rev-manifest.json', {
+            base: './public/assets',
+            merge: true // merge with the existing manifest (if one exists)
+        }))
+      
+        .pipe(gulp.dest('./public/assets/'))
+        .pipe(browserSync.stream());
+    });
+
+    done();
+});
 
 
-gulp.task('css',function(done){
+
+
+
+gulp.task('css', function (done) {
     console.log('minifying.css');
 
+
+
     gulp.src('./assets/css/**/*.css')
-    .pipe(gulp.dest('./assets.css'));
+        .pipe(gulp.dest('./assets.css'));
 
-    gulp.src('./assets/**/*.css')
-    .pipe(cssMinify())
-    // .pipe(hash())
-    // .pipe(rename(function(path){
-    //     path.basename += "-min";
+    return gulp.src('./assets/**/*.css')
+        .pipe(cssMinify())
+        .pipe(rev())
+        .pipe(gulp.dest('./public/assets'))
+        .pipe(rev.manifest('public/assets/rev-manifest.json', {
+            base: './public/assets/',
+            merge: true // merge with the existing manifest (if one exists)
+        }))
+        .pipe(gulp.dest('./public/assets'))
+        .pipe(browserSync.stream());
+       
 
-
-    // }))
-    .pipe(rev())
-    .pipe(gulp.dest('./public/assets'))
-    .pipe(rev.manifest({
-        cwd:'public',
-        merge:true
-    }))
-    .pipe(gulp.dest('./public/assets'));
-    done();
-});
-
-
-gulp.task('js',function(done){
-
-    gulp.src('./assets/js/**/*.js')
-    .pipe(jsMinify())
-    // .pipe(hash())
-    // .pipe(rename(function(path){
-    //     path.basename += "-min";
-
-    // }))
-    .pipe(rev())
-    .pipe(gulp.dest('./public/assets/js'))
-    .pipe(rev.manifest({
-        cwd: 'public',
-        merge: true
-
-    }))
-    .pipe(gulp.dest('./public/assets'));
     done();
 
 });
 
-gulp.task('img',function(done){
 
-    console.log("compressing images");
-    
-    gulp.src('./assets/img/**/*.+(png|jpg|gif|svg|jpeg)')
-    .pipe(imagemin())
-    .pipe(rev())
-    .pipe(gulp.dest('./public/assets/img'))
-    .pipe(rev.manifest({
-        cwd:'public',
-        merge:true
-    }))
-    // .pipe(hash())
-    // .pipe(rename(function(path){
-    //     path.basename += "-min"
-    // }))
-    .pipe(gulp.dest('./public/assets'));
+gulp.task('js', function (done) {
+
+
+    gulp.src('./assets/**/*.js')
+        .pipe(jsMinify())
+        .pipe(rev())
+        .pipe(gulp.dest('./public/assets/'))
+        .pipe(rev.manifest('public/assets/rev-manifest.json', {
+            base: './public/assets',
+            merge: true
+
+        }))
+        .pipe(gulp.dest('./public/assets/'))
+        .pipe(browserSync.stream());
+      
+
     done();
 
 });
 
 
 
-gulp.task('clean:assets',function(done){
+
+gulp.task('img', function (done) {
+
+    console.log("compressing images")
+    gulp.src('./assets/**/*.+(png|jpg|gif|svg|jpeg)')
+        .pipe(imagemin())
+        .pipe(rev())
+        .pipe(gulp.dest('./public/assets/'))
+        .pipe(rev.manifest('public/assets/rev-manifest.json', {
+            base: './public/assets',
+            merge: true // merge with the existing manifest (if one exists)
+        }))
+      
+        .pipe(gulp.dest('./public/assets/'))
+        .pipe(browserSync.stream());
+      
+
+    done();
+
+
+});
+
+
+
+gulp.task('clean:assets', function (done) {
     fs.removeSync('./public/assets');
     done();
 });
 
 
-gulp.task('build',gulp.series('clean:assets','css','js','img'),function(done){
-    console.log('building assets');
+
+
+gulp.task('build', gulp.series('clean:assets','css','js','img'), function (done) {
+    console.log('Building assets');
     done();
+
 });
+
+
+function browsersyncReload(cb){
+  browserSync.reload();
+  cb();
+}
+
+// Watch Task
+function watchTask(done){
+
+  gulp.watch(['./assets/css/**/*.css', './assets/js/**/*.js', './assets/**/*.+(png|jpg|gif|svg|jpeg'], gulp.series('css', 'js','img','new-assets',browsersyncReload));
+  done();
+}
+
+// Default Gulp task
+exports.default = gulp.series(
+  'clean:assets',
+  'css',
+  'js',
+  'img',
+  'new-assets',
+  watchTask
+);

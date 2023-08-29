@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<%= assetPath('/css/blackListed_urls.css')%>">
+<link rel="stylesheet" type="text/css" href="<%= assetPath('css/blackListed_urls.css')%>">
 
 
 <% if(Search_key!="" ){%>
@@ -65,7 +65,7 @@
                                   <%=data.count%>
                                 </div>
 
-                                <div class="reports col shadow-lg  bg-light p-3 rounded <%=color%> border">
+                                <div class="flex reports col shadow-lg  bg-light p-3 rounded <%=color%> border">
 
                                   <%if(data.count=="_"){%>
 
@@ -78,71 +78,76 @@
                                         Check
                                       </button>
 
+                                      <% if(locals.user && locals.user.access=="admin" ) {%>
+                                        <a data-removeLink="true"  id="remove-link" href="/report/delete/<%=data.id%>"> <i data-removeLink="true" class="fa-solid fa-trash"></i></a>
+
                                       <%}%>
 
+                                  <%}%>
 
-                                        <div class="modal" id="exampleModal<%=i%>" tabindex="-1">
-                                          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                                            <div class="modal-content">
-                                              <div class="modal-header">
-                                                <h5 class="modal-title">Reported By</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                  aria-label="Close"></button>
-                                              </div>
 
-                                              <%console.log(Reporters[i].length,"hi");%>
+                                            <div class="modal" id="exampleModal<%=i%>" tabindex="-1">
+                                              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                <div class="modal-content">
+                                                  <div class="modal-header">
+                                                    <h5 class="modal-title">Reported By</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                      aria-label="Close"></button>
+                                                  </div>
 
-                                                <% if(Reporters[i].length==0){%>
+                                                  <%console.log(Reporters[i].length,"hi");%>
 
-                                                  <div class="modal-body">NO record found</div>
-                                                  <%}else{%>
+                                                    <% if(Reporters[i].length==0){%>
 
-                                                    <div id="<%=i%>" class="modal-body">
+                                                      <div class="modal-body">NO record found</div>
+                                                      <%}else{%>
 
-                                                      <div class="card">
+                                                        <div id="<%=i%>" class="modal-body">
 
-                                                        <div id="card-entities" class="reported-by card-header">
-                                                          <ul class="list-group list-group-horizontal">
-                                                            <li class="list-group-item"
-                                                              style="color:white; background-color: rgba(0, 0, 0, 0.84);">
-                                                              Name</li>
-                                                            <li class="list-group-item "
-                                                              style="color:white; background-color: rgba(0, 0, 0, 0.84);">
-                                                              Email </li>
-                                                          </ul>
+                                                          <div class="card">
+
+                                                            <div id="card-entities" class="reported-by card-header">
+                                                              <ul class="list-group list-group-horizontal">
+                                                                <li class="list-group-item"
+                                                                  style="color:white; background-color: rgba(0, 0, 0, 0.84);">
+                                                                  Name</li>
+                                                                <li class="list-group-item "
+                                                                  style="color:white; background-color: rgba(0, 0, 0, 0.84);">
+                                                                  Email </li>
+                                                              </ul>
+
+                                                            </div>
+
+                                                            <% for(rep of Reporters[i]){%>
+
+                                                              <div class="card-header reported-by">
+                                                                <ul class="list-group list-group-horizontal">
+                                                                  <li class="list-group-item">
+                                                                    <%=rep.fname%>&nbsp;<%=rep.lname%>
+                                                                  </li>
+                                                                  <li class="list-group-item">
+                                                                    <%=rep.email%>
+                                                                  </li>
+                                                                  <!-- <li class="list-group-item" style="font-size:0.7rem;">A third item</li> -->
+                                                                </ul>
+
+                                                              </div>
+                                                              <% }%>
+
+                                                          </div>
 
                                                         </div>
 
-                                                        <% for(rep of Reporters[i]){%>
+                                                        <%}%>
 
-                                                          <div class="card-header reported-by">
-                                                            <ul class="list-group list-group-horizontal">
-                                                              <li class="list-group-item">
-                                                                <%=rep.fname%>&nbsp;<%=rep.lname%>
-                                                              </li>
-                                                              <li class="list-group-item">
-                                                                <%=rep.email%>
-                                                              </li>
-                                                              <!-- <li class="list-group-item" style="font-size:0.7rem;">A third item</li> -->
-                                                            </ul>
-
+                                                          <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                              data-bs-dismiss="modal">Close</button>
+                                                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
                                                           </div>
-                                                          <% }%>
-
-                                                      </div>
-
-                                                    </div>
-
-                                                    <%}%>
-
-                                                      <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary"
-                                                          data-bs-dismiss="modal">Close</button>
-                                                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-                                                      </div>
+                                                </div>
+                                              </div>
                                             </div>
-                                          </div>
-                                        </div>
                                 </div>
 
 
@@ -154,7 +159,7 @@
       </div>
 
 
-      <% if(Reported_links.length>9){ %>
+     
 
 
         <div id="page">
@@ -165,7 +170,7 @@
 
         </div>
 
-        <%}%>
+   
 
 
 
@@ -219,4 +224,4 @@
     </div>
 
 
-    <script src="<%= assetPath('/js/blackListedUrls.js')%>"></script>
+    <script type="application/javascript" src="<%=assetPath('js/blackListedUrls.js')%>"></script>

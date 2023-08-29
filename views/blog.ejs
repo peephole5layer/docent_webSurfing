@@ -57,12 +57,13 @@
             <div id="blog-created">
 
                 <p>
-                    <%= locals.user.fname%>&nbsp;<%= locals.user.lname%> your blog is successfully added
+                    <span><%= locals.user.fname%></span> your blog is successfully added
                 </p>
 
             </div>
-            <%}%>
+        <%}%>
 
+           
 
                 <div id="login-message">
                     <div class="alert alert-danger" role="alert">
@@ -80,20 +81,17 @@
 
 
 
-
-
-    <div class="post">
-        <!-- Post 1 -->
+ 
+     <div class="post">
 
 
         <% for(blog of Blogs){%>
 
-            <div class="post-box tech">
+             <div class="post-box tech">
                 <div class="image">
-                    <img src='<%=blog.coverImageUrl%>' alt="" class="post-img">
+                    <img src='<%= assetPath(blog.coverImageUrl)%>' alt="" class="post-img">
                 </div>
 
-                <!-- <h2 class="category">Tech</h2> -->
                 <div class="content-box">
 
                     <div>
@@ -115,21 +113,21 @@
 
                         
                         
-                        <% if(locals.user && locals.user.id==blog.createdBy.id) {%>
-                          <span id="delete-blog"><a href="/blog/delete/<%=blog.id%>"><i class="fa-solid fa-trash"></i></a></span>
+                        <% if(locals.user && (locals.user.id==blog.createdBy.id || locals.user.access=='admin')) {%>
+                          <span id="delete-blog"><a data-removeBlog ="true" href="/blog/delete/<%=blog.id%>"><i data-removeBlog ="true" class="fa-solid fa-trash"></i></a></span>
                         <%}%>
                         
-                    </div>
+                    </div> 
 
                     <a style="display:inline-block" href="/blog/<%=blog.id%>" class="btn">Read</a>
 
                 </div>
 
-            </div>
+            </div> 
 
             <%}%>
 
-    </div>
+    </div>  
 
 
     <div class="btn-container">

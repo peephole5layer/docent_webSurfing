@@ -21,6 +21,7 @@ const blackListController = require('../controllers/blackList_controller');
 
 router.post('/blacklist/:id',blackListController.blackList);
 router.get('/blacklisted-urls',blackListController.blackListedUrls);
+router.get('/delete/:id',blackListController.delete);
 
 // router.post('/blacklisted-urls',)
 

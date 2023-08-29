@@ -5,10 +5,18 @@ module.exports.home = function(req, res) {
 
     console.log(req.params);
 
-    return res.render('home', {
-        Title: "Home",
-        Success:"",
-        Message:""
-        
-    });
+    if(req.user && req.user.access=='admin'){
+        return res.redirect('/admin');
+    }else{
+
+        return res.render('home', {
+            Title: "Home",
+            Success:"",
+            Message:""
+            
+        });
+
+    }
+
+   
 }

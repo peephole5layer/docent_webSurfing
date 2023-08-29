@@ -76,7 +76,8 @@ const production = {
   
     google_client_id : process.env.DOCENT_WEBSURF_GOOGLE_CLIENT_ID,
     google_client_secret : process.env.DOCENT_WEBSURF_GOOGLE_CLIENT_SECRET,
-    google_call_back_url : process.env.DOCENT_WEBSURF_GOOGLE_CALL_BACK_URL,
+    google_call_back_url : "http://localhost:8000/users/auth/google/callback" ,
+    // process.env.DOCENT_WEBSURF_GOOGLE_CALL_BACK_URL,
     jwt_secret : process.env.DOCENT_WEBSURF_JWT_SECRET,
     morgan :{
         mode : 'combined',

@@ -85,7 +85,7 @@ app.use(session({
 
     store : MongoStore.create({
 
-            mongoUrl: 'mongodb://127.0.0.1:27017/kavach_development',
+            mongoUrl: `mongodb://127.0.0.1:27017/${env.db}`,
             autoRemove: 'disabled'
         },
         function(err){

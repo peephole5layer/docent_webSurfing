@@ -14,7 +14,7 @@ passport.use(new googleStrategy({
 },
 
     async function(accessToken,refreshToken,profile,done){
-        const user = await User.findOne({email:profile.emails[0].value});
+        let user = await User.findOne({email:profile.emails[0].value});
 
 
         // .exec(async function(err,user){
@@ -22,8 +22,10 @@ passport.use(new googleStrategy({
         try{
 
             console.log(profile);
+            console.log("heekkekeeiieiei");
 
             if(user){
+               
                 return done(null,user);
             }else{
 
@@ -38,11 +40,15 @@ passport.use(new googleStrategy({
                         password: crypto.randomBytes(20).toString('hex')
                     });
 
+                    user = newUser;
+
                 }catch(err){
 
                     console.log("error in creating user google strategy-passport",err);
                     return;
                 }
+
+                console.log("exectued");
 
                 return done(null,user);
             }

@@ -163,16 +163,13 @@ a {
     height: 228.5px;
     margin-top: 0px;
     ;
-
-
     /* border:2px solid red; */
     display: flex;
     flex-direction: column;
 
     align-items: center;
     justify-content: space-evenly;
-
-
+    overflow: hidden;
 }
 
 
@@ -197,7 +194,12 @@ a {
 
 .post-title {
 
-    word-break: break-all;
+    
+   
+
+
+    word-wrap: break-word;
+    
 
     text-align: center;
     padding-left: 8px;
@@ -215,8 +217,9 @@ a {
 
 
 .post-description {
+    overflow-x: hidden;
     height: 67.5px;
-
+ 
 
     padding-left: 13px;
     padding-right: 13px;
@@ -228,7 +231,8 @@ a {
     overflow: hidden;
     color: var(--light-black);
     font-weight: 500;
-    word-break: break-all;
+    word-wrap: break-word; 
+  
 }
 
 
@@ -378,14 +382,6 @@ a {
     padding: 8px;
 }
 
-#blog-created {
-    display: none;
-}
-
-
-
-
-
 #create-blog-container #add-blog-form {
     margin: auto;
     display: none;
@@ -398,8 +394,8 @@ a {
     height: 500px;
 }
 
-#add-blog-form #heading h1 {
-    font-size: 1.2rem;
+#add-blog-form #heading{
+    font-size: 2.35rem;
     font-family: cursive;
     margin-bottom: 60px;
 }
@@ -493,6 +489,20 @@ a {
 
 }
 
+#blog-created{
+      display: none;
+}
+
+#blog-created p{
+    font-size:1.95rem;
+    font-family: sans-serif;
+}
+
+#blog-created p span{
+    font-family: cursive;
+    font-size:2.1rem;
+}
+
 /*  
  #submit-report-container #book-form .btn{
     margin-top: -2rem;
@@ -562,6 +572,15 @@ a {
         margin-top: 16px;
     }
 
+    #blog-created p{
+        font-size:1.65rem;
+    }
+    
+    #blog-created p span{
+        font-size:1.92rem;
+    }
+    
+
 
 }
 
@@ -612,7 +631,7 @@ a {
 
     #add-blog-form #heading {
         font-size: 2.2rem;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
     }
 
 
@@ -716,6 +735,25 @@ a {
 
     .post-date {
     }
+
+
+    #blog-created p{
+        font-size:1.55rem;
+    }
+    
+    #blog-created p span{
+        font-size:1.86rem;
+    }
+
+
+
+
+
+
+
+
+
+
 }
 
 @media only screen and (max-width:720px) {
@@ -727,12 +765,10 @@ a {
     }
 
     #add-blog-form #heading {
-        font-size: 2.2rem;
-        margin-bottom: 60px;
+        font-size: 2.1rem;
+        margin-bottom: 45px;
     }
-    #add-blog-form #heading h1{
-        font-size:0.2rem;
-    }
+  
 
 
 
@@ -799,7 +835,7 @@ a {
     
     .post {
   
-        width:100vw;
+        width:95vw;
         
     }
 
@@ -818,6 +854,15 @@ a {
         font-size: 0.82rem;
     }
 
+    
+    #blog-created p{
+        font-size:1.28rem;
+    }
+    
+    #blog-created p span{
+        font-size:1.55rem;
+    }
+
 }
 
 @media only screen and (max-width:480px) {
@@ -826,6 +871,8 @@ a {
         width: 99.5vw;
         height: 350px;
     }
+
+    
 
     #add-blog-form #blog-form {
 
@@ -867,12 +914,9 @@ a {
 
     }
 
-    #btn-container {}
-
-    #btn-container .btn {}
-
 
     #blogs-page-header h1{
+
 
         font-size:5.5vw;
 
@@ -883,14 +927,14 @@ a {
     }
 
     .post {
-        width:99vw;
+        width:96vw;
         
     }
 
     .post-box {
         position: relative;
         left:-12px;
-        min-width:96.7vw;
+        min-width:95.7vw;
     }
     .post-title {
 /* 
@@ -901,5 +945,14 @@ a {
 
     .post-description {
         font-size: 0.725rem;
+    }
+
+
+    #blog-created p{
+        font-size:0.915rem;
+    }
+    
+    #blog-created p span{
+        font-size:1.01rem;
     }
 }

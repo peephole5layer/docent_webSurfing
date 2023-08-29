@@ -50,6 +50,7 @@ loadMoreBtn.onclick = () => {
 
 let createBlog = document.getElementById('blog-btn');
 let addBlogForm = document.getElementById('add-blog-form');
+let blogPageHeader = document.querySelector('#blogs-page-header h1');
 // let blogSubmit = document.getElementById("blog-submit-btn");
 const user = createBlog.getAttribute('data-user');
 
@@ -72,6 +73,8 @@ createBlog.onclick = () => {
       
       document.getElementById('create-blog-btn-container').style.display="none";
       addBlogForm.style.display = "flex";
+      blogPageHeader.style.marginTop = "100px";
+
    }
 
 
@@ -135,6 +138,7 @@ let blogSubmit = function () {
 
             const blogCreated = document.getElementById('blog-created');
             blogCreated.style.display = "block";
+            blogCreated.style.marginTop = "-150px";
 
             console.log('ajax operation succesfull');
 
@@ -151,6 +155,7 @@ let blogSubmit = function () {
       // webAddress.value = '';
 
       addBlogForm.style.display = "none";
+      blogPageHeader.style.marginTop = "-145px";
 
 
    });
@@ -158,6 +163,26 @@ let blogSubmit = function () {
 }
 
 blogSubmit();
+
+
+
+
+
+function reallySure (event) {
+   var message = ' Remove this Blog ? ';
+   action = confirm(message) ? true : event.preventDefault();
+}
+
+function actionToFunction (event) {
+
+   if(event.target.getAttribute('data-removeBlog')=='true'){
+       reallySure(event);
+
+   }
+}
+
+document.body.addEventListener('click', actionToFunction);
+
 
 
 

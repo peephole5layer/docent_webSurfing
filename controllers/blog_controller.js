@@ -1,4 +1,5 @@
 const Blogs = require('../models/blogs');
+const fs = require('fs');
 
 
 
@@ -10,7 +11,8 @@ module.exports.blog= async function (req, res) {
 
     return res.render('blog', {
         Title: "blog page", 
-        Blogs : blogs  
+        Blogs : blogs ,
+    
     });
 }
 
@@ -28,13 +30,14 @@ module.exports.createBlog = async function(req,res){
     try{
 
         const {title,content} = req.body;
-        
+
+      
 
 
         await Blogs.create({
             title : title,
             body : content,
-            coverImageUrl : `/uploads/${req.file.filename}`,
+            coverImageUrl : `uploads/${req.file.filename}`,
             createdBy : req.user._id
         });
     
@@ -80,12 +83,27 @@ module.exports.delete = async function(req,res){
     try{
 
 
-        const blog = Blogs.findById(req.params.id);
+        console.log("delele blog controller loaded");
 
-        if(req.user.id != blog.createdBy){
+        
+
+
+        const blog = await Blogs.findById(req.params.id);
+
+        let coverImageUrl = blog.coverImageUrl;
+        fs.unlinkSync(`./assets/${coverImageUrl}`);
+
+        console.log("successfully removed cover image of the blog")
+        
+
+
+
+        if(req.user.id != blog.createdBy && req.user.access!='admin'){
             console.log('user not authenticated to delete this blog ....');
             res.redirect('/blog');
         }
+
+
 
         await Blogs.findByIdAndDelete(req.params.id)
  

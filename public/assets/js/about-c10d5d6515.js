@@ -1,1 +1,0 @@
-let header=document.getElementsByClassName("heading");console.log(header);let bgImgUrl=header[0].getAttribute("data-backgroundUrl");header[0].style.background=`url(${bgImgUrl}) no-repeat`,header[0].style.backgroundSize="cover",header[0].style.backgroundPosition="center";

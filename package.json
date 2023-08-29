@@ -13,8 +13,11 @@
         "test": "echo \"Error: no test specified\" && exit 1",
 
         "start": "nodemon index.js",
+        "gulp" : "gulp",
 
-        "prod_start": "NODE_ENV=production nodemon index.js"
+        "prod_start": "NODE_ENV=production nodemon index.js",
+
+        "dev": "npm-run-all --parallel gulp prod_start"
 
     },
 
@@ -125,6 +128,12 @@
         "sass": "^1.63.3",
 
         "validator": "^13.9.0"
+
+    },
+
+    "devDependencies": {
+
+        "npm-run-all": "^4.1.5"
 
     }
 

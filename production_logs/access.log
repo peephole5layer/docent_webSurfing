@@ -1,0 +1,62 @@
+[0mGET / [32m200[0m 21.691 ms - 21496[0m
+[0mGET /favicon.ico [33m404[0m 7.878 ms - 150[0m
+[0mGET / [36m304[0m 24.966 ms - -[0m
+[0mGET /blog [32m200[0m 41.830 ms - 20196[0m
+[0mGET /users/signin [32m200[0m 8.415 ms - 10589[0m
+[0mGET /users/auth/google [36m302[0m 5.640 ms - 0[0m
+[0mGET /users/auth/google/callback?code=4%2F0Adeu5BVMVzS1oNMu5QIv7dX61Vg6idlyn9poDxKPjjhs--A8AecNKtm__O6WxHmDf1hpQg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=consent [36m302[0m 578.526 ms - 46[0m
+[0mGET / [36m302[0m 8.271 ms - 56[0m
+[0mGET /admin [32m200[0m 9.990 ms - 12889[0m
+::1 - - [29/Aug/2023:11:27:39 +0000] "GET / HTTP/1.1" 200 21650 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:11:27:44 +0000] "GET /blog/64c9cec7ebc22969ccc24da3 HTTP/1.1" 200 13246 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:11:27:52 +0000] "GET /blog/64c9d019b35180497be2ee98 HTTP/1.1" 200 13244 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:11:27:59 +0000] "GET /users/signin HTTP/1.1" 200 10688 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:11:28:02 +0000] "GET /users/auth/google HTTP/1.1" 302 0 "http://localhost:8000/users/signin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:11:28:06 +0000] "GET /users/auth/google/callback?code=4%2F0Adeu5BV6PBCZ6Sux-hFe0BQr4tJMp8Ips8gq8oIR0-vmSiuQfQ8n_-GcFJbqWLqSM-rOcg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=1&prompt=consent HTTP/1.1" 302 46 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:11:28:06 +0000] "GET / HTTP/1.1" 200 24311 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:11:28:15 +0000] "GET /report/blacklisted-urls HTTP/1.1" 200 21221 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:11:28:24 +0000] "GET /article/search/tech/page HTTP/1.1" 200 10509 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:11:28:32 +0000] "GET /article/online/shopping/scam HTTP/1.1" 200 10234 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:11:28:40 +0000] "GET /reliableSites/1 HTTP/1.1" 200 8658 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+[0mGET / [32m200[0m 72.211 ms - 21496[0m
+[0mGET /users/signin [32m200[0m 54.854 ms - 10589[0m
+[0mGET /users/auth/google [36m302[0m 25.007 ms - 0[0m
+[0mGET /users/auth/google/callback?code=4%2F0Adeu5BXHAHvdqBJEAAVOUaHrA3TrPrk9U9uzN8ccKm2csqTFdNrp3rK5vk983utm3gQgdQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=1&prompt=consent [36m302[0m 860.762 ms - 46[0m
+[0mGET / [32m200[0m 37.328 ms - 24101[0m
+[0mGET /blog [32m200[0m 117.545 ms - 21936[0m
+[0mPOST /blog/create-blog [32m200[0m 201.123 ms - 39[0m
+[0mGET /blog [32m200[0m 42.897 ms - 27007[0m
+[0mGET /blog [36m304[0m 117.880 ms - -[0m
+[0mGET /blog/64ede94f524b45d7244488b6 [32m200[0m 141.622 ms - 12527[0m
+::1 - - [29/Aug/2023:12:54:44 +0000] "POST /blog/create-blog HTTP/1.1" 302 23 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:12:54:44 +0000] "GET / HTTP/1.1" 200 21650 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:12:54:47 +0000] "GET /blog HTTP/1.1" 200 27477 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:12:54:59 +0000] "GET /blog HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:12:55:09 +0000] "GET /users/signin HTTP/1.1" 200 10688 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:12:55:11 +0000] "GET /users/auth/google HTTP/1.1" 302 0 "http://localhost:8000/users/signin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:12:55:15 +0000] "GET /users/auth/google/callback?code=4%2F0Adeu5BULgQn6N62CuopTbWnZyuj8QdiGWz-rpaF6XA1ABajhxYHFhWE5hs6iGEfU7ym67w&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=1&prompt=consent HTTP/1.1" 302 46 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:12:55:15 +0000] "GET / HTTP/1.1" 200 24311 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:12:55:21 +0000] "GET /blog HTTP/1.1" 200 29274 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:12:55:34 +0000] "POST /blog/create-blog HTTP/1.1" 200 39 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:12:55:37 +0000] "GET /blog HTTP/1.1" 200 33094 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:12:55:37 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:12:55:47 +0000] "GET /blog HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:12:55:47 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:13:14:08 +0000] "GET /blog HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:13:14:09 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:13:14:39 +0000] "POST /blog/create-blog HTTP/1.1" 200 39 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:13:15:14 +0000] "GET /blog HTTP/1.1" 200 36879 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:13:15:14 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:13:15:14 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:13:18:28 +0000] "GET /blog/64edef3f2c62b87833f07748 HTTP/1.1" 200 11408 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:13:18:28 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/blog/64edef3f2c62b87833f07748" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:13:18:31 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:13:21:04 +0000] "POST /blog/create-blog HTTP/1.1" 200 39 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:13:21:14 +0000] "GET /blog HTTP/1.1" 200 41610 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:13:21:14 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [29/Aug/2023:13:21:15 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:13:21:27 +0000] "GET /blog/delete/64edef3f2c62b87833f07748 HTTP/1.1" 302 96 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:13:21:27 +0000] "GET /blog HTTP/1.1" 200 37825 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:13:21:27 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:13:21:33 +0000] "GET /blog/delete/64edeac6a9c705dbb6ccda9d HTTP/1.1" 302 96 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [29/Aug/2023:13:21:33 +0000] "GET /blog HTTP/1.1" 200 34005 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"

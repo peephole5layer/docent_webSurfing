@@ -261,7 +261,7 @@ function browsersyncReload(cb){
 // Watch Task
 function watchTask(done){
 
-  gulp.watch(['./assets/css/**/*.css', './assets/js/**/*.js', './assets/**/*.+(png|jpg|gif|svg|jpeg'], gulp.series('css', 'js','img','new-assets',browsersyncReload));
+  gulp.watch(['./assets/css/**/*.css', './assets/js/**/*.js', './assets/**/*.+(png|jpg|gif|svg|jpeg|PNG'], gulp.series('css', 'js','img','new-assets',browsersyncReload));
   done();
 }
 

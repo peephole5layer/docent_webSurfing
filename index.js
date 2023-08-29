@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 require('./config/view-helpers')(app);
 
-const port = 8000;
+const port = process.env.PORT!=undefined? process.env.PORT : 8000;
 const expressLayouts = require('express-ejs-layouts');
 
 const cookieParser = require('cookie-parser');

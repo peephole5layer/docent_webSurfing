@@ -100,3 +100,9 @@
 [0mGET /favicon.ico [33m404[0m 8.397 ms - 150[0m
 [0mGET /blog [32m200[0m 69.294 ms - 25050[0m
 [0mGET /img/logo.png [33m404[0m 5.700 ms - 151[0m
+::1 - - [30/Aug/2023:13:32:48 +0000] "GET / HTTP/1.1" 200 21636 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [30/Aug/2023:13:32:48 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [30/Aug/2023:13:32:54 +0000] "GET /blog HTTP/1.1" 200 31977 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [30/Aug/2023:13:32:54 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [30/Aug/2023:13:33:02 +0000] "GET /blog/64c913e87c677eecbab36205 HTTP/1.1" 200 14732 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [30/Aug/2023:13:33:02 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/blog/64c913e87c677eecbab36205" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"

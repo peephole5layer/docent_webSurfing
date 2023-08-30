@@ -34,8 +34,6 @@
 
 }
 
-
-
 #signin-page header h1 {
   font-size: 2.45rem;
   font-weight: bolder;
@@ -46,10 +44,6 @@
   font-size: 4.6rem;
 
 }
-
-
-
-
 
 #signin-form label {
   /* border :2px solid green; */
@@ -88,19 +82,13 @@ label {
 
 }
 
-
-
 #signin-form div div div {
   width: 100px;
-
-
-
 }
 
 #signin-form div div {
   width: 300px;
 }
-
 
 #signin-submit-container {
   width: 280px;
@@ -109,17 +97,15 @@ label {
   justify-content: space-between;
 }
 
-
-
 #signin-button {
 
   margin-top: 5px;
   width: 150px;
   height: 41px;
   box-shadow: 1.4px 1.4px 1.5px 1.5px;
-  background-color: rgb(14, 51, 235);
+  /* background-color: rgb(14, 51, 235); */
+  background-color: #d36a9f;
   border-radius: 5px;
-
 }
 
 #signin-button button {
@@ -130,7 +116,6 @@ label {
   font-size: 1.08rem;
 }
 
-
 #signin-button .btn {
 
   position: relative;
@@ -140,9 +125,7 @@ label {
   padding: 5px;
   font-size: 1.08rem;
   border: none;
-
-
-  background-color: rgb(14, 51, 235);
+  background-color:#d36a9f
 }
 
 #signin-button:hover {
@@ -157,19 +140,13 @@ label {
 }
 
 #forgot-password button {
-
-
   width:100%;
   height:100%;
-
-
-
   background-color: transparent;
   color: blue;
   text-decoration: underline;
   border: none;
 }
-
 
 #search-email {
   display: none;
@@ -184,23 +161,11 @@ label {
   margin-bottom: 5px;
   box-shadow: 1px 1px 1.2px 1.2px;
   border-radius: 5px;
-
-
 }
-
 
 #search-email input:nth-child(1) {
-
   padding-left: 10px;
 }
-
-
-
-
-
-
-
-
 
 
 #divider-container {
@@ -216,33 +181,25 @@ label {
 #divider-container p {
 
   color: grey;
-  /* border:2px solid red; */
   width: 37.8px;
-  /* margin:auto; */
   position: relative;
   left: -4.6px;
   font-size: 0.815rem;
   padding: 3px;
   top: 6.9px;
-  /* top:69px; */
 }
 
 #divider-container p span {
   font-size: 0.85rem;
   position: relative;
-
-  /* display:inline-block; */
   margin-top: 1px;
 }
 
 .line-break {
   position: relative;
-  /* top:62px; */
-
   height: 2px;
   width: 130px;
   border-bottom: 1.3px solid grey;
-  ;
   margin: auto;
 }
 
@@ -258,29 +215,20 @@ label {
   width: 425px;
   height: 44px;
   position: relative;
-
-
   box-shadow: 2.2px 2.2px 3px 3px;
   border-radius: 17px;
-  background-color: blue;
+  background-color: #d36a9f;
   margin: auto;
-
   top: 68px;
-
 }
 
 #google-signin button {
   letter-spacing: 0.1rem;
-
   border-radius: 16px;
-
-
-
   height: 100%;
   width: 100%;
   color: white;
   background-color: transparent;
-
 }
 
 #google-signin:hover {
@@ -292,38 +240,16 @@ label {
   display: inline-block;
   position: relative;
   top: 1.5px;
-
   left: -15px;
   font-size: 1.21rem;
   color: white
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*margins*/
 .mg-left-5 {
   margin-left: 5rem;
 }
-
-
-
-
 
 /*media query*/
 

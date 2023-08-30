@@ -34,7 +34,9 @@ const development ={
     morgan :{
         mode : 'dev',
         options : {stream :accessLogStream}
-    }
+    },
+
+    mongo_url : `mongodb://127.0.0.1:27017/kavach_development`
 
 
 }
@@ -82,7 +84,11 @@ const production = {
     morgan :{
         mode : 'combined',
         options : {stream:accessLogStream}
-    }
+    },
+
+    mongo_url : process.env.MONGO_URL
+
+
 }
 
 

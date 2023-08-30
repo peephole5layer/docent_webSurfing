@@ -4,7 +4,7 @@ const redis = require('redis');
 try {
 
   const queue = kue.createQueue({
-    redis: this.process.env.REDIS_URL,
+    redis: process.env.REDIS_URL,
   });
 
   kue.app.listen(3000);

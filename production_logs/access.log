@@ -60,3 +60,14 @@
 ::1 - - [29/Aug/2023:13:21:27 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
 ::1 - - [29/Aug/2023:13:21:33 +0000] "GET /blog/delete/64edeac6a9c705dbb6ccda9d HTTP/1.1" 302 96 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
 ::1 - - [29/Aug/2023:13:21:33 +0000] "GET /blog HTTP/1.1" 200 34005 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+[0mGET / [32m200[0m 56.061 ms - 21496[0m
+[0mGET /img/logo.png [33m404[0m 19.218 ms - 151[0m
+[0mGET /favicon.ico [33m404[0m 12.554 ms - 150[0m
+[0mGET /users/signin [32m200[0m 58.272 ms - 10589[0m
+[0mGET /img/logo.png [33m404[0m 3.524 ms - 151[0m
+[0mGET /users/signup [32m200[0m 46.562 ms - 12744[0m
+[0mGET /img/logo.png [33m404[0m 3.714 ms - 151[0m
+[0mGET /users/signin [36m304[0m 15.326 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 4.536 ms - 151[0m
+[0mGET /users/signup [36m304[0m 39.097 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 9.461 ms - 151[0m

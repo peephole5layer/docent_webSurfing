@@ -79,7 +79,8 @@ font-size:4.6rem;
   text-align: center;
   height:41px;
   box-shadow: 1.4px 1.4px 1.5px 1.5px;
-  background-color: rgb(14, 51, 235);
+  /* background-color: rgb(14, 51, 235); */
+  background-color: #d36a9f;
   border-radius: 5px;
 
   

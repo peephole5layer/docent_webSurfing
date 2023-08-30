@@ -1,8 +1,15 @@
 const kue = require('kue');
-const queue = kue.createQueue();
+const redis = require('redis');
 
+try {
 
-kue.app.listen(3000);
+  const queue = kue.createQueue({
+    redis: this.process.env.REDIS_URL,
+  });
 
+  kue.app.listen(3000);
 
-module.exports = queue;
+  module.exports = queue;
+} catch (err) {
+  console.log('Error in Kue configuration:', err);
+}

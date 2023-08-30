@@ -3,10 +3,17 @@ const redis = require('redis');
 
 try {
 
-  // const queue = kue.createQueue();
+  const client = redis.createClient({
+    url: process.env.REDIS_URL
+  });
+
+  client.on('error', (err) => console.log('Redis Client Error', err));
 
   const queue = kue.createQueue({
-    redis: process.env.REDIS_URL,
+    redis: {
+      createClientFactory: () => client,
+    },
+
   });
 
   kue.app.listen(3000);

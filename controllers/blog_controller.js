@@ -64,10 +64,15 @@ module.exports.blogContent = async function(req,res){
         const blog = await Blogs.findById(req.params.id).populate("createdBy");
         console.log(blog);
 
-        return res.render('blogContent',{
-            Title : ""+blog.title,
-            Blog : blog
-        })
+        if(blog!=null){
+            return res.render('blogContent',{
+                Title : ""+blog.title,
+                Blog : blog
+            })
+
+        }
+
+        return res.redirect('/');
 
 
 

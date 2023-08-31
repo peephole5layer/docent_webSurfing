@@ -114,9 +114,10 @@ let blogSubmit = function () {
 
          type: 'post',
          url: $(this).attr('action'),
-         data:formData,
-         contentType:false,
-         processData : false,
+         data: blogForm.serialize(),
+         // data:formData,
+         // contentType:false,
+         // processData : false,
       
 
          success: function (data) {

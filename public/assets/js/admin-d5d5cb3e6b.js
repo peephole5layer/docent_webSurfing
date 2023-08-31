@@ -1,1 +1,0 @@
-let toggle=document.querySelector(".toggle"),navigation=document.querySelector(".navigation"),showNavBar=!1;console.log(toggle),toggle.onclick=()=>{showNavBar=!showNavBar,console.log(navigation),showNavBar?(navigation.style.display="inline-block",toggle.style.color="white"):(navigation.style.display="none",toggle.style.color="black")};

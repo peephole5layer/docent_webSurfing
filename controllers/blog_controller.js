@@ -29,7 +29,7 @@ module.exports.createBlog = async function(req,res){
 
     try{
 
-        const {title,content} = req.body;
+        const {title,content,coverImageUrl} = req.body;
 
       
 
@@ -37,7 +37,7 @@ module.exports.createBlog = async function(req,res){
         await Blogs.create({
             title : title,
             body : content,
-            coverImageUrl : `uploads/${req.file.filename}`,
+            coverImageUrl : coverImageUrl,
             createdBy : req.user._id
         });
     
@@ -90,30 +90,13 @@ module.exports.delete = async function(req,res){
 
         console.log("delele blog controller loaded");
 
-        
-
-
-        const blog = await Blogs.findById(req.params.id);
-
-        let coverImageUrl = blog.coverImageUrl;
-        fs.unlinkSync(`./assets/${coverImageUrl}`);
-
-        console.log("successfully removed cover image of the blog")
-        
-
-
 
         if(req.user.id != blog.createdBy && req.user.access!='admin'){
             console.log('user not authenticated to delete this blog ....');
             res.redirect('/blog');
         }
 
-
-
         await Blogs.findByIdAndDelete(req.params.id)
- 
-
-      
 
         return res.redirect('back');
 

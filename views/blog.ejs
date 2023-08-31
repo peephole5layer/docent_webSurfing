@@ -21,7 +21,7 @@
 
                 </div>
 
-                <form action="/blog/create-blog" method="POST" enctype="multipart/form-data" id="blog-form">
+                <form action="/blog/create-blog" method="POST" id="blog-form">
 
                     <div id="flex">
                         <div class="inputBox">
@@ -30,7 +30,7 @@
                         </div>
                         <div class="inputBox">
                             <span>Image:</span>
-                            <input id="coverImage" type="file" placeholder="" name="coverImage" required>
+                            <input id="coverImage" type="url" placeholder="" name="coverImageUrl" required>
                         </div>
                         <div class="inputBox">
                             <span>Content : </span>
@@ -89,7 +89,7 @@
 
              <div class="post-box tech">
                 <div class="image">
-                    <img src='<%= assetPath(blog.coverImageUrl)%>' alt="" class="post-img">
+                    <img src='<%= blog.coverImageUrl%>' alt="" class="post-img">
                 </div>
 
                 <div class="content-box">

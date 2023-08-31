@@ -117,53 +117,36 @@
 
 
 const gulp = require('gulp');
-
-const cssnano = require('gulp-cssnano');
-// const rev = require('gulp-rev');
-
-const sass = require('gulp-sass')(require('sass'));
-const autoprefixer = require('gulp-autoprefixer');
 const cssMinify = require('gulp-clean-css');
 const jsMinify = require('gulp-terser');
 
-const hash = require('gulp-hash');
 const imagemin = require('gulp-imagemin');
-const rename = require('gulp-rename');
 const fs = require('fs-extra');
-const merge = require('merge-stream');
-const reload = require('reload');
 const browserSync = require('browser-sync').create();
 
 
 const rev = require('gulp-rev');
 
+// var gulpwatch = require('gulp-watch');
 
-var hashedjs;
-var hashedcss;
+// gulp.task('new-assets', function(done) {
 
-
-var gulpwatch = require('gulp-watch');
-
-gulp.task('new-assets', function(done) {
-
-    gulpwatch('./assets/**/*.+(png|jpg|gif|svg|jpeg)', function(obj){
-        gulp.src( obj.path, { "base": './assets', "allowEmpty":true})
-        .pipe(imagemin())
-        .pipe(rev())
-        .pipe(gulp.dest('./public/assets/'))
-        .pipe(rev.manifest('public/assets/rev-manifest.json', {
-            base: './public/assets',
-            merge: true // merge with the existing manifest (if one exists)
-        }))
+//     gulpwatch('./assets/**/*.+(png|jpg|gif|svg|jpeg)', function(obj){
+//         gulp.src( obj.path, { "base": './assets', "allowEmpty":true})
+//         .pipe(imagemin())
+//         .pipe(rev())
+//         .pipe(gulp.dest('./public/assets/'))
+//         .pipe(rev.manifest('public/assets/rev-manifest.json', {
+//             base: './public/assets',
+//             merge: true // merge with the existing manifest (if one exists)
+//         }))
       
-        .pipe(gulp.dest('./public/assets/'))
-        .pipe(browserSync.stream());
-    });
+//         .pipe(gulp.dest('./public/assets/'))
+//         .pipe(browserSync.stream());
+//     });
 
-    done();
-});
-
-
+//     done();
+// });
 
 
 
@@ -187,7 +170,7 @@ gulp.task('css', function (done) {
         .pipe(browserSync.stream());
        
 
-    done();
+
 
 });
 
@@ -253,24 +236,24 @@ gulp.task('build', gulp.series('clean:assets','css','js','img'), function (done)
 });
 
 
-function browsersyncReload(cb){
-  browserSync.reload();
-  cb();
-}
+// function browsersyncReload(cb){
+//   browserSync.reload();
+//   cb();
+// }
 
-// Watch Task
-function watchTask(done){
+// // Watch Task
+// function watchTask(done){
 
-  gulp.watch(['./assets/css/**/*.css', './assets/js/**/*.js', './assets/**/*.+(png|jpg|gif|svg|jpeg|PNG'], gulp.series('css', 'js','img','new-assets',browsersyncReload));
-  done();
-}
+//   gulp.watch(['./assets/css/**/*.css', './assets/js/**/*.js', './assets/**/*.+(png|jpg|gif|svg|jpeg|PNG'], gulp.series('css', 'js','img','new-assets',browsersyncReload));
+//   done();
+// }
 
 // Default Gulp task
-exports.default = gulp.series(
-  'clean:assets',
-  'css',
-  'js',
-  'img',
-  'new-assets',
-  watchTask
-);
+// exports.default = gulp.series(
+//   'clean:assets',
+//   'css',
+//   'js',
+//   'img',
+//   'new-assets',
+//   watchTask
+// );

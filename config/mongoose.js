@@ -5,7 +5,6 @@ const env = require('./environment');
 console.log(env.mongo_url,"hieieieiieieiei");
 mongoose.connect(`${env.mongo_url}`);
 
-
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, "Error connection to mongodb"));

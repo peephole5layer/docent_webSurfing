@@ -199,3 +199,39 @@
 [0mGET / [32m200[0m 43.521 ms - 21496[0m
 [0mGET /img/logo.png [33m404[0m 16.023 ms - 151[0m
 [0mGET /favicon.ico [33m404[0m 3.416 ms - 150[0m
+[0mGET / [36m304[0m 46.786 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 17.203 ms - 151[0m
+[0mGET /favicon.ico [33m404[0m 5.229 ms - 150[0m
+[0mGET /users/signin [32m200[0m 14.311 ms - 10589[0m
+[0mGET /img/logo.png [33m404[0m 2.777 ms - 151[0m
+[0mGET /users/auth/google [36m302[0m 6.865 ms - 0[0m
+[0mGET /users/auth/google/callback?code=4%2F0Adeu5BXp4TRSc8EXhw-zWHXMs2FNlWsxMNluc6Q2mpPOUrZbcZvQPs9gTmRnr2xrN9U3gQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=1&prompt=consent [36m302[0m 604.476 ms - 46[0m
+[0mGET / [32m200[0m 26.364 ms - 24101[0m
+[0mGET /img/logo.png [33m404[0m 10.923 ms - 151[0m
+[0mGET /blog [32m200[0m 47.529 ms - 67048[0m
+[0mGET /uploads/1691819021974-3.jpg [33m404[0m 16.292 ms - 166[0m
+[0mGET /uploads/1693313359362-searchMovies.PNG [33m404[0m 15.309 ms - 177[0m
+[0mGET /img/logo.png [33m404[0m 24.919 ms - 151[0m
+[0mPOST /blog/create-blog [32m200[0m 96.281 ms - 39[0m
+[0mGET /blog [32m200[0m 25.174 ms - 74995[0m
+[0mGET /uploads/1691819021974-3.jpg [33m404[0m 9.076 ms - 166[0m
+[0mGET /uploads/1693313359362-searchMovies.PNG [33m404[0m 17.440 ms - 177[0m
+[0mGET /img/logo.png [33m404[0m 21.695 ms - 151[0m
+::1 - - [31/Aug/2023:08:22:30 +0000] "GET /blog HTTP/1.1" 200 17034 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [31/Aug/2023:08:22:31 +0000] "GET /uploads/1693394466445-3.jpg HTTP/1.1" 404 166 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [31/Aug/2023:08:22:31 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [31/Aug/2023:08:22:42 +0000] "GET /users/signin HTTP/1.1" 200 10674 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [31/Aug/2023:08:22:42 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/users/signin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [31/Aug/2023:08:22:45 +0000] "GET /users/auth/google HTTP/1.1" 302 0 "http://localhost:8000/users/signin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [31/Aug/2023:08:22:49 +0000] "GET /users/auth/google/callback?code=4%2F0Adeu5BXz3W2yd6r1e3tQsodO0XhSjc2DHwiQ3RlDhcR0XlNAzibkY0PKBJCT1EbQBl-N6Q&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=1&prompt=consent HTTP/1.1" 302 46 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [31/Aug/2023:08:22:50 +0000] "GET / HTTP/1.1" 200 24297 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [31/Aug/2023:08:22:50 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [31/Aug/2023:08:22:55 +0000] "GET /blog HTTP/1.1" 200 19020 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [31/Aug/2023:08:22:55 +0000] "GET /uploads/1693394466445-3.jpg HTTP/1.1" 404 166 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [31/Aug/2023:08:22:55 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [31/Aug/2023:08:23:08 +0000] "POST /blog/create-blog HTTP/1.1" 200 39 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [31/Aug/2023:08:23:10 +0000] "GET /blog HTTP/1.1" 200 24377 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [31/Aug/2023:08:23:11 +0000] "GET /uploads/1693394466445-3.jpg HTTP/1.1" 404 166 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [31/Aug/2023:08:23:11 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [31/Aug/2023:08:23:14 +0000] "GET /blog/64f04decad4f75a1ba8ad1b0 HTTP/1.1" 200 12966 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [31/Aug/2023:08:23:14 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/blog/64f04decad4f75a1ba8ad1b0" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"

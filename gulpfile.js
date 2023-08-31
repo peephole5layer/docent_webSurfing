@@ -120,7 +120,7 @@ const gulp = require('gulp');
 const cssMinify = require('gulp-clean-css');
 const jsMinify = require('gulp-terser');
 
-const imagemin = require('gulp-imagemin');
+// const imagemin = require('gulp-imagemin');
 const fs = require('fs-extra');
 const browserSync = require('browser-sync').create();
 
@@ -198,38 +198,40 @@ gulp.task('js', function (done) {
 
 
 
-gulp.task('img', function (done) {
+// gulp.task('img', function (done) {
 
-    console.log("compressing images")
-    gulp.src('./assets/**/*.+(png|jpg|gif|svg|jpeg)')
-        .pipe(imagemin())
-        .pipe(rev())
-        .pipe(gulp.dest('./public/assets/'))
-        .pipe(rev.manifest('public/assets/rev-manifest.json', {
-            base: './public/assets',
-            merge: true // merge with the existing manifest (if one exists)
-        }))
+//     console.log("compressing images")
+//     gulp.src('./assets/**/*.+(png|jpg|gif|svg|jpeg)')
+//         .pipe(imagemin())
+//         .pipe(rev())
+//         .pipe(gulp.dest('./public/assets/'))
+//         .pipe(rev.manifest('public/assets/rev-manifest.json', {
+//             base: './public/assets',
+//             merge: true // merge with the existing manifest (if one exists)
+//         }))
       
-        .pipe(gulp.dest('./public/assets/'))
-        .pipe(browserSync.stream());
+//         .pipe(gulp.dest('./public/assets/'))
+//         .pipe(browserSync.stream());
       
 
-    done();
+//     done();
 
 
-});
+// });
 
 
 
 gulp.task('clean:assets', function (done) {
-    fs.removeSync('./public/assets');
+    fs.removeSync('./public/assets/css');
+    fs.removeSync('./public/assets/js');
+
     done();
 });
 
 
 
 
-gulp.task('build', gulp.series('clean:assets','css','js','img'), function (done) {
+gulp.task('build', gulp.series('clean:assets','css','js'), function (done) {
     console.log('Building assets');
     done();
 

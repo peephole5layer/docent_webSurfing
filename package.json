@@ -16,7 +16,7 @@
 
         "gulp": "gulp build",
 
-        "prod_start": "NODE_ENV=production nodemon index.js",
+        "prod_start": "NODE_ENV=production node index.js",
 
         "dev": "npm-run-all --parallel gulp prod_start"
 

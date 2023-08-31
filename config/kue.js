@@ -5,7 +5,7 @@ try {
 
   // import { createClient } from 'redis';
 
-  const client = createClient({
+  const client = redis.createClient({
     password: 'tFZ7gVUB3NI5Lz7fTU259asTnj9cuzWw',
     socket: {
       host: 'redis-11465.c212.ap-south-1-1.ec2.cloud.redislabs.com',

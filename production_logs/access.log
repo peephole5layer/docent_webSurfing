@@ -196,3 +196,6 @@
 [0mGET /img/logo.png [33m404[0m 3.833 ms - 151[0m
 [0mGET /blog/64f02901179cd2231f8ca79b [32m200[0m 140.518 ms - 28202[0m
 [0mGET /img/logo.png [33m404[0m 4.429 ms - 151[0m
+[0mGET / [32m200[0m 43.521 ms - 21496[0m
+[0mGET /img/logo.png [33m404[0m 16.023 ms - 151[0m
+[0mGET /favicon.ico [33m404[0m 3.416 ms - 150[0m

@@ -3,9 +3,19 @@ const redis = require('redis');
 
 try {
 
-  const client = redis.createClient({
-    url: process.env.REDIS_URL
+  // import { createClient } from 'redis';
+
+  const client = createClient({
+    password: 'tFZ7gVUB3NI5Lz7fTU259asTnj9cuzWw',
+    socket: {
+      host: 'redis-11465.c212.ap-south-1-1.ec2.cloud.redislabs.com',
+      port: 11465
+    }
   });
+
+  // const client = redis.createClient({
+  //   url: process.env.REDIS_URL
+  // });
 
   client.on('error', (err) => console.log('Redis Client Error', err));
 

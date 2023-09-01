@@ -585,3 +585,115 @@
 [0mPOST /report/blacklist/648a964a67a7fa4943d7bd68 [36m302[0m 142.628 ms - 88[0m
 [0mGET / [32m200[0m 47.611 ms - 24108[0m
 [0mGET /img/logo.png [33m404[0m 6.180 ms - 151[0m
+::1 - - [01/Sep/2023:15:37:05 +0000] "GET /users/destroy-session HTTP/1.1" - - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [01/Sep/2023:15:37:05 +0000] "GET / HTTP/1.1" 200 21593 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [01/Sep/2023:15:37:06 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [01/Sep/2023:15:37:10 +0000] "GET /article/online/shopping/scam HTTP/1.1" 200 10211 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [01/Sep/2023:15:37:10 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/article/online/shopping/scam" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [01/Sep/2023:17:22:43 +0000] "GET /article/online/shopping/scam HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36"
+::1 - - [01/Sep/2023:17:22:44 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/article/online/shopping/scam" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36"
+::1 - - [01/Sep/2023:17:23:21 +0000] "GET /article/online/shopping/scam HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [01/Sep/2023:17:23:22 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/article/online/shopping/scam" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [01/Sep/2023:17:23:40 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [01/Sep/2023:17:23:48 +0000] "GET /article/search/tech/page HTTP/1.1" 200 10486 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [01/Sep/2023:17:23:49 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/article/search/tech/page" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [01/Sep/2023:17:25:28 +0000] "GET /article/search/tech/page HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36"
+::1 - - [01/Sep/2023:17:25:28 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/article/search/tech/page" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36"
+::1 - - [01/Sep/2023:17:26:27 +0000] "GET /article/search/tech/page HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [01/Sep/2023:17:26:27 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/article/search/tech/page" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [01/Sep/2023:17:27:19 +0000] "GET /article/search/tech/page HTTP/1.1" 200 10486 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [01/Sep/2023:17:27:19 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/article/search/tech/page" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [01/Sep/2023:17:28:49 +0000] "GET /article/search/tech/page HTTP/1.1" 304 - "http://localhost:8000/" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36"
+::1 - - [01/Sep/2023:17:28:49 +0000] "GET /undefined HTTP/1.1" 404 148 "http://localhost:8000/article/search/tech/page" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36"
+[0mGET /article/search/tech/page [32m200[0m 22.254 ms - 10412[0m
+[0mGET /img/logo.png [33m404[0m 26.726 ms - 151[0m
+[0mGET /css/layout-fe83d7b3d5.css [33m404[0m 40.036 ms - 164[0m
+[0mGET /css/home-71d6e26a5b.css [33m404[0m 42.831 ms - 162[0m
+[0mGET /css/header-e2a5a4c2b1.css [33m404[0m 73.337 ms - 164[0m
+[0mGET /css/footer-b433ae82e1.css [33m404[0m 76.936 ms - 164[0m
+[0mGET /article/search/tech/page [36m304[0m 20.933 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 1.893 ms - 151[0m
+[0mGET /article/search/tech/page [36m304[0m 15.393 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 3.618 ms - 151[0m
+[0mGET /article/search/tech/page [36m304[0m 18.977 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 2.277 ms - 151[0m
+[0mGET /article/search/tech/page [36m304[0m 36.830 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 10.934 ms - 151[0m
+[0mGET /article/search/tech/page [36m304[0m 29.027 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 7.319 ms - 151[0m
+[0mGET /article/search/tech/page [36m304[0m 33.293 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 8.872 ms - 151[0m
+[0mGET /article/search/tech/page [36m304[0m 23.874 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 7.335 ms - 151[0m
+[0mGET /article/search/tech/page [36m304[0m 24.938 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 13.636 ms - 151[0m
+[0mGET / [32m200[0m 18.618 ms - 21497[0m
+[0mGET /img/logo.png [33m404[0m 4.781 ms - 151[0m
+[0mGET / [36m304[0m 17.282 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 8.572 ms - 151[0m
+[0mGET /article/online/shopping/scam [32m200[0m 7.931 ms - 10137[0m
+[0mGET /img/logo.png [33m404[0m 3.772 ms - 151[0m
+[0mGET /article/phishing/identity/theft [32m200[0m 12.961 ms - 10143[0m
+[0mGET /img/logo.png [33m404[0m 6.070 ms - 151[0m
+[0mGET /article/advance/fee/scam [32m200[0m 24.230 ms - 10129[0m
+[0mGET /img/logo.png [33m404[0m 6.420 ms - 151[0m
+[0mGET /article/search/tech/page [36m304[0m 18.529 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 3.623 ms - 151[0m
+[0mGET /article/online/shopping/scam [36m304[0m 11.657 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 4.214 ms - 151[0m
+[0mGET /article/phishing/identity/theft [36m304[0m 12.366 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 3.034 ms - 151[0m
+[0mGET /article/romance/love/scams [32m200[0m 11.347 ms - 10133[0m
+[0mGET /img/logo.png [33m404[0m 3.847 ms - 151[0m
+[0mGET /article/investment/crypto/scams [32m200[0m 8.992 ms - 10143[0m
+[0mGET /img/logo.png [33m404[0m 3.447 ms - 151[0m
+[0mGET /article/all/tech/scams [32m200[0m 13.116 ms - 10125[0m
+[0mGET /img/logo.png [33m404[0m 3.528 ms - 151[0m
+[0mGET /blog [32m200[0m 47.276 ms - 72850[0m
+[0mGET /uploads/1691819021974-3.jpg [33m404[0m 4.115 ms - 166[0m
+[0mGET /uploads/1693313359362-searchMovies.PNG [33m404[0m 4.622 ms - 177[0m
+[0mGET /img/logo.png [33m404[0m 6.285 ms - 151[0m
+[0mGET /article/search/tech/page [36m304[0m 12.423 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 5.982 ms - 151[0m
+[0mGET / [32m200[0m 11.625 ms - 21487[0m
+[0mGET /img/logo.png [33m404[0m 1.916 ms - 151[0m
+[0mGET /article//fee/scam [33m404[0m 2.088 ms - 156[0m
+[0mGET /article/search/tech/page [36m304[0m 13.803 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 3.822 ms - 151[0m
+[0mGET /article//fee/scam [33m404[0m 12.655 ms - 156[0m
+[0mGET / [32m200[0m 29.805 ms - 21503[0m
+[0mGET /img/logo.png [33m404[0m 6.199 ms - 151[0m
+[0mGET /article/trending/fee/scam [32m200[0m 11.457 ms - 10115[0m
+[0mGET /img/logo.png [33m404[0m 3.505 ms - 151[0m
+[0mGET /article/trending/fee/scam [32m200[0m 21.602 ms - 10113[0m
+[0mGET /img/logo.png [33m404[0m 9.231 ms - 151[0m
+[0mGET /article/romance/love/scams [36m304[0m 12.370 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 2.833 ms - 151[0m
+[0mGET / [36m304[0m 19.473 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 3.333 ms - 151[0m
+[0mGET /article/romance/love/scams [36m304[0m 10.388 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 3.531 ms - 151[0m
+[0mGET /article/trending/fee/scam [36m304[0m 12.114 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 5.378 ms - 151[0m
+[0mGET /article/investment/crypto/scams [36m304[0m 11.303 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 5.393 ms - 151[0m
+[0mGET /article/trending/tech/scams [32m200[0m 9.294 ms - 10117[0m
+[0mGET /img/logo.png [33m404[0m 2.908 ms - 151[0m
+[0mGET / [36m304[0m 34.425 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 5.717 ms - 151[0m
+[0mGET /article/online/shopping/scam [36m304[0m 10.136 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 3.620 ms - 151[0m
+[0mGET /article/online/shopping/scam [36m304[0m 15.144 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 3.797 ms - 151[0m
+[0mGET /article/romance/love/scams [36m304[0m 10.047 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 2.821 ms - 151[0m
+[0mGET /article/online/shopping/scam [36m304[0m 10.733 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 3.813 ms - 151[0m
+[0mGET /article/trending/fee/scam [36m304[0m 9.928 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 3.541 ms - 151[0m
+[0mGET /article/trending/fee/scam [36m304[0m 25.716 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 5.324 ms - 151[0m
+[0mGET /article/trending/fee/scam [36m304[0m 12.272 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 6.411 ms - 151[0m
+[0mGET /article/trending/fee/scam [36m304[0m 15.727 ms - -[0m
+[0mGET /img/logo.png [33m404[0m 5.864 ms - 151[0m

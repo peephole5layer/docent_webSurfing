@@ -1,6 +1,10 @@
-const API_KEY="36f66b49f93747b1946ed401287feca4";
+// const API_KEY="36f66b49f93747b1946ed401287feca4";
+const API_KEY = "6f2509490274d40018fe286d26af241f";
 
-const url = "https://newsapi.org/v2/everything?q=";
+// https://gnews.io/api/v4/{endpoint}?apikey=API_KEY
+
+// const url = "https://newsapi.org/v2/everything?q=";
+const url = "https://gnews.io/api/v4/search?q="
 
 
 const cardsContainer = document.getElementById("cards-container");
@@ -49,7 +53,8 @@ function reload() {
 
 async function fetchNews(query) {
     console.log(query);
-    const res = await fetch(`${url}${query}&apiKey=${API_KEY}`);
+    console.log(`${url}${query}&lang=en&max=10&apiKey=${API_KEY}`);
+    const res = await fetch(`${url}${query}&lang=en&max=9&apikey=${API_KEY}`);
     const data = await res.json();
     bindData(data.articles);
 }
@@ -61,7 +66,7 @@ function bindData(articles) {
     cardsContainer.innerHTML = "";
 
     articles.forEach((article) => {
-        if (!article.urlToImage) return;
+       
         const cardClone = newsCardTemplate.content.cloneNode(true);
         fillDataInCard(cardClone, article);
         cardsContainer.appendChild(cardClone);
@@ -74,7 +79,9 @@ function fillDataInCard(cardClone, article) {
     const newsSource = cardClone.querySelector("#news-source");
     const newsDesc = cardClone.querySelector("#news-desc");
 
-    newsImg.src = article.urlToImage;
+    newsImg.src = article.image;
+    console.log(newsImg.res);
+    console.log("image : ",article.image);
     
     let title = article.title;
     newsTitle.innerHTML = title.slice(0,71) +"...";

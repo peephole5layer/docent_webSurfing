@@ -1,3 +1,5 @@
+// const { createBullBoard } = require('bull-board');
+// const { BullAdapter } = require('bull-board/bullAdapter');
 const express = require('express');
 const env = require('./config/environment');
 const logger = require('morgan');
@@ -5,6 +7,20 @@ const logger = require('morgan');
 
 const path = require('path');
 const app = express();
+
+// const file = require('./config/bull');
+// console.log(file.queue,"heiieie88888888888888");
+// const { router } = createBullBoard([new BullAdapter(file.queue)]);
+
+
+// app.use('/admin/queues', router);
+
+
+
+
+
+
+
 require('./config/view-helpers')(app);
 
 const port = process.env.PORT!=undefined? process.env.PORT : 8000;
@@ -72,8 +88,6 @@ app.set('views', './views');
 
 
 
-
-
 app.use(session({
     name : 'webScan',
     secret : env.session_cookie_key,
@@ -113,10 +127,17 @@ app.use(customMware.setFlash);
 
 app.use('/', require('./routes'));
 
-app.listen(port, function(err) {
+app.listen(port, async function(err) {
     if (err) {
         console.log(`Error in running the server: ${err}`);
     }
 
     console.log(`Server is running on port: ${port}`);
+
+    // try{
+    //     await file.connect();
+    //     console.log("REdis connected");
+    // }catch(err){
+    //     console.log("Redis error ,::",err);
+    // }
 });

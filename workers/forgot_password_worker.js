@@ -16,3 +16,22 @@ try {
 
 }
 
+// const {Job} = require('bull');
+
+// queue.process('findEmail',async(job)=>{
+//     console.log(job.data);
+//     forgotPasswordMailer.forgotPassword(job.data);
+//     return Promise.resolve();;
+// })
+
+// queue.on('completed', (job, result) => {
+//     console.log(`Job completed with result ${result}`);
+// })
+
+// module.exports.forgotPassProcess = async(job)=>{
+//     console.log("388383838");
+//     forgotPasswordMailer.forgotPassword(job.data);
+// }
+
+
+

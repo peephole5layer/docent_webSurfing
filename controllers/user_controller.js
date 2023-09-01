@@ -1,10 +1,13 @@
 const User = require('../models/user');
 const ForgotPassToken = require('../models/forgot_pass_token');
 const crypto = require('crypto');
-const queue = require('../config/kue');
+// const queue = require('../config/kue');
+// const queue = require('../config/bull');
 const forgotPasswordEmailWorder = require('../workers/forgot_password_worker');
 const { Script } = require('vm');
 const { listenerCount } = require('stream');
+
+// const file = require('../config/bull');
 
 
 module.exports.signup = function (req, res) {
@@ -161,6 +164,15 @@ module.exports.findEmail = async function (req, res) {
             const data = [];
             data.push(user);
             data.push(forgotPassToken);
+
+            // console.log("hieieiieieeiyououuo");
+
+            // await file.forgotPass(data);
+
+
+
+
+            // console.log("2222222222222222");
 
             // console.log(forgotPassToken.user.fname);
 

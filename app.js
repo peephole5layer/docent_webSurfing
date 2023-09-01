@@ -1,5 +1,6 @@
 // const { createBullBoard } = require('bull-board');
 // const { BullAdapter } = require('bull-board/bullAdapter');
+require('dotenv').config()
 const express = require('express');
 const env = require('./config/environment');
 const logger = require('morgan');

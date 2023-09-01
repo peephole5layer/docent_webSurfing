@@ -1,7 +1,7 @@
 const User = require('../models/user');
 const ForgotPassToken = require('../models/forgot_pass_token');
 const crypto = require('crypto');
-// const queue = require('../config/kue');
+const queue = require('../config/kue');
 // const queue = require('../config/bull');
 const forgotPasswordEmailWorder = require('../workers/forgot_password_worker');
 const { Script } = require('vm');

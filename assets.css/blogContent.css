@@ -178,7 +178,7 @@ pre {
 #contributor p span{
     font-size:1.3rem;
     font-family: cursive;
-    margin-left : 10px;;
+    margin-left : 6px;;
     margin-bottom: 2px;
 
 }
@@ -190,4 +190,21 @@ pre {
 
 }
 
+
+@media only screen and (max-width:480px){
+
+    #contributor p{
+        font-size:0.7rem;
+    }
+
+    #contributor p span{
+        font-size:0.81rem;
+        font-family: cursive;
+    
+        margin-bottom: 2px;
+    
+    }
+    
+
+}
 

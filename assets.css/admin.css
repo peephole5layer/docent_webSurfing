@@ -33,6 +33,7 @@
   display: flex;
 
   max-height:700px;
+  margin-top:90px;
 
 
 
@@ -42,6 +43,7 @@
  
   
 }
+
 
 
 /* =============== Navigation ================ */
@@ -54,7 +56,7 @@
 
   position: fixed;
   left:0px;
-  top:72px;
+  top:110px;
   width: 250px;
   height: 100%;
   background: var(--blue);
@@ -190,7 +192,7 @@
 .toggle {
   position: fixed;
   z-index: 2;
-  top:88.5px;
+  top:130.5px;
   width: 60px;
   height: 60px;
   display: flex;
@@ -369,6 +371,13 @@
 
 /* ====================== Responsive Design ========================== */
  @media (max-width: 1280px) {
+
+    
+  #admin_container {
+    margin-top:130px;
+  }
+
+
   .navigation {
     z-index: 1;
   }
@@ -451,6 +460,11 @@
 
 
 @media (max-width: 720px) {
+
+  #admin_container {
+    margin-top:90px;
+  }
+
   .cardBox {
     width:95%;
   }
@@ -489,15 +503,12 @@
 
     
   #admin_container {
-    display: flex;
+
+    margin-top:130px;
 
     max-height:1200px;
 
 
-
-    position:relative;
-
-    left:0px;
   
     
   }

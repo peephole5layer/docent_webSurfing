@@ -10,6 +10,10 @@
    
 } */
 
+#signin-page{
+  margin-top:196px;
+}
+
 
 #signin-page header {
 
@@ -19,9 +23,10 @@
   /* justify-content: space-between; */
   /* left:30%; */
   margin: auto;
+
   width: 405px;
   height: 90px;
-  margin-top: 70px;
+  /* margin-top: 340px; */
 
 
 }
@@ -256,6 +261,11 @@ label {
 
 
 @media only screen and (max-width:480px) {
+
+    
+  #signin-page{
+    margin-top:148px;
+  }
 
 
   .mg-left-5 {

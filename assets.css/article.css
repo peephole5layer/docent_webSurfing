@@ -63,6 +63,9 @@ ul {
     overflow: hidden;
 }
 
+#article{
+    margin-top:120px;
+}
 
 #article header{
     position: relative;
@@ -358,7 +361,7 @@ main div{
 
     .cards-container .card .card-content{
         font-size:0.83rem;
-        height:80%;
+        height:242px;
     }
 
     .cards-container .card .card-content #news-title{
@@ -370,6 +373,8 @@ main div{
 
     .cards-container .card .card-content .news-source{
         font-size:0.77rem;
+        position: relative;
+        /* top:-110px; */
       
         
     }

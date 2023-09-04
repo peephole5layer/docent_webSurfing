@@ -1,4 +1,7 @@
 
+#signup-page{
+  margin-top:196px;
+}
 #signup-page header{
  
   position:relative;
@@ -189,6 +192,12 @@ font-size:4.6rem;
 
 /*media query*/
 @media only screen and (max-width:480px){
+
+   
+  #signup-page{
+    margin-top:148px;
+  }
+
 
   .mg-left-5{
     margin-left:2rem;

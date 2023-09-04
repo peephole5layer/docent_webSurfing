@@ -28,16 +28,15 @@
 #home {
    
     position : relative;
-    top:0.06vh;
+    top:108px;
     bottom : 10vh;
 }
 
 #carouselExampleDark{
-    background-color:#06c7aa22;
-    height:540px
-
-
-
+    /* background-color:#06c7aa22; */
+    background-color: white;
+    background: linear-gradient(white 27%,whitesmoke,rgba(211, 211, 211, 0.484),whitesmoke);
+    height:540px;
 }
 
 #form-container{
@@ -211,7 +210,7 @@
    
     margin-left:21.6px;
     font-weight: 600;
-    font-family: cursive;
+    /* font-family: cursive; */
     color:rgba(0, 0, 0, 0.833);
     width: 60px;
 
@@ -476,31 +475,31 @@
  }
 
  #search-articles button{
-    height:170px;
+    height:162px;
     width:340px;
     font-family: cursive;
 
-    background-color:#06c7aa22;;
+    background-color: rgba(255, 250, 240, 0.748);
   
     color:black;
-    font-size:1.85rem;
-    box-shadow: 2px 2px 4px 4px black;
+    font-size:1.75rem;
+    border:0.5px solid black;
+    /* box-shadow: 2px 2px 4px 4px black; */
     font-weight: bold;
-    transition:0.4s ease-in-out;
+    transition:0.5s ease-in-out;
 
  }
 
  #search-articles button::first-letter{
-    font-size:2.9rem;
+    font-size:2.8rem;
  }
 
  #search-articles button:hover{
 
-    background-color:#06c7aa35;;
-    
-    transform: translateX(25px);
-  
+    background-color: floralwhite;
+    width:365px;
  }
+
 
 
 
@@ -509,21 +508,13 @@
 
 
 
-#blogs header span{
-    display:inline-block;
-}
-
-#blogs header span::first-letter{
-    font-size:2.65rem;
-}
-
-
 #blogs {
     /* background: var(--light-bg); */
     background-image: linear-gradient(#fffffffb 60%,#d0d0d0af 80%,#bbbbbb7c 100%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 380px;
 
 
 
@@ -531,7 +522,8 @@
 
  
 .heading-title{
-    margin-top:55px;
+    margin-top:90px;
+    margin-bottom: 70px;
     text-align: center;
     margin-bottom: 40px;;
     font-size: 2.5rem;
@@ -546,9 +538,9 @@
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: center;
-    /* position: relative; */
-    top:80px;
-    margin-bottom: 20px;;
+    position: relative;
+    top:20px;
+    
 
   
 
@@ -624,9 +616,10 @@
  .custom-btn{
 
     position: relative;
-    top:87px;
-    background-color: black;
-    color:white;
+    top:65px;
+    background-color: white;
+    border:0.5px solid black;
+    color:black;
     font-size:1.1rem;
 
     width:170px;
@@ -634,15 +627,12 @@
     border-radius: 5px;
     padding:13px;
     margin:auto;
+    margin-bottom: 33px;
+
     transition: 0.35s ease-in-out;
  }
  .custom-btn:hover{
-    background-color:white;
-    color: black;
-    font-weight: bold;
-    border:0.9px solid black;
-
-   
+    width:195px;
  }
 
  #blogs .box-container .box .content .btn:hover{
@@ -664,6 +654,8 @@
 /*media query*/
 
 @media only screen and (max-width: 980px){
+
+
 
      .heading-title{
         font-size:2.03rem;
@@ -771,6 +763,29 @@
     
 }
 @media only screen and (max-width:480px){
+
+        
+    #home {
+    
+        position : relative;
+        top:142px;
+        bottom : 10vh;
+    }
+
+    #carouselExampleDark{
+        /* background-color:#06c7aa22; */
+        background-color: white;
+        background: linear-gradient(white 41.5%,whitesmoke,rgba(211, 211, 211, 0.347),whitesmoke);
+    }
+    
+
+
+
+ 
+    .element h2{
+        margin-bottom: 22px;
+    }
+
 
 
         
@@ -893,7 +908,7 @@
         
     .cards{
         height:94px;
-        width:94px;
+        width:96px;
         margin:10px;
 
     }
@@ -903,8 +918,8 @@
     }
         
     .cards p{
-        font-size:0.65rem;
-        margin-left:15.35px;
+        font-size:0.69rem;
+        margin-left:11.55px;
     }
 
     #data h2{
@@ -927,7 +942,8 @@
 
            
     #reports-container div button,#report-sites-container div button{
-        font-size:1.2rem;
+        font-size:1.1rem;
+        height:47px;
       
         width:81vw;
     }
@@ -969,13 +985,34 @@
     #submit-report-container #book-form #flex .inputBox span{
         font-size:1.02rem;
     }
+
+    #search-articles{
+        height:370px;
+    
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient(to right bottom, white 30%,white ,rgba(0, 0, 0, 0.216));
+     }
+    
+     
+ 
         
     #search-articles button{
-        height:155px;
-        width:78vw;
-        font-size:1.655rem;
+        height:75px;
+        width:87.3vw;
+        font-size:1.4rem;
     }
+       
+    #search-articles button::first-letter{
+        font-size:1.93rem;
+     }
 
+     #search-articles button:hover{
+
+        background-color: floralwhite;
+        width:89vw;
+     }
 
     #blogs{
         margin-top:30px;

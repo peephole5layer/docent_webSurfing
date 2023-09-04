@@ -1,5 +1,6 @@
 #search{
-    margin-top:50px;
+    margin-top:180px;
+    margin-bottom: 50px;
 }
 #search form{
     width:700px;
@@ -13,7 +14,9 @@
 
 #search-key{
 
-    margin-top:2.5px;
+
+
+    margin-top:20.5px;
     height:45px;
     display:flex;
     align-items: center;
@@ -33,7 +36,7 @@
 #blackListed-container{  
     margin-left:0;
     margin-right:0;
-    margin-top:7vh;
+    margin-top:1.4vh;
 }
 
 .reports{
@@ -57,6 +60,7 @@
     height:105px;
     padding:5px;
 }
+
 
 #info div div{
     display: inline-block;
@@ -186,8 +190,40 @@
 
 @media (max-width:480px) {
 
+    #search{
+        width:98vw;
+    }
+
+    #search form{
+        width:270px;
+        /* width:100%; */
+        margin:auto;
+    }
+
+    #search form input{
+        width: 191px;
+        font-size:0.85rem;
+        
+       
+        margin-left: auto;
+    }
+
+    #search form button{
+        width:63px;
+        height:33px;
+        font-size:0.78rem;
+    }
+
     .col{
         font-size:0.78rem;
+    }
+
+        
+    #blackListed-container{  
+        margin-left:0;
+        margin-right:0;
+        margin-top:1.4vh;
+        width:98vw;
     }
 
     #modal-button{
@@ -213,6 +249,22 @@
 
         font-size: 0.74rem;
         
+    }
+
+    #info{
+        position: relative;
+        left:-15px;
+       
+    }
+
+        
+    #info>div{
+      
+        width:95vw;
+    }
+
+    .reports-num{
+        font-size:0.85rem;
     }
 
 }

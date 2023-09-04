@@ -2,7 +2,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 
-
+<!-- 
 <nav class="navbar sticky-top navbar-expand-lg bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
 
   <div class="container-fluid" id="hi">
@@ -21,7 +21,7 @@
       aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+  
 
 
 
@@ -88,8 +88,57 @@
       </form>
     </div>
   </div>
-</nav>
+</nav> -->
 
 <!-- bg-dark border-bottom border-bottom-dark -->
+
+<nav id="nav-bar" >
+
+  <a id="try" class="navbar-brand  ml-5" href="#">
+    <img style="border: 1px solid #5e818a26" id="docent-logo" src="<%=assetPath('img/l7.png')%>" alt="docent-logo"
+      width="50" height="15px" class="d-inline-block align-text-top">
+    <div id="docent">
+      <div>Docent</div>
+      <div>webscan</div>
+
+    </div>
+  </a>
+  <!-- <div id="logo"><i class="fa-solid fa-film fa-spin"></i> <span>MovieGuideX</span></div> -->
+  <div id="nav-items">
+
+      <a href="/"><i class="fa-solid fa-house"></i> <span>Home</span></a>
+      <a href="/#report-sites-container"><i class="fa-solid fa-masks-theater"></i><span>Report&nbsp;Url</span></a>
+      <a href="/#reports-container"><i class="fa-solid fa-ban"></i> <span>Reported&nbsp;Urls</span></a>
+      <a href="/#search-articles"><i class="fa-solid fa-newspaper"></i> <span>Articles</span></a>
+      <li class="nav-item dropdown">
+        <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          More
+        </button>
+        <ul class="dropdown-menu" id="dropdown-menu">
+          <li><a class="dropdown-item" href="/#blogs"><i class="fa-solid fa-blog"></i> Blogs</a></li>
+          <li><a class="dropdown-item" href="/about"><i class="fa-solid fa-info"></i> About</a></li>
+          <li><a class="dropdown-item" href="/#contact-us"><i class="fa-solid fa-phone"></i> Contact&nbsp;Us</a></li>
+
+          <% if(locals.user){ %>
+
+           
+              <li><a class="dropdown-item" href="#"> <%=locals.user.fname%>&nbsp;<%=locals.user.lname%></a></li>
+              <li><a class="dropdown-item" href="/users/destroy-session"><i class="fa-solid fa-arrow-left-long"></i> Sign&nbsp;out</a></li>
+
+            <% }else {%>
+
+              <li><a class="dropdown-item" href="/users/signin" ><i class="fa-solid fa-arrow-right-long"></i> Sign&nbsp;in</a></li>
+              <li><a class="dropdown-item" href="/users/signup" ><i class="fa-solid fa-arrow-right-long"></i> Sign&nbsp;up</a></li>
+
+
+
+            
+              <%}%>
+        </ul>
+      </li>
+  </div>
+  <div id="menu-bar"> <i class="fa-solid fa-bars"></i></div>
+</nav>
+
 
 <script src="<%= assetPath('js/_header.js')%>"></script>

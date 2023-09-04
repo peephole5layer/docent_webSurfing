@@ -96,46 +96,17 @@ let blogSubmit = function () {
       console.log(form);
 
       let formData = new FormData(form);
-   
-   
-
-
-
-
       console.log(formData);
-
-
-
-
-      // console.log("hiill    ",formData.get('coverImage'));
-
-
       $.ajax({
 
          type: 'post',
          url: $(this).attr('action'),
          data: blogForm.serialize(),
-         // data:formData,
-         // contentType:false,
-         // processData : false,
       
 
          success: function (data) {
 
-            // let type;
-            // if (data.message == 'URL Reported!') {
-            //    type = 'success';
-            // } else {
-            //    type = 'error';
-            // }
-
-            // new Noty({
-            //    theme: 'relax',
-            //    text: data.message,
-            //    type: type,
-            //    layout: 'topRight',
-            //    timeout: 1500
-            // }).show();
+           
 
             const blogCreated = document.getElementById('blog-created');
             blogCreated.style.display = "block";

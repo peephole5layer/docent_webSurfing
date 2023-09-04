@@ -19,16 +19,6 @@ reportBtn.onclick = ()=> {
         },7000);
 
         message.style.display= "block";
-
-       
-
-      
-
-
-      
-
-
-       
     }else{
 
         submitReportContainer.style.display= "flex";

@@ -30,7 +30,7 @@ router.post('/create-blog',blogController.createBlog);
 router.get('/delete/:id',blogController.delete);
 
 router.get('/:id',blogController.blogContent);
-// ,
+
 
 
 console.log("blog router loaded");

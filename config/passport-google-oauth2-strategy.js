@@ -4,6 +4,10 @@ const crypto = require('crypto');
 const User = require('../models/user');
 const env = require('./environment');
 
+console.log( env.google_client_secret);
+console.log(env.google_call_back_url);
+console.log(env.google_client_id);
+
 
 passport.use(new googleStrategy({
 

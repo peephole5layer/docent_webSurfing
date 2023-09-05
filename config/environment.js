@@ -29,7 +29,9 @@ const development ={
     
     google_client_id : "1012046356057-0qtcguk00fddtcrf9auk7ilh420ek0hp.apps.googleusercontent.com",
     google_client_secret : "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",
-    google_call_back_url : "http://localhost:8000/users/auth/google/callback",
+    // google_call_back_url : "http://localhost:8000/users/auth/google/callback",
+    google_call_back_url : "http://docentwebscan.live:8000/users/auth/google/callback" ,
+
     jwt_secret : 'webSurf',
     morgan :{
         mode : 'dev',
@@ -78,8 +80,7 @@ const production = {
   
     google_client_id : process.env.DOCENT_WEBSURF_GOOGLE_CLIENT_ID,
     google_client_secret : process.env.DOCENT_WEBSURF_GOOGLE_CLIENT_SECRET,
-    google_call_back_url : "http://localhost:8000/users/auth/google/callback" ,
-    // process.env.DOCENT_WEBSURF_GOOGLE_CALL_BACK_URL,
+    google_call_back_url : process.env.DOCENT_WEBSURF_GOOGLE_CALL_BACK_URL,
     jwt_secret : process.env.DOCENT_WEBSURF_JWT_SECRET,
     morgan :{
         mode : 'combined',
@@ -93,8 +94,5 @@ const production = {
 
 
 console.log(process.env.NODE_ENV);
-
-
-
 
 module.exports = eval(process.env.NODE_ENV) == undefined ? development : eval(process.env.NODE_ENV);

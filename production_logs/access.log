@@ -1401,3 +1401,17 @@
 [0mGET / [36m304[0m 33.260 ms - -[0m
 [0mGET / [36m304[0m 31.421 ms - -[0m
 [0mGET / [36m304[0m 16.292 ms - -[0m
+[0mGET / [32m200[0m 30.800 ms - 23406[0m
+[0mGET /favicon.ico [33m404[0m 10.141 ms - 150[0m
+[0mGET /users/signin [32m200[0m 22.091 ms - 12447[0m
+[0mGET /users/auth/google [36m302[0m 21.247 ms - 0[0m
+[0mGET /users/signin [36m304[0m 19.819 ms - -[0m
+[0mGET /users/signin [36m304[0m 29.733 ms - -[0m
+[0mGET /users/signin [36m304[0m 27.191 ms - -[0m
+[0mGET /users/signin [36m304[0m 23.622 ms - -[0m
+[0mGET /users/signin [36m304[0m 12.466 ms - -[0m
+[0mGET /users/auth/google [36m302[0m 9.798 ms - 0[0m
+[0mGET / [36m304[0m 73.489 ms - -[0m
+[0mGET /favicon.ico [33m404[0m 18.301 ms - 150[0m
+[0mGET /users/signin [32m200[0m 52.747 ms - 12447[0m
+[0mGET /users/auth/google [36m302[0m 20.436 ms - 0[0m

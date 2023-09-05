@@ -38,7 +38,7 @@ const development ={
         options : {stream :accessLogStream}
     },
 
-    mongo_url : `mongodb://127.0.0.1:27017/kavach_development`
+    mongo_url : `mongodb://127.0.0.1:27017/docent_safe_websurf`
 
 
 }

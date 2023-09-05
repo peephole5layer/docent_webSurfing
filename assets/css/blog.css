@@ -452,6 +452,8 @@ a {
     height: 110px;
     width: 500px;
     border: 2px solid black;
+    padding: 0.45rem 0.9rem;
+    font-size: 0.92rem;
 }
 
 
@@ -648,6 +650,7 @@ a {
     #add-blog-form #blog-form #flex .inputBox textarea {
         height: 165px;
         width: 400px;
+        font-size:0.87rem;
     }
 
 
@@ -797,6 +800,7 @@ a {
         width: 57vw;
         margin-right: 0.4vw;
         margin-left: auto;
+        font-size: 0.85rem;
     }
 
 

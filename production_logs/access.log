@@ -1,1 +1,4 @@
 ::1 - - [06/Sep/2023:03:07:20 +0000] "GET /blog HTTP/1.1" 200 40779 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::ffff:127.0.0.1 - - [06/Sep/2023:03:08:52 +0000] "GET /blog HTTP/1.1" 200 40779 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [06/Sep/2023:03:09:04 +0000] "GET /users/signin HTTP/1.1" 200 12532 "http://localhost:8000/blog" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"
+::1 - - [06/Sep/2023:03:09:06 +0000] "GET /users/auth/google HTTP/1.1" 302 0 "http://localhost:8000/users/signin" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36"

@@ -400,6 +400,8 @@
  
  #submit-report-container #book-form #flex .inputBox textarea{
     border:2px solid black;
+    padding:0.8rem 0.8rem;
+    font-size:0.8rem;
  }
 
 

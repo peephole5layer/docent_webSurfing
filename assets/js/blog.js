@@ -65,7 +65,10 @@ createBlog.onclick = () => {
 
      },7000);
 
+     
+
      msg.style.display= "block";
+     window.scrollBy(0,20);
 
 
    } else {
@@ -74,6 +77,8 @@ createBlog.onclick = () => {
       document.getElementById('create-blog-btn-container').style.display="none";
       addBlogForm.style.display = "flex";
       blogPageHeader.style.marginTop = "100px";
+
+      window.location.href = "#add-blog-form";
 
    }
 

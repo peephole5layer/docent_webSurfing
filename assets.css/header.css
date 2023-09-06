@@ -250,6 +250,8 @@
     display: none;
 }
 
+
+
 /*_________________________________media query_____________________ */
 
 @media only screen and (max-width:992px){
@@ -434,4 +436,11 @@
         font-size: 2.1rem;
     }
 
+}
+
+#nav-items #username{
+    font-size:0.65rem !important;
+    word-spacing: -3.5px;
+    font-weight: 500;
+   
 }

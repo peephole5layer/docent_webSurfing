@@ -2,22 +2,3 @@ node_modules/
 .env/
 
 
-
-
-# export DOCENT_WEBSURF_ASSET_PATH = ./public/assets
-# export DOCENT_WEBSURF_DB= docent_safe_websurf
-# export DOCENT_WEBSURF_GMAIL_PASSWORD=t dlgyjquznloopil
-# export DOCENT_WEBSURF_GMAIL_USERNAME=bhaveshrathour4@gmail.com
-# export DOCENT_WEBSURF_GOOGLE_CALL_BACK_URL=https://docentwebscan.live/users/auth/google/callback
-# # export DOCENT_WEBSURF_GOOGLE_CALL_BACK_URL= http://localhost:8000/users/auth/google/callback
-
-# export DOCENT_WEBSURF_GOOGLE_CLIENT_ID= 1012046356057-0qtcguk00fddtcrf9auk7ilh420ek0hp.apps.googleusercontent.com
-# # 1012046356057-0qtcguk00fddtcrf9auk7ilh420ek0hp.apps.googleusercontent.com
-# export DOCENT_WEBSURF_GOOGLE_CLIENT_SECRET=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
-
-# export DOCENT_WEBSURF_JWT_SECRET=tsohaXRgCnhmdUrf4L0q3rvgjttre5En
-# export DOCENT_WEBSURF_SESSION_COOKIE_KEY=SZ8IiXX41m3iFgqrOt7rIbc23tkF2Ick
-# export PORT = 8000
-# export MONGO_URL = mongodb+srv://bhaveshrathour380:CbzYYOKWc3gXAOyK@cluster0.jubptas.mongodb.net/?retryWrites=true&w=majority
-# # export NODE_ENV = production
-# export hi = by

@@ -84,3 +84,5 @@ Engage with our thriving community through our blog engine. Read and write blogs
 ## Join Us in Creating a Safer Online Space
 Docent WebScan is more than a platform – it's a collective effort to make the internet a safer place. We invite you to become an active participant in our mission by reporting suspicious websites, sharing your knowledge, staying informed through our resources and be part of a caring online community dedicated to safeguarding each other . With Docent WebScan, you can confidently explore the digital world, armed with knowledge and supported by a community that cares about your online safety. 
  
+
+</br>

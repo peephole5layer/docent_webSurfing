@@ -296,7 +296,23 @@ module.exports.blackList = async function (req, res, next) {
             return res.redirect('/');
         }
 
+
+        let validUrls = new Array('http://www.docentwebscan.live','http://docentwebscan.live', 'https://docentwebscan.live','https://www.docentwebscan.live','https://www.google.com','https://google.com');
+
         const url = req.body.url;
+        if(validUrls.includes(url.toLowerCase())){
+            req.flash('error',"can't report this site");
+
+            if (req.xhr) {
+                return res.status(200).json({
+
+                    message: "can't report this site"
+                });
+            }
+
+            return res.redirect('back');
+        }
+      
         console.log(validator.isURL(url));
         console.log(url);
 

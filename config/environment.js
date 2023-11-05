@@ -29,8 +29,7 @@ const development ={
     
     google_client_id : "1012046356057-0qtcguk00fddtcrf9auk7ilh420ek0hp.apps.googleusercontent.com",
     google_client_secret : "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",
-    google_call_back_url : "http://localhost:8000/users/auth/google/callback",
-    // google_call_back_url : "http://docentwebscan.live:8000/users/auth/google/callback" ,
+    google_call_back_url : "http://docentwebscan.live:8000/users/auth/google/callback" ,
 
     jwt_secret : 'webSurf',
     morgan :{
@@ -38,7 +37,8 @@ const development ={
         options : {stream :accessLogStream}
     },
 
-    mongo_url : `mongodb://127.0.0.1:27017/docent_safe_websurf`
+    // mongo_url : `mongodb://127.0.0.1:27017/docent_safe_websurf`
+    mongo_url : `mongodb+srv://bhaveshrathour380:CbzYYOKWc3gXAOyK@cluster0.jubptas.mongodb.net/?retryWrites=true&w=majority`
 
 
 }

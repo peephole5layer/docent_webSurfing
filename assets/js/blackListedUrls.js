@@ -1,6 +1,6 @@
 let boxes = [...document.querySelectorAll('.reports')];
 
-let x = 21;
+let x = 24;
 
 for(let i=0; i<x &&i<boxes.length; i++){
     boxes[i].style.display = 'inline-block';

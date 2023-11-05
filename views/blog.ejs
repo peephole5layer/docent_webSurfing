@@ -56,9 +56,12 @@
 
             <div id="blog-created">
 
-                <p>
-                    <span><%= locals.user.fname%></span> your blog is successfully added
-                </p>
+                <div class="alert alert-danger" role="alert">
+                 
+                    <span> Your Blog is Sent For Review ... (it might take 15-16 hours)</span>
+                </div>
+
+             
 
             </div>
         <%}%>
@@ -87,7 +90,7 @@
 
         <% for(blog of Blogs){%>
 
-             <div class="post-box tech">
+             <div class="post-box approved-blog tech">
                 <div class="image">
                     <img src='<%= blog.coverImageUrl%>' alt="" class="post-img">
                 </div>
@@ -132,10 +135,89 @@
 
     <div class="btn-container">
 
-        <button class="custom-btn"> Load More </button>
+        <button class="custom-btn load-more-approved"> Load More </button>
 
 
     </div>
+
+
+
+    <%if(locals.user && locals.user.access=='admin' && UnapprovedBlogs.length != 0){%>
+
+
+     
+
+        <header id="unapproved-blogs-header">
+
+            <h1>Approve Newly Added Blogs</h1>
+
+
+        </header>
+
+
+
+    <div class="post">
+
+
+
+
+
+        <% for(blog of UnapprovedBlogs){%>
+
+             <div class="post-box unapproved-blog tech">
+                <div class="image">
+                    <img src='<%= blog.coverImageUrl%>' alt="" class="post-img">
+                </div>
+
+                <div class="content-box">
+
+                    <div>
+
+                        <h3 class="post-title">
+                            <%= blog.title%>
+                        </h3>
+
+                        <p class="post-description">
+                            <%= blog.body%>
+                        </p>
+
+                    </div>
+
+                    <div class="profile">
+
+                        <span class="profile-name"><%=blog.createdBy.fname%>&nbsp;<%=blog.createdBy.lname%></span>
+                        <span class="post-date"><%=blog.createdAt.toDateString()%></span>
+
+                      
+
+                        <span class="approve-blog"><a  data-confirm="approveBlog" href="/admin/approveBlog/<%=blog.id%>"> Approve</a></span>
+
+                        <span id="delete-blog"><a data-confirm ="removeBlog" href="/blog/delete/<%=blog.id%>"><i data-confirm ="removeBlog" class="fa-solid fa-trash"></i></a></span>
+
+                    
+
+                        
+                    </div> 
+
+                    <a style="display:inline-block" href="/blog/<%=blog.id%>" class="btn">Read</a>
+
+                </div>
+
+            </div> 
+
+            <%}%>
+
+    </div>
+
+    <div class="btn-container">
+
+        <button class="custom-btn load-more-unapproved"> Load More </button>
+
+
+    </div>
+
+    <%}%>
+
 
 </section>
 

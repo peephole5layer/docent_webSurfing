@@ -13,6 +13,8 @@ const blogSchema = new mongoose.Schema({
         required:true
     },
 
+   
+
     coverImageUrl:{
         type:String,
         required:true
@@ -23,6 +25,13 @@ const blogSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: true
+    },
+
+    isApproved:{
+        type:String,
+        enum:['Approved','Unapproved']
+        
+        
     },
  
 },{

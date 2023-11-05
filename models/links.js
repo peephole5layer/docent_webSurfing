@@ -28,10 +28,12 @@ const linkSchema = new mongoose.Schema({
         integer:true
     },
 
-    users:{
-        type: [],
-        required:true
-    },
+    users : [{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'User'
+
+    }],
+
 
     biometricData :{
         type:[Object],

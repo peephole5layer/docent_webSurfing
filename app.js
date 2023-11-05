@@ -1,62 +1,33 @@
-// const { createBullBoard } = require('bull-board');
-// const { BullAdapter } = require('bull-board/bullAdapter');
 require('dotenv').config()
 const express = require('express');
-const env = require('./config/environment');
-
-
-
-
-
-
-
-
 const logger = require('morgan');
-
-
 const path = require('path');
-const app = express();
-
-// const file = require('./config/bull');
-// console.log(file.queue,"heiieie88888888888888");
-// const { router } = createBullBoard([new BullAdapter(file.queue)]);
-
-
-// app.use('/admin/queues', router);
-
-
-
-
-
-
-
-require('./config/view-helpers')(app);
-
-const port = process.env.PORT!=undefined? process.env.PORT : 8000;
 const expressLayouts = require('express-ejs-layouts');
-
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
-
-
-
-const db = require('./config/mongoose');
-
-//used for session cookie
-
 const session = require('express-session');
 const passport = require('passport');
+const MongoStore = require('connect-mongo');
+const flash = require('connect-flash');
+
+
+const env = require('./config/environment');
 const passportLocal = require('./config/passport-local-strategy')
 const passportJWT = require('./config/passport-jwt-strategy');
 const passportGoogle = require('./config/passport-google-oauth2-strategy');
 const passportFido2 = require('./config/passport-fido2-webAuthn');
-const MongoStore = require('connect-mongo');
-const flash = require('connect-flash');
 const customMware = require('./config/middleware');
 
 
-// app.use(express.urlencoded());
+const app = express();
+require('./config/view-helpers')(app);
+const port = process.env.PORT!=undefined? process.env.PORT : 8000;
+const db = require('./config/mongoose');
+
+
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 // app.use(express.json());
@@ -77,24 +48,6 @@ app.set('layout extractScripts', true);
 // set up the view engine
 app.set('view engine', 'ejs');
 app.set('views', './views');
-
-
-// let ejsOptions = {
-//     // delimiter: '?', Adding this to tell you do NOT use this like I've seen in other docs, does not work for Express 4
-//     async: true
-// };
-
-
-// app.engine('ejs', async (path, data, cb) => {
-// try{
-//     let html = await ejs.renderFile(path, data, ejsOptions);
-//     cb(null, html);
-// }catch (e){
-//     cb(e, '');
-// }
-// });
-
-
 
 
 app.use(session({
@@ -129,11 +82,6 @@ app.use(flash());
 app.use(customMware.setFlash);
 
 
-
-// app.use(flash());
-
-// app.use(customMware.setFlash);
-
 app.use('/', require('./routes'));
 
 app.listen(port, async function(err) {
@@ -142,11 +90,4 @@ app.listen(port, async function(err) {
     }
 
     console.log(`Server is running on port: ${port}`);
-
-    // try{
-    //     await file.connect();
-    //     console.log("REdis connected");
-    // }catch(err){
-    //     console.log("Redis error ,::",err);
-    // }
 });

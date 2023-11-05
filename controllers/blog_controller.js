@@ -1,3 +1,4 @@
+const { TRUE } = require('node-sass');
 const Blogs = require('../models/blogs');
 const fs = require('fs');
 
@@ -6,13 +7,28 @@ const fs = require('fs');
 module.exports.blog= async function (req, res) {
     console.log("blog loaded");
 
+  
 
-    const blogs = await Blogs.find({}).populate("createdBy");
+    const blogs = await Blogs.find({isApproved:'Approved'}).populate("createdBy");
+
+    // console.log(blogs[0].approved+'****************')
+    // console.log(typeof(blogs[0].approved))
+    // console.log("***************************************",blogs);
+
+    let unApprovedBlogs = null;
+
+    if(req.user && req.user.access=='admin'){
+
+        unApprovedBlogs = await Blogs.find({isApproved:'Unapproved'}).populate("createdBy");
+        
+    }
+
+    console.log(unApprovedBlogs)
 
     return res.render('blog', {
         Title: "blog page", 
         Blogs : blogs ,
-    
+        UnapprovedBlogs : unApprovedBlogs
     });
 }
 
@@ -38,7 +54,9 @@ module.exports.createBlog = async function(req,res){
             title : title,
             body : content,
             coverImageUrl : coverImageUrl,
-            createdBy : req.user._id
+            createdBy : req.user._id,
+            isApproved:'Unapproved'
+
         });
     
       

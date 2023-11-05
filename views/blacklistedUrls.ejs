@@ -2,228 +2,233 @@
 
 
 
-    <div id="search">
+<div id="search">
 
-      <form action="/report/blacklisted-urls" method="GET" class="d-flex" role="search">
-        <input name="search" id="search-bar" class="form-control me-2" type="search" placeholder="Search url"
-          aria-label="Search url">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
+  <form action="/report/blacklisted-urls" method="GET" class="d-flex" role="search">
+    <input name="search" id="search-bar" class="form-control me-2" type="search" placeholder="Search url"
+      aria-label="Search url">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
 
-    </div>
-
-        
-    <% if(Search_key!="" ){%>
-
-      <div id="search-key">
-        <p>Search results: <%=Search_key%>
-        </p>
+</div>
 
 
-      </div>
+<% if(Search_key!="" ){%>
 
-      <%}%>
-
-    <div id="blackListed-container"  class="p-3  bd-example bd-example-row">
-
-      <div class="container text-center">
-        <div class="row rounded row-cols-3 text-white bg-black">
-          <div class="col">URL</div>
-          <div class="col">Number of Reports</div>
-          <div class="col">Reported By</div>
-
-        </div>
-
-        <div class="row row-cols-3 border border-dar">
-
-          <% let i=0; %>
-
-            <% for(data of Reported_links){%>
-
-              <% if(data.count=="_" ){%>
-
-                <% color="text-success" ; bgColor="bg-success bg-gradient" ; %>
-
-                  <%}else if(data.count>8) {%>
-
-                    <% color="text-danger" ; bgColor="bg-danger bg-gradient bg-opacity-100" ; %>
-
-                      <%}else if(data.count>2){%>
-
-                        <% color="text-warning" ; bgColor="bg-warning bg-gradient bg-opacity-75" %>
-
-                          <%}else{%>
-                            <% color="text-primary" ; bgColor="bg-primary bg-gradient bg-opacity-75" ; %>
-
-                              <%}%>
+  <div id="search-key">
+    <p>Search results: <%=Search_key%>
+    </p>
 
 
+  </div>
 
-                                <div class="reports col p-3 shadow-lg bg-light <%=color%> border url"
-                                  style="word-break:break-all; font-style:italic;">
-                                  <%=data.url%>
-                                </div>
-                                <div class="reports col shadow-lg bg-light p-3 rounded <%=color%> border">
-                                  <%=data.count%>
-                                </div>
+  <%}%>
 
-                                <div class="flex reports col shadow-lg  bg-light p-3 rounded <%=color%> border">
+    <% let cols=2; %>
 
-                                  <%if(data.count=="_"){%>
+      <%if(locals.user && locals.user.access=='admin' ){%>
+        <%cols = 3;%>
+        <!-- console.log(Reporters) -->
 
-                                    <div>None</div>
+        <%}%>
 
-                                    <%}else{%>
+          <div id="blackListed-container" class="p-3  bd-example bd-example-row">
 
-                                      <button id="modal-button" type="button" class="btn <%=bgColor%>"
-                                        data-bs-toggle="modal" data-bs-target="#exampleModal<%=i%>">
-                                        Check
-                                      </button>
+            <div class="container text-center">
+              <div class="row rounded row-cols-<%=cols%>  text-white bg-black">
+                <div class="col">URL</div>
+                <div class="col">Number of Reports</div>
+                
+                <%if(cols==3){%>
+                  <div class="col">Reported By</div>
 
-                                      <% if(locals.user && locals.user.access=="admin" ) {%>
-                                        <a data-removeLink="true"  id="remove-link" href="/report/delete/<%=data.id%>"> <i data-removeLink="true" class="fa-solid fa-trash"></i></a>
+                <%}%>
+                
 
-                                      <%}%>
+              </div>
 
-                                  <%}%>
+              <div class="row row-cols-<%=cols%> border border-dar">
+
+                <% let i=0; %>
+
+                  <% for(data of Links){%>
+
+                    <% if(data.count=="_" ){%>
+
+                      <% color="text-success" ; bgColor="bg-success bg-gradient" ; %>
+
+                        <%}else if(data.count>8) {%>
+
+                          <% color="text-danger" ; bgColor="bg-danger bg-gradient bg-opacity-100" ; %>
+
+                            <%}else if(data.count>2){%>
+
+                              <% color="text-warning" ; bgColor="bg-warning bg-gradient bg-opacity-75" %>
+
+                                <%}else{%>
+                                  <% color="text-primary" ; bgColor="bg-primary bg-gradient bg-opacity-75" ; %>
+
+                                    <%}%>
+
+                                      <div class="reports col p-3 shadow-lg bg-light <%=color%> border url"
+                                        style="word-break:break-all; font-style:italic;">
+                                        <%=data.url%>
+                                      </div>
+                                      <div class="reports col shadow-lg bg-light p-3 rounded <%=color%> border">
+                                        <%=data.count%>
+                                      </div>
+
+                                      <%if(locals.user && locals.user.access=='admin' ){%>
+
+                                        <div style="background-color: red;"
+                                          class="flex reports col shadow-lg  bg-light p-3 rounded <%=color%> border">
+
+                                          <%if(data.count=="_"){%>
+
+                                            <div>None</div>
+
+                                            <%}else{%>
+
+                                              <button id="modal-button" type="button" class="btn <%=bgColor%>"
+                                                data-bs-toggle="modal" data-bs-target="#exampleModal<%=i%>">
+                                                Check
+                                              </button>
+
+                                              <a data-removeLink="true" id="remove-link"
+                                                href="/report/delete/<%=data.id%>">
+                                                <i data-removeLink="true" class="fa-solid fa-trash"></i></a>
 
 
-                                            <div class="modal" id="exampleModal<%=i%>" tabindex="-1">
-                                              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                                                <div class="modal-content">
-                                                  <div class="modal-header">
-                                                    <h5 class="modal-title">Reported By</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                      aria-label="Close"></button>
-                                                  </div>
+                                              <%}%>
 
-                                                  <%console.log(Reporters[i].length,"hi");%>
 
-                                                    <% if(Reporters[i].length==0){%>
+                                                <div class="modal" id="exampleModal<%=i%>" tabindex="-1">
+                                                  <div
+                                                    class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                    <div class="modal-content">
+                                                      <div class="modal-header">
+                                                        <h5 class="modal-title">Reported By</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                          aria-label="Close"></button>
+                                                      </div>
 
-                                                      <div class="modal-body">NO record found</div>
-                                                      <%}else{%>
 
-                                                        <div id="<%=i%>" class="modal-body">
+                                                      <% if(data.users.length==0){%>
 
-                                                          <div class="card">
+                                                        <div class="modal-body">NO record found</div>
+                                                        <%}else{%>
 
-                                                            <div id="card-entities" class="reported-by card-header">
-                                                              <ul class="list-group list-group-horizontal">
-                                                                <li class="list-group-item"
-                                                                  style="color:white; background-color: rgba(0, 0, 0, 0.84);">
-                                                                  Name</li>
-                                                                <li class="list-group-item "
-                                                                  style="color:white; background-color: rgba(0, 0, 0, 0.84);">
-                                                                  Email </li>
-                                                              </ul>
+                                                          <div id="<%=i%>" class="modal-body">
 
-                                                            </div>
+                                                            <div class="card">
 
-                                                            <% for(rep of Reporters[i]){%>
-
-                                                              <div class="card-header reported-by">
+                                                              <div id="card-entities" class="reported-by card-header">
                                                                 <ul class="list-group list-group-horizontal">
-                                                                  <li class="list-group-item">
-                                                                    <%=rep.fname%>&nbsp;<%=rep.lname%>
-                                                                  </li>
-                                                                  <li class="list-group-item">
-                                                                    <%=rep.email%>
-                                                                  </li>
-                                                                  <!-- <li class="list-group-item" style="font-size:0.7rem;">A third item</li> -->
+                                                                  <li class="list-group-item"
+                                                                    style="color:white; background-color: rgba(0, 0, 0, 0.84);">
+                                                                    Name</li>
+                                                                  <li class="list-group-item "
+                                                                    style="color:white; background-color: rgba(0, 0, 0, 0.84);">
+                                                                    Email </li>
                                                                 </ul>
 
                                                               </div>
-                                                              <% }%>
+
+                                                              <% for(rep of data.users){%>
+
+                                                                <div class="card-header reported-by">
+                                                                  <ul class="list-group list-group-horizontal">
+                                                                    <li class="list-group-item">
+                                                                      <%=rep.fname%>&nbsp;<%=rep.lname%>
+                                                                    </li>
+                                                                    <li class="list-group-item">
+                                                                      <%=rep.email%>
+                                                                    </li>
+                                                                  </ul>
+
+                                                                </div>
+                                                                <% }%>
+
+                                                            </div>
 
                                                           </div>
 
-                                                        </div>
+                                                          <%}%>
 
-                                                        <%}%>
-
-                                                          <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary"
-                                                              data-bs-dismiss="modal">Close</button>
-                                                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-                                                          </div>
+                                                            <div class="modal-footer">
+                                                              <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Close</button>
+                                                            </div>
+                                                    </div>
+                                                  </div>
                                                 </div>
-                                              </div>
-                                            </div>
-                                </div>
-
-
-                                <% i++%>
-
-                                  <%}%>
-        </div>
-
-      </div>
-
-
-     
-
-
-        <div id="page">
-          <div id="prevBtn-container"> <button id="prev"><i class="fa-solid fa-arrow-left"></i>
-              &nbsp;&nbsp;prev</button></div>
-          <div id="nextBtn-container"> <button id="next">Next &nbsp;&nbsp;<i
-                class="fa-solid fa-arrow-right-long"></i></button></div>
-
-        </div>
-
-   
+                                        </div>
 
 
 
 
+                                        <%}%>
 
+                                          <% i++%>
 
-          <div id="info">
-            <div>
-              <div style="height:23.5px; width:23.5px;" class="spinner-grow text-danger" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-
-              <div class="reports-num">
-                <i>Reported by 9 or more users</i>
+                                            <%}%>
               </div>
 
             </div>
 
-            <div>
-              <div style="height:23.5px; width:23.5px;" class="spinner-grow text-warning" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-
-              <div class="reports-num">
-                <i>Reported by 3 or more users</i>
-              </div>
-            </div>
-
-
-            <div>
-              <div style="height:23.5px; width:23.5px;" class="spinner-grow text-primary" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-              <div class="reports-num">
-                <i>Reported by less than 3 users </i>
-              </div>
+            <div id="page">
+              <div id="prevBtn-container"> <button id="prev"><i class="fa-solid fa-arrow-left"></i>
+                  &nbsp;&nbsp;prev</button></div>
+              <div id="nextBtn-container"> <button id="next">Next &nbsp;&nbsp;<i
+                    class="fa-solid fa-arrow-right-long"></i></button></div>
 
             </div>
 
-            <div>
-              <div style="height:23.5px; width:23.5px;" class="spinner-grow text-success" role="status">
-                <span class="visually-hidden">Loading...</span>
-              </div>
-              <div class="reports-num">
-                <i>Safe to Browse </i>
+            <div id="info">
+              <div>
+                <div style="height:23.5px; width:23.5px;" class="spinner-grow text-danger" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+
+                <div class="reports-num">
+                  <i>Reported by 9 or more users</i>
+                </div>
+
               </div>
 
+              <div>
+                <div style="height:23.5px; width:23.5px;" class="spinner-grow text-warning" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+
+                <div class="reports-num">
+                  <i>Reported by 3 or more users</i>
+                </div>
+              </div>
+
+
+              <div>
+                <div style="height:23.5px; width:23.5px;" class="spinner-grow text-primary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="reports-num">
+                  <i>Reported by less than 3 users </i>
+                </div>
+
+              </div>
+
+              <div>
+                <div style="height:23.5px; width:23.5px;" class="spinner-grow text-success" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+                <div class="reports-num">
+                  <i>Safe to Browse </i>
+                </div>
+
+              </div>
             </div>
+
           </div>
 
-    </div>
 
-
-    <script type="application/javascript" src="<%=assetPath('js/blackListedUrls.js')%>"></script>
+          <script type="application/javascript" src="<%=assetPath('js/blackListedUrls.js')%>"></script>

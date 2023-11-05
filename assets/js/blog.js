@@ -27,25 +27,60 @@
 
 
 
-let loadMoreBtn = document.querySelector('.custom-btn');
-let currentItem = 4;
+function loadMoreApproved() {
 
+   let loadMoreBtnApproved = document.querySelector('.load-more-approved');
+   let currentItem = 4;
 
-loadMoreBtn.onclick = () => {
-   let boxes = [...document.querySelectorAll('.post-box')];
-   for (var i = currentItem; i < currentItem + 4 && i < boxes.length; i++) {
-      boxes[i].style.display = 'flex';
-      boxes[i].style.flexDirection = 'column';
-      boxes[i].style.justifyContent = 'space-between';
-      boxes[i].style.marginBottom = '35px';
-      boxes[i].style.marginLeft = '25px';
-   };
-   currentItem += 4;
-   if (currentItem >= boxes.length) {
-      loadMoreBtn.style.display = 'none';
+   loadMoreBtnApproved.onclick = () => {
+      let boxes = [...document.querySelectorAll('.approved-blog')];
+      for (var i = currentItem; i < currentItem + 4 && i < boxes.length; i++) {
+         boxes[i].style.display = 'flex';
+         boxes[i].style.flexDirection = 'column';
+         boxes[i].style.justifyContent = 'space-between';
+         boxes[i].style.marginBottom = '35px';
+         boxes[i].style.marginLeft = '25px';
+      };
+      currentItem += 4;
+      if (currentItem >= boxes.length) {
+         loadMoreBtnApproved.style.display = 'none';
 
+      }
    }
+
 }
+
+function loadMoreUnapproved(){
+
+
+
+
+   let loadMoreBtnUnapproved = document.querySelector('.load-more-unapproved');
+
+   if(loadMoreBtnUnapproved==null){
+      return;
+   }
+   let currentItem = 4;
+
+   loadMoreBtnUnapproved.onclick = () => {
+      let boxes = [...document.querySelectorAll('.unapproved-blog')];
+      for (var i = currentItem; i < currentItem + 4 && i < boxes.length; i++) {
+         boxes[i].style.display = 'flex';
+         boxes[i].style.flexDirection = 'column';
+         boxes[i].style.justifyContent = 'space-between';
+         boxes[i].style.marginBottom = '35px';
+         boxes[i].style.marginLeft = '25px';
+      };
+      currentItem += 4;
+      if (currentItem >= boxes.length) {
+         loadMoreBtnUnapproved.style.display = 'none';
+
+      }
+   }
+
+}
+loadMoreApproved();
+loadMoreUnapproved()
 
 
 let createBlog = document.getElementById('blog-btn');
@@ -60,21 +95,21 @@ createBlog.onclick = () => {
    if (user == "") {
 
       const msg = document.getElementById('login-message');
-      setTimeout(function(){
+      setTimeout(function () {
          msg.style.display = "none";
 
-     },7000);
+      }, 7000);
 
-     
 
-     msg.style.display= "block";
-     window.scrollBy(0,20);
+
+      msg.style.display = "block";
+      window.scrollBy(0, 20);
 
 
    } else {
 
-      
-      document.getElementById('create-blog-btn-container').style.display="none";
+
+      document.getElementById('create-blog-btn-container').style.display = "none";
       addBlogForm.style.display = "flex";
       blogPageHeader.style.marginTop = "100px";
 
@@ -107,11 +142,11 @@ let blogSubmit = function () {
          type: 'post',
          url: $(this).attr('action'),
          data: blogForm.serialize(),
-      
+
 
          success: function (data) {
 
-           
+
 
             const blogCreated = document.getElementById('blog-created');
             blogCreated.style.display = "block";
@@ -145,15 +180,19 @@ blogSubmit();
 
 
 
-function reallySure (event) {
-   var message = ' Remove this Blog ? ';
+function reallySure(event, message) {
    action = confirm(message) ? true : event.preventDefault();
 }
 
-function actionToFunction (event) {
+function actionToFunction(event) {
 
-   if(event.target.getAttribute('data-removeBlog')=='true'){
-       reallySure(event);
+   console.log(event.target.getAttribute('data-confirm'))
+   if (event.target.getAttribute('data-confirm') == 'removeBlog') {
+      reallySure(event, 'Remove this Blog ?');
+
+   } else if (event.target.getAttribute('data-confirm') == 'approveBlog') {
+
+      reallySure(event, 'Approve this Blog ?');
 
    }
 }

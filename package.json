@@ -12,11 +12,11 @@
 
         "test": "echo \"Error: no test specified\" && exit 1",
 
-        "start": "gulp build  & NODE_ENV=production node app.js",
+        "start": "gulp build  & NODE_ENV=production nodemon app.js",
 
         "gulp": "gulp build",
 
-        "prod_start": "NODE_ENV=production nodemon app.js",
+        "prod_start": "NODE_ENV=production node app.js",
 
         "dev": "npm-run-all --parallel gulp prod_start"
 
@@ -67,6 +67,8 @@
         "fs": "^0.0.1-security",
 
         "fs-extra": "^11.1.1",
+
+        "global": "^4.4.0",
 
         "gulp": "^4.0.2",
 

@@ -1,0 +1,80 @@
+<div style="background-color: red;"class="flex reports col shadow-lg  bg-light p-3 rounded <%=color%> border">
+
+    <%if(data.count=="_"){%>
+
+      <div>None</div>
+
+      <%}else{%>
+
+        <button id="modal-button" type="button" class="btn <%=bgColor%>"
+          data-bs-toggle="modal" data-bs-target="#exampleModal<%=i%>">
+          Check
+        </button>
+
+        <a data-removeLink="true" id="remove-link" href="/report/delete/<%=data.id%>">
+          <i data-removeLink="true" class="fa-solid fa-trash"></i></a>
+
+
+        <%}%>
+
+
+          <div class="modal" id="exampleModal<%=i%>" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Reported By</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+                </div>
+
+
+                  <% if(Reporters[i].length==0){%>
+
+                    <div class="modal-body">NO record found</div>
+                    <%}else{%>
+
+                      <div id="<%=i%>" class="modal-body">
+
+                        <div class="card">
+
+                          <div id="card-entities" class="reported-by card-header">
+                            <ul class="list-group list-group-horizontal">
+                              <li class="list-group-item"
+                                style="color:white; background-color: rgba(0, 0, 0, 0.84);">
+                                Name</li>
+                              <li class="list-group-item "
+                                style="color:white; background-color: rgba(0, 0, 0, 0.84);">
+                                Email </li>
+                            </ul>
+
+                          </div>
+
+                          <% for(rep of Reporters[i]){%>
+
+                            <div class="card-header reported-by">
+                              <ul class="list-group list-group-horizontal">
+                                <li class="list-group-item">
+                                  <%=rep.fname%>&nbsp;<%=rep.lname%>
+                                </li>
+                                <li class="list-group-item">
+                                  <%=rep.email%>
+                                </li>
+                              </ul>
+
+                            </div>
+                            <% }%>
+
+                        </div>
+
+                      </div>
+
+                      <%}%>
+
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button>
+                        </div>
+              </div>
+            </div>
+          </div>
+  </div>

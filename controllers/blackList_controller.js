@@ -213,54 +213,39 @@ module.exports.blackListedUrls = async function (req, res) {
     const search = req.query.search != undefined ? req.query.search : "";
 
     try {
+        
 
-        const link = await Link.find({ url: { $regex: search, $options: "i" } }).sort({ count: -1 });
-        let reporters = [];
+        const links = await Link.find({ url: { $regex: search, $options: "i" }}).populate({path:'users',selected:'-password'}).sort({ count: -1 });   
+        
+        console.log(links);
 
-        if (link.length != 0) {
+        // let reporters = [];
 
-            for (i of link) {
-
-                let x = [];
-
-                for (userId of i.users) {
-
-                    const user = await User.findById(userId.toHexString());
-                    if (user != undefined)
-                        x.push(user);
-                }
-
-                if (x.length != 0) {
-                    reporters.push(x);
-
-                }
+        if(links.length==0) {
 
 
-            }
-
-        } else {
+          
             const status = {
                 url: "Not found",
                 count: "_",
                 adhaarNos: ["Not found"],
                 users: ["Not found"]
             }
-
-            reporters.push([]);
-
-            link.push(status);
-            console.log(link);
+            links.push(status)
         }
+
 
 
         return res.render('blacklistedUrls', {
             Title: 'BlackListed URLs',
-            Reported_links: link,
-            Reporters: reporters,
+            Links : links,
+          
             Search_key: search,
             color: "",
             bgColor: "",
         });
+
+        // return res.send('ji');
 
     } catch (err) {
         console.log("Error in blacklisted URLS controller , ::: ", err);
@@ -269,18 +254,7 @@ module.exports.blackListedUrls = async function (req, res) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 function isValid_Aadhaar_Number(aadhaar_number) {
-
 
     try {
 
@@ -294,7 +268,7 @@ function isValid_Aadhaar_Number(aadhaar_number) {
 
         console.log(regex.test(aadhaar_number));
 
-        if ( regex.test(aadhaar_number) == true) {
+        if (regex.test(aadhaar_number) == true) {
             return true;
         }
         else {
@@ -354,27 +328,32 @@ module.exports.blackList = async function (req, res, next) {
             return res.redirect('back');
         }
 
-
-
-
-
-
-
-
-
-
         const user = await User.findById(req.params.id);
-
-
         let getLink = await Link.findOne({ url: url });
 
         if (getLink == null) {
-            const link = new Link;
-            link.url = url;
-            link.count = 1;
-            link.adhaarNos.push(req.body.adhaar);
+
+            let adhaars = []
+            adhaars.push(req.body.adhaar);
+            let users = []
+            users.push(user._id);
+
+
+            const link = await Link.create({
+                url : url,
+                count:1,
+                adhaarNos:adhaars,
+
+            });
+
             link.users.push(user._id);
             link.save();
+            // const link = new Link;
+            // link.url = url;
+            // link.count = 1;
+            // link.adhaarNos.push(req.body.adhaar);
+            // link.users.push(user._id);
+            // link.save();
 
         } else {
 
@@ -488,3 +467,35 @@ module.exports.delete = async function (req, res) {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // if (req.user && req.user.access == 'admin') {
+
+            //     for (i of link) {
+
+            //         let x = [];
+            //         for (userId of i.users) {
+
+            //             const user = await User.findById(userId.toHexString());
+            //             if (user != undefined)
+            //                 x.push(user);
+            //         }
+
+            //         if (x.length != 0) {
+            //             reporters.push(x);
+            //         }
+            //     }
+            // }

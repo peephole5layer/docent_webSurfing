@@ -10,7 +10,7 @@ const base64url = require('base64url');
 
 
 const homeController = require('../controllers/home_controller');
-
+const checkAdminMiddleware = require('../middlewares/checkIsAdmin');
 
 
 
@@ -25,17 +25,15 @@ const reliableSitesController = require('../controllers/reliableSites_controller
 const aboutController =require('../controllers/about_controller');
 
 
-
-
-
-router.get('/admin', adminController.admin);
-router.get('/', homeController.home);
+router.get('/',checkAdminMiddleware.checkIsAdmin, homeController.home);
 router.get('/signup',userController.signup);
 router.get('/article/:str1/:str2/:str3',articleController.article);
 router.get('/about', aboutController.about);
 router.get('/reliableSites/:index',reliableSitesController.reliableSites);
 
 
+
+router.use('/admin', require('./admin'));
 router.use('/users', require('./users'));
 router.use('/blog',require('./blogs'));
 router.use('/report',require('./report'));
